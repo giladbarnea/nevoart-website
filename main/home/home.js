@@ -89,9 +89,9 @@ const HomePage = () => {
         }
     }
     if (MOBILE === undefined) {
-        log('home outside init, BEFORE then:', JSON.parstr({ MOBILE }), 'o');
+        console.log('home outside init, BEFORE then:', JSON.parstr({ MOBILE }), 'o');
         Emitter.until('MOBILEReady').then(() => {
-            log('home outside init, AFTER then:', JSON.parstr({ MOBILE }), 'o');
+            console.log('home outside init, AFTER then:', JSON.parstr({ MOBILE }), 'o');
             return buildRightWidgetAndNewsChildren();
         });
     }
@@ -100,17 +100,17 @@ const HomePage = () => {
     }
     async function init() {
         const data = await fetchDict('main/home/home.json');
-        log('home init() BEFORE waiting:', JSON.parstr({ MOBILE }), 'grn');
+        console.log('home init() BEFORE waiting:', JSON.parstr({ MOBILE }), 'grn');
         if (MOBILE === undefined) {
             await Emitter.until('MOBILEReady');
         }
-        log('home init() AFTER waiting:', JSON.parstr({ MOBILE }), 'grn');
+        console.log('home init() AFTER waiting:', JSON.parstr({ MOBILE }), 'grn');
         if (!MOBILE) {
             rightWidget.newsCoverImageContainer
                 .append(img({ src: `main/home/${data["news-cover-image"]}` }));
         }
         else {
-            log(`setting #mobile_cover_image_container > img src to main/home/${data["news-cover-image"]}`, 'grn');
+            console.log(`setting #mobile_cover_image_container > img src to main/home/${data["news-cover-image"]}`, 'grn');
             elem({ query: '#mobile_cover_image_container > img' }).attr({ src: `main/home/${data["news-cover-image"]}` });
         }
         if (Navbar === undefined)
@@ -163,4 +163,3 @@ const HomePage = () => {
     }
     return { init };
 };
-//# sourceMappingURL=home.js.map

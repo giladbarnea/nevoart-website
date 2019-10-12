@@ -940,4 +940,3 @@ function wait(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//# sourceMappingURL=all.js.map

@@ -60,4 +60,3 @@ const Routing = (() => {
     initPage(lastPage);
     return { initPage, navigateTo, pageStrings };
 })();
-//# sourceMappingURL=routing.js.map

@@ -13,7 +13,7 @@ class EventEmitter {
         this._store = {};
     }
     emit(key, data) {
-        log(`EventEmitter.emit()`, JSON.parstr({
+        console.log(`EventEmitter.emit()`, JSON.parstr({
             key,
             'this._store[key](length?)': this._store[key] ? this._store[key].length : undefined
         }), 'l');
@@ -31,30 +31,30 @@ class EventEmitter {
     }
     one(key, fn) {
         function _fn() {
-            log('_fn, calling fn() then removing.', JSON.parstr({ 'this._store[key].length': this._store[key].length }), 'b');
+            console.log('_fn, calling fn() then removing.', JSON.parstr({ 'this._store[key].length': this._store[key].length }), 'b');
             fn();
             let indexofFn = this._store[key].findIndex(f => f.id === id);
             if (indexofFn === -1)
                 throw new Error(`indexofFn is -1, key: "${key}"`);
             this._store[key].splice(indexofFn, 1);
-            log('_fn, after removing.', JSON.parstr({ 'this._store[key].length': this._store[key].length }), 'b');
+            console.log('_fn, after removing.', JSON.parstr({ 'this._store[key].length': this._store[key].length }), 'b');
         }
         const id = Math.random();
-        log(`EventEmitter.one,`, JSON.parstr({ key, id }), 'b');
+        console.log(`EventEmitter.one,`, JSON.parstr({ key, id }), 'b');
         const bound = _fn.bind(this);
         bound.id = id;
         this.on(key, bound);
     }
     until(key, options = { once: true }) {
-        log('EventEmitter.until,', JSON.parstr({ key }), 'bg');
+        console.log('EventEmitter.until,', JSON.parstr({ key }), 'bg');
         if (options && options.once)
             return new Promise(resolve => this.one(key, () => {
-                log(`until one resolving key`, JSON.parstr({ key }), 'bg');
+                console.log(`until one resolving key`, JSON.parstr({ key }), 'bg');
                 return resolve();
             }));
         else
             return new Promise(resolve => this.on(key, () => {
-                log(`until on resolving key`, JSON.parstr({ key }), 'bg');
+                console.log(`until on resolving key`, JSON.parstr({ key }), 'bg');
                 return resolve();
             }));
     }
@@ -246,4 +246,3 @@ hamburger.click((event) => {
         console.log('closed');
     }
 });
-//# sourceMappingURL=main.js.map

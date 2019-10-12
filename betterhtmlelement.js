@@ -660,4 +660,3 @@ function extend(sup, child) {
     const proxy = new Proxy(child, handler);
     return proxy;
 }
-//# sourceMappingURL=all.js.map

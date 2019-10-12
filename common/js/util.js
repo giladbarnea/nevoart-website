@@ -339,4 +339,3 @@ async function log(message, ...args) {
     else
         console.log(message, ...args, `${tspath}:${tslineno + 1}`);
 }
-//# sourceMappingURL=util.js.map
