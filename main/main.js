@@ -62,7 +62,7 @@ WindowElem.on({
             children: {
                 home: '.home',
                 research: '.research',
-                people: '.people',
+                team: '.team',
                 publications: '.publications',
                 gallery: '.gallery',
                 contact: '.contact',
@@ -87,14 +87,14 @@ WindowElem.on({
                 }
             });
         }
-        async function cachePeople() {
-            console.log(...less('cachePeople'));
-            const peopleData = await fetchDict('main/people/people.json');
-            const { team: teamData, alumni: alumniData } = peopleData;
+        async function cacheTeam() {
+            console.log(...less('cacheTeam'));
+            const data = await fetchDict('main/team/team.json');
+            const { team: teamData, alumni: alumniData } = data;
             for (let [_, { image }] of dict(teamData).items())
-                cache(image, "people");
+                cache(image, "team");
             for (let [_, { image }] of dict(alumniData).items())
-                cache(image, "people");
+                cache(image, "team");
         }
         async function cacheGallery() {
             console.log(...less('cacheGallery'));
@@ -114,8 +114,8 @@ WindowElem.on({
             console.log(...less('done waiting, starting caching'));
             if (!window.location.hash.includes('research'))
                 cacheResearch();
-            if (!window.location.hash.includes('people'))
-                cachePeople();
+            if (!window.location.hash.includes('team'))
+                cacheTeam();
             if (!window.location.hash.includes('gallery'))
                 cacheGallery();
             console.log('done caching');

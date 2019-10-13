@@ -4,9 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const PeoplePage = () => {
+const TeamPage = () => {
     async function init() {
-        console.log('PeoplePage init');
+        console.log('TeamPage init');
         let ROWSIZE = 4;
         if (window.innerWidth >= $BP1) {
         }
@@ -19,12 +19,12 @@ const PeoplePage = () => {
                 this.cv = cv;
                 this.email = email;
                 let imgElem;
-                let cachedImage = CacheDiv[`people.${image}`];
+                let cachedImage = CacheDiv[`team.${image}`];
                 if (cachedImage !== undefined) {
                     imgElem = cachedImage.removeAttr('hidden');
                 }
                 else {
-                    imgElem = img({ src: `main/people/${image}` });
+                    imgElem = img({ src: `main/team/${image}` });
                 }
                 this.append(imgElem, div({ text: name, cls: "name" }), div({ text: role, cls: "role" })).click((event) => {
                     console.log('person click, stopping prop and toggling expando');
@@ -51,12 +51,12 @@ const PeoplePage = () => {
                     }
                 }
             }
-            pushPeopleBelow() {
+            pushTeamBelow() {
                 for (let [i, j] of this.yieldIndexesBelow()) {
                     this.group[i * ROWSIZE + j].css({ gridRow: `${i + 2}/${i + 2}` });
                 }
             }
-            pullbackPeopleBelow() {
+            pullbackTeamBelow() {
                 for (let [i, j] of this.yieldIndexesBelow()) {
                     this.group[i * ROWSIZE + j].uncss("gridRow");
                 }
@@ -66,7 +66,7 @@ const PeoplePage = () => {
                 this.group[rightmostPersonIndex].after(expando);
             }
         }
-        class People extends Array {
+        class Team extends Array {
             constructor() {
                 super();
                 this._push = super.push;
@@ -118,7 +118,7 @@ const PeoplePage = () => {
             }
             async toggle(pressed) {
                 if (this.owner === null) {
-                    People.unfocusOthers(pressed);
+                    Team.unfocusOthers(pressed);
                     await this.pushAfterAndExpand(pressed);
                     this.ownPopulateAndPosition(pressed);
                     return;
@@ -143,7 +143,7 @@ const PeoplePage = () => {
                 }
             }
             async pushAfterAndExpand(pressed) {
-                pressed.pushPeopleBelow();
+                pressed.pushTeamBelow();
                 pressed.squeezeExpandoBelow();
                 await wait(0);
                 this.expand();
@@ -155,14 +155,14 @@ const PeoplePage = () => {
             }
             collapse() {
                 this.removeClass('expanded').addClass('collapsed').remove();
-                this.owner.pullbackPeopleBelow();
+                this.owner.pullbackTeamBelow();
             }
             expand() {
                 this.removeClass('collapsed').addClass('expanded');
             }
             close() {
                 this.collapse();
-                People.focusOthers(this.owner);
+                Team.focusOthers(this.owner);
                 this.owner = null;
             }
             setGridColumn() {
@@ -190,24 +190,24 @@ const PeoplePage = () => {
         __decorate([
             logFn()
         ], Expando.prototype, "setHtml", null);
-        function containerFactory({ containerData, people }) {
+        function containerFactory({ containerData, team }) {
             let index = 0;
             for (let [name, { image, role, cv, email }] of dict(containerData).items()) {
                 let person = new Person(image, name, role, cv, email);
-                people.push(person);
+                team.push(person);
                 index++;
             }
             let cls = MOBILE ? 'flex' : 'grid';
-            const grid = div({ cls }).append(...people);
+            const grid = div({ cls }).append(...team);
             return grid;
         }
-        const { alumni: alumniData, team: teamData } = await fetchDict('main/people/people.json');
+        const { alumni: alumniData, team: teamData } = await fetchDict('main/team/team.json');
         const expando = new Expando();
-        const team = new People();
-        const alumni = new People();
-        const teamContainer = containerFactory({ containerData: teamData, people: team });
-        const alumniContainer = containerFactory({ containerData: alumniData, people: alumni });
-        Home.empty().class('people-page').append(elem({ tag: 'h1', text: 'Team' }), teamContainer, elem({ tag: 'h1', text: 'Alumni' }), alumniContainer);
+        const team = new Team();
+        const alumni = new Team();
+        const teamContainer = containerFactory({ containerData: teamData, team: team });
+        const alumniContainer = containerFactory({ containerData: alumniData, team: alumni });
+        Home.empty().class('team-page').append(elem({ tag: 'h1', text: 'Team' }), teamContainer, elem({ tag: 'h1', text: 'Alumni' }), alumniContainer);
         DocumentElem
             .click(() => {
             console.log('DocumentElem click');

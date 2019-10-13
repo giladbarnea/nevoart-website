@@ -3,8 +3,8 @@ const Routing = (() => {
         switch (key) {
             case "research":
                 return ResearchPage;
-            case "people":
-                return PeoplePage;
+            case "team":
+                return TeamPage;
             case "publications":
                 return PublicationsPage;
             case "gallery":
@@ -14,7 +14,7 @@ const Routing = (() => {
         }
     }
     function pageStrings() {
-        return ["home", "research", "people", "publications", "gallery", "contact"];
+        return ["home", "research", "team", "publications", "gallery", "contact"];
     }
     async function initPage(url) {
         console.log(`%cRouting.initPage(url: "${url}")`, `color: ${GOOGLEBLUE}`);
