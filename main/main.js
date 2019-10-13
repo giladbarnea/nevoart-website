@@ -8,60 +8,31 @@ const FundingSection = elem({
     }
 });
 const CacheDiv = elem({ id: 'cache' });
-class EventEmitter {
-    constructor() {
-        this._store = {};
-    }
-    emit(key, data) {
-        console.log(`EventEmitter.emit()`, JSON.parstr({
-            key,
-            'this._store[key](length?)': this._store[key] ? this._store[key].length : undefined
-        }), 'l');
-        if (this._store[key]) {
-            for (let fn of this._store[key]) {
-                fn(data || undefined);
-            }
+const WindowElem = elem({ htmlElement: window });
+WindowElem.isLoaded = false;
+WindowElem.promiseLoaded = async function () {
+    console.log('WindowElem.promiseLoaded()');
+    if (this.isLoaded)
+        return true;
+    let count = 0;
+    while (!this.isLoaded) {
+        if (count >= 2000) {
+            if (count === 2000)
+                console.trace(`WindowElem.promiseLoaded() count: ${count}. Waiting 200ms, warning every 1s.`);
+            else if (count % 5 === 0)
+                console.warn(`WindowElem.promiseLoaded() count: ${count}. Waiting 200ms, warning every 1s.`);
+            await wait(200);
         }
-    }
-    on(key, fn) {
-        if (this._store[key])
-            this._store[key].push(fn);
-        else
-            this._store[key] = [fn];
-    }
-    one(key, fn) {
-        function _fn() {
-            console.log('_fn, calling fn() then removing.', JSON.parstr({ 'this._store[key].length': this._store[key].length }), 'b');
-            fn();
-            let indexofFn = this._store[key].findIndex(f => f.id === id);
-            if (indexofFn === -1)
-                throw new Error(`indexofFn is -1, key: "${key}"`);
-            this._store[key].splice(indexofFn, 1);
-            console.log('_fn, after removing.', JSON.parstr({ 'this._store[key].length': this._store[key].length }), 'b');
+        else {
+            await wait(5);
         }
-        const id = Math.random();
-        console.log(`EventEmitter.one,`, JSON.parstr({ key, id }), 'b');
-        const bound = _fn.bind(this);
-        bound.id = id;
-        this.on(key, bound);
+        count++;
     }
-    until(key, options = { once: true }) {
-        console.log('EventEmitter.until,', JSON.parstr({ key }), 'bg');
-        if (options && options.once)
-            return new Promise(resolve => this.one(key, () => {
-                console.log(`until one resolving key`, JSON.parstr({ key }), 'bg');
-                return resolve();
-            }));
-        else
-            return new Promise(resolve => this.on(key, () => {
-                console.log(`until on resolving key`, JSON.parstr({ key }), 'bg');
-                return resolve();
-            }));
-    }
-}
-const Emitter = new EventEmitter();
-const WindowElem = elem({ htmlElement: window })
-    .on({
+    console.log('WindowElem.promiseLoaded() returning true');
+    this.isLoaded = true;
+    return true;
+};
+WindowElem.on({
     scroll: (event) => {
         if (Navbar !== undefined) {
             if (window.scrollY > 0) {
@@ -84,8 +55,8 @@ const WindowElem = elem({ htmlElement: window })
     },
     load: () => {
         console.log(`window loaded, window.location.hash: "${window.location.hash}"`);
+        WindowElem.isLoaded = true;
         MOBILE = window.innerWidth <= $BP4;
-        Emitter.emit('MOBILEReady');
         Navbar = new NavbarElem({
             query: 'div#navbar',
             children: {
@@ -94,11 +65,9 @@ const WindowElem = elem({ htmlElement: window })
                 people: '.people',
                 publications: '.publications',
                 gallery: '.gallery',
-                neuroanatomy: '.neuroanatomy',
                 contact: '.contact',
             }
         });
-        Emitter.emit('navbarReady');
         console.log({ innerWidth: window.innerWidth, MOBILE });
         if (window.location.hash !== "")
             fetchDict('main/home/home.json').then(({ logo }) => Navbar.home.attr({ src: `main/home/${logo}` }));
@@ -140,6 +109,18 @@ const WindowElem = elem({ htmlElement: window })
             for (let [_, { image }] of researchData.items())
                 cache(image, "research");
         }
+        console.log(...less('waiting 1000...'));
+        wait(1000).then(() => {
+            console.log(...less('done waiting, starting caching'));
+            if (!window.location.hash.includes('research'))
+                cacheResearch();
+            if (!window.location.hash.includes('people'))
+                cachePeople();
+            if (!window.location.hash.includes('gallery'))
+                cacheGallery();
+            console.log('done caching');
+            console.groupEnd();
+        });
     }
 });
 class NavbarElem extends BetterHTMLElement {
@@ -202,7 +183,7 @@ const Footer = elem({
 });
 Footer.ugugSection.mainCls.html(`2019
     Developed by <a href="http://giladbarnea.github.io" target="_blank">Gilad Barnea</a>`);
-fetchDict("main/contact/contact.json").then(data => {
+fetchDict("main/contact/contact.json").then(async (data) => {
     Footer.contactSection.mainCls.address.append(anchor({ href: data.visit.link }).html(data.visit.address).target("_blank"));
     Footer.contactSection.mainCls.contact.append(paragraph().html(`Phone:
                                                         <a href="tel:${data.call.phone}">${data.call.phone}</a><br>
@@ -212,13 +193,22 @@ fetchDict("main/contact/contact.json").then(data => {
     uni.click(() => window.open("https://www.tau.ac.il"));
     medicine.click(() => window.open("https://en-med.tau.ac.il/"));
     sagol.click(() => window.open("https://www.sagol.tau.ac.il/"));
-    window.onload = () => Footer.contactSection.mainCls.append(elem({ tag: 'iframe' })
-        .id('contact_map')
-        .attr({
-        frameborder: "0",
-        allowfullscreen: "",
-        src: data.map
-    }));
+    WindowElem.on({
+        load: () => {
+            if (!MOBILE) {
+                wait(3000).then(() => {
+                    console.log("Footer.contactSection.mainCls.append(elem({tag: 'iframe'}))");
+                    Footer.contactSection.mainCls.append(elem({ tag: 'iframe' })
+                        .id('contact_map')
+                        .attr({
+                        frameborder: "0",
+                        allowfullscreen: "",
+                        src: data.map
+                    }));
+                });
+            }
+        }
+    });
 });
 const hamburger = elem({
     id: 'hamburger', children: { menu: '.menu', logo: '.logo', items: '.items' }

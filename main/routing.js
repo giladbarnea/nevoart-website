@@ -9,14 +9,12 @@ const Routing = (() => {
                 return PublicationsPage;
             case "gallery":
                 return GalleryPage;
-            case "neuroanatomy":
-                return NeuroanatomyPage;
             case "contact":
                 return ContactPage;
         }
     }
     function pageStrings() {
-        return ["home", "research", "people", "publications", "gallery", "neuroanatomy", "contact"];
+        return ["home", "research", "people", "publications", "gallery", "contact"];
     }
     async function initPage(url) {
         console.log(`%cRouting.initPage(url: "${url}")`, `color: ${GOOGLEBLUE}`);
@@ -30,11 +28,8 @@ const Routing = (() => {
                 FundingSection.attr({ hidden: '' });
                 const pageObj = getPageObj(url);
                 pageObj().init();
-                if (Navbar === undefined) {
-                    console.log('%cinitPage Navbar === undefined, awaiting navbarReady...', `color: ${GOOGLEBLUE}`);
-                    await Emitter.until('navbarReady');
-                    console.log('%cinitPage done awaiting navbarReady', `color: ${GOOGLEBLUE}`);
-                }
+                if (Navbar === undefined)
+                    await WindowElem.promiseLoaded();
                 Navbar.select(Navbar[url]);
             }
             else {

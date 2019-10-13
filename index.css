@@ -27,31 +27,19 @@
   --GREY8: rgb(40, 40, 40);
   --TRANS: rgba(0, 0, 0, 0);
 }
+@font-face {
+  font-family: "BasisGrotesqueOffWhite";
+  src: url("common/fonts/basis-grotesque-off-white.woff");
+}
+@font-face {
+  font-family: "BasisGrotesqueMedium";
+  src: url("common/fonts/basis-grotesque-medium.woff");
+}
+@font-face {
+  font-family: "BasisGrotesqueBold";
+  src: url("common/fonts/basis_grotesque_bold.otf")
+}
 
-@font-face {
-  font-family: "OpenSans";
-  src: url("common/fonts/OpenSans-Regular.ttf");
-}
-@font-face {
-  font-family: "OpenSansSemiBold";
-  src: url("common/fonts/OpenSans-SemiBold.ttf");
-}
-@font-face {
-  font-family: "OpenSansBold";
-  src: url("common/fonts/OpenSans-Bold.ttf");
-}
-@font-face {
-  font-family: "OpenSansLight";
-  src: url("common/fonts/OpenSans-Light.ttf");
-}
-@font-face {
-  font-family: "OpenSansLightItalic";
-  src: url("common/fonts/OpenSans-LightItalic.ttf");
-}
-@font-face {
-  font-family: "OpenSansItalic";
-  src: url("common/fonts/OpenSans-Italic.ttf");
-}
 html {
   min-height: 100%;
 }
@@ -60,7 +48,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--GREY7);
-  font-family: "OpenSans", sans-serif;
+  font-family: "BasisGrotesque", sans-serif;
   margin: 0;
   line-height: 24px;
   transition: filter 0.2s ease-in-out;
@@ -126,30 +114,26 @@ body {
     --small_gap: var(--SMALL_GAP2);
   }
 }
-body.theater {
-  background-color: var(--GREY8);
-}
 
 h1 {
-  text-align: left;
-  margin-top: unset;
-  margin-right: unset;
-  margin-bottom: 20px;
-  margin-left: unset;
-  font-family: OpenSansBold;
+  font-family: BasisGrotesqueBold;
+  margin: 0 0 20px 0;
   color: var(--GREY8);
-  letter-spacing: -0.5px;
 }
 @media screen and (min-width: 500px) {
   h1 {
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: -1.5px;
+
   }
 }
 @media screen and (max-width: 500px) {
   h1 {
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: -1px;
+
   }
 }
 
@@ -749,14 +733,14 @@ div#home > div.article {
   margin-bottom: var(--big_gap);
   text-align: left;
 }
-div#home > div.article > h1 {
+/* div#home > div.article > h1 {
   border-bottom: 1px solid var(--TRANS);
   margin-bottom: 18px;
   padding-bottom: 2px;
   transition: color 0.6s ease-in-out;
   width: fit-content;
   grid-column: 1/1;
-}
+} */
 div#home > div.article > h1.highlighted {
   color: var(--GOOGLEBLUE);
 }
@@ -1212,10 +1196,10 @@ div#contact_grid > div {
   grid-template-rows: 80px 40px auto;
   grid-template-columns: repeat(2, calc(var(--itemWidth) / 2));
 }
-div#contact_grid > div > h1 {
+/* div#contact_grid > div > h1 {
   grid-row: 1/1;
   grid-column: 1/1;
-}
+} */
 div#contact_grid > div > svg, div#contact_grid > div > img, div#contact_grid > div > div {
   background-repeat: no-repeat;
   grid-row: 1/1;

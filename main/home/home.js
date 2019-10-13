@@ -69,7 +69,7 @@ const HomePage = () => {
     let rightWidget;
     let newsChildren;
     function buildRightWidgetAndNewsChildren() {
-        console.log('buildRightWidgetAndNewsChildren', JSON.parstr({ MOBILE }));
+        console.log('buildRightWidgetAndNewsChildren,', JSON.parstr({ MOBILE }));
         if (!MOBILE) {
             rightWidget = elem({
                 query: '#right_widget',
@@ -88,24 +88,14 @@ const HomePage = () => {
             newsChildren = rightWidget.news.children().map(c => c.e);
         }
     }
-    if (MOBILE === undefined) {
-        console.log('home outside init, BEFORE then:', JSON.parstr({ MOBILE }), 'o');
-        Emitter.until('MOBILEReady').then(() => {
-            console.log('home outside init, AFTER then:', JSON.parstr({ MOBILE }), 'o');
-            return buildRightWidgetAndNewsChildren();
-        });
-    }
-    else {
-        buildRightWidgetAndNewsChildren();
-    }
+    WindowElem.promiseLoaded().then(buildRightWidgetAndNewsChildren);
     async function init() {
         const data = await fetchDict('main/home/home.json');
-        console.log('home init() BEFORE waiting:', JSON.parstr({ MOBILE }), 'grn');
-        if (MOBILE === undefined) {
-            await Emitter.until('MOBILEReady');
-        }
-        console.log('home init() AFTER waiting:', JSON.parstr({ MOBILE }), 'grn');
         if (!MOBILE) {
+            if (MOBILE === undefined)
+                await WindowElem.promiseLoaded();
+            while(rightWidget === undefined)
+                await wait(10);
             rightWidget.newsCoverImageContainer
                 .append(img({ src: `main/home/${data["news-cover-image"]}` }));
         }
@@ -114,7 +104,7 @@ const HomePage = () => {
             elem({ query: '#mobile_cover_image_container > img' }).attr({ src: `main/home/${data["news-cover-image"]}` });
         }
         if (Navbar === undefined)
-            await Emitter.until('navbarReady');
+            await WindowElem.promiseLoaded();
         Navbar.home.attr({ src: `main/home/${data.logo}` });
         const aboutText = elem({ query: "#about > .about-text" });
         const splitParagraphs = (val) => val.split("</p>").join("").split("<p>").slice(1);
@@ -125,6 +115,7 @@ const HomePage = () => {
             aboutText.append(paragraph({ text: p, cls }));
         }
         if (!MOBILE) {
+            console.log('HomePage().init(), building News, entered !MOBILE clause', JSON.parstr({ MOBILE }));
             const newsData = new NewsData();
             let i = 0;
             const radios = elem({ id: 'radios' });
