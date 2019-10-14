@@ -11,7 +11,6 @@ const CacheDiv = elem({ id: 'cache' });
 const WindowElem = elem({ htmlElement: window });
 WindowElem.isLoaded = false;
 WindowElem.promiseLoaded = async function () {
-    console.log('WindowElem.promiseLoaded()');
     if (this.isLoaded)
         return true;
     let count = 0;
@@ -54,7 +53,7 @@ WindowElem.on({
         }
     },
     load: () => {
-        console.log(`window loaded, window.location.hash: "${window.location.hash}"`);
+        console.log(`%cwindow loaded, window.location.hash: "${window.location.hash}"`,`color: #627E57`);
         WindowElem.isLoaded = true;
         MOBILE = window.innerWidth <= $BP4;
         Navbar = new NavbarElem({
@@ -68,7 +67,6 @@ WindowElem.on({
                 contact: '.contact',
             }
         });
-        console.log({ innerWidth: window.innerWidth, MOBILE });
         if (window.location.hash !== "")
             fetchDict('main/home/home.json').then(({ logo }) => Navbar.home.attr({ src: `main/home/${logo}` }));
         function cache(file, page) {
@@ -109,7 +107,7 @@ WindowElem.on({
             for (let [_, { image }] of researchData.items())
                 cache(image, "research");
         }
-        console.log(...less('waiting 1000...'));
+        console.log(...less('waiting 1000ms before caching starts...'));
         wait(1000).then(() => {
             console.log(...less('done waiting, starting caching'));
             if (!window.location.hash.includes('research'))
@@ -118,8 +116,7 @@ WindowElem.on({
                 cacheTeam();
             if (!window.location.hash.includes('gallery'))
                 cacheGallery();
-            console.log('done caching');
-            console.groupEnd();
+            console.log(...less('done caching'));
         });
     }
 });
@@ -197,7 +194,6 @@ fetchDict("main/contact/contact.json").then(async (data) => {
         load: () => {
             if (!MOBILE) {
                 wait(3000).then(() => {
-                    console.log("Footer.contactSection.mainCls.append(elem({tag: 'iframe'}))");
                     Footer.contactSection.mainCls.append(elem({ tag: 'iframe' })
                         .id('contact_map')
                         .attr({
@@ -230,9 +226,9 @@ hamburger.click((event) => {
     console.log('hamburger.click');
     hamburger.toggleClass('open');
     if (hamburger.hasClass('open')) {
-        console.log('opened');
+        console.log('hamburger opened');
     }
     else {
-        console.log('closed');
+        console.log('hamburger closed');
     }
 });

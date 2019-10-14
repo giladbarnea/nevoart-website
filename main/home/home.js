@@ -69,7 +69,7 @@ const HomePage = () => {
     // let rightWidget;
     // let newsChildren;
     function buildRightWidgetAndNewsChildren() {
-        console.log('buildRightWidgetAndNewsChildren,', JSON.parstr({ MOBILE }));
+        // console.log('buildRightWidgetAndNewsChildren,', JSON.parstr({ MOBILE }));
         // if (!MOBILE) {
         //     rightWidget = elem({
         //         query: '#right_widget',
@@ -109,7 +109,6 @@ const HomePage = () => {
         const aboutText = elem({ query: "#about > .about-text" });
         aboutText.append(paragraph({ text: data["about-text"]}));
         if (!MOBILE) {
-            console.log('HomePage().init(), building News, entered !MOBILE clause', JSON.parstr({ MOBILE }));
             // const newsData = new NewsData();
             let i = 0;
             // const radios = elem({ id: 'radios' });
