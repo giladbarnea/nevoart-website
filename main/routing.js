@@ -17,10 +17,10 @@ const Routing = (() => {
         return ["home", "research", "team", "publications", "gallery", "contact"];
     }
     async function initPage(url) {
-        console.log(`%cRouting.initPage(url: "${url}")`, `color: ${GOOGLEBLUE}`);
+        console.log(`%cRouting.initPage(url: "${url}")`, `color: ${BLUE}`);
         if (bool(url)) {
             if (pageStrings().slice(1).includes(url)) {
-                console.log(`\t%cvalid url ("${url}"), calling pageObj().init()`, `color: ${GOOGLEBLUE}`);
+                console.log(`\t%cvalid url ("${url}"), calling pageObj().init()`, `color: ${BLUE}`);
                 if (url === "gallery")
                     Footer.attr({ hidden: '' });
                 else
@@ -33,12 +33,12 @@ const Routing = (() => {
                 Navbar.select(Navbar[url]);
             }
             else {
-                console.log(`%cRouting.initPage(), bad url, not in pageStrings(): "${url}". Calling Routing.navigateTo("home")`, `color: ${GOOGLEBLUE}`);
+                console.log(`%cRouting.initPage(), bad url, not in pageStrings(): "${url}". Calling Routing.navigateTo("home")`, `color: ${BLUE}`);
                 Routing.navigateTo("home");
             }
         }
         else {
-            console.log('\t%cempty url, calling HomePage().init()', `color: ${GOOGLEBLUE}`);
+            console.log('\t%cempty url, calling HomePage().init()', `color: ${BLUE}`);
             HomePage().init();
         }
     }
@@ -47,11 +47,11 @@ const Routing = (() => {
             throw new Error(`navigateTo(url) bad url: "${url}"`);
         }
         let href = url === "home" ? '' : `#${url}`;
-        console.log(`%cRouting.navigateTo(url: "${url}") clicking fake <a href="${href}">`, `color: ${GOOGLEBLUE}`);
+        console.log(`%cRouting.navigateTo(url: "${url}") clicking fake <a href="${href}">`, `color: ${BLUE}`);
         anchor({ href }).appendTo(Body).click().remove();
     }
     let lastPage = window.location.hash.slice(1);
-    console.log(`%cRouting() root, window.location: ${window.location}\ncalling initPage(lastPage = "${lastPage}")`, `color: ${GOOGLEBLUE}`);
+    console.log(`%cRouting() root, window.location: ${window.location}\ncalling initPage(lastPage = "${lastPage}")`, `color: ${BLUE}`);
     initPage(lastPage);
     return { initPage, navigateTo, pageStrings };
 })();

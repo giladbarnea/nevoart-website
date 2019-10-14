@@ -3,7 +3,7 @@ const $BP1 = 1340;
 const $BP4 = 500;
 const W0 = 1200;
 const W1 = 984;
-const GOOGLEBLUE = '#3b82f0';
+const BLUE = '#3b82f0';
 let MOBILE = undefined;
 const FILEDATA = {};
 function float(str) {

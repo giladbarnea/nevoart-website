@@ -49,7 +49,7 @@ WindowElem.on({
             Routing.navigateTo("home");
         }
         else {
-            console.log(`%chash change, event.newURL: "${event.newURL}"\n\tnewURL: "${newURL}"`, `color: ${GOOGLEBLUE}`);
+            console.log(`%chash change, event.newURL: "${event.newURL}"\n\tnewURL: "${newURL}"`, `color: ${BLUE}`);
             Routing.initPage(newURL);
         }
     },
