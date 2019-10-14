@@ -105,9 +105,10 @@ const HomePage = () => {
         // }
         if (Navbar === undefined)
             await WindowElem.promiseLoaded();
-        Navbar.home.attr({ src: `main/home/${data.logo}` });
+        // Navbar.home.attr({ src: `main/home/${data.logo}` });
         const aboutText = elem({ query: "#about > .about-text" });
-        aboutText.append(paragraph({ text: data["about-text"]}));
+        // aboutText.append(paragraph({ text: data["about-text"]}));
+        aboutText.append(elem({tag:'h2',text: data["about-text"]}));
         if (!MOBILE) {
             // const newsData = new NewsData();
             let i = 0;

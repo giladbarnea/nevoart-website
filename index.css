@@ -28,7 +28,7 @@
   --TRANS: rgba(0, 0, 0, 0);
 }
 
-/* ==================  END LAYOUT  ================== */
+/* ==================  LAYOUT  ================== */
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -132,6 +132,27 @@ body {
   }
 }
 
+#navbar > div {
+  margin: 23px 40px auto 0;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+#navbar .home {
+  background-color: white;
+  color: var(--BLUE);
+  margin-right: auto;
+  padding: 23px 12px 12px 12px;
+  margin-top: 0;
+}
+#navbar > div:hover {
+  margin-top: 25px;
+}
+
+#navbar .home:hover {
+  padding-top: 25px;
+}
+
 /* ==================  END LAYOUT  ================== */
 
 /* ==================  GRID  ================== */
@@ -145,7 +166,10 @@ body {
     grid-column-end: 13;
 
   }
-  .seven-first{}
+  .seven-first{
+    grid-column-start: 1;
+    grid-column-end: 8;
+  }
   .seven-rest{}
   .first-third {}
   .second-third{}
@@ -196,16 +220,44 @@ body {
   font-family: BasisGrotesqueBold;
 }
 
+a {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
 h1 {
   font-family: BasisGrotesqueBold;
   margin: 0 0 20px 0;
   color: var(--GREY8);
+  font-weight: normal;
 }
 
 h2 {
+  font-family: BasisGrotesqueBold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  margin-bottom: 20px;
   color: var(--GREY8);
-  letter-spacing: -0.5px;
+  font-weight: normal;
 }
+
+h3{
+
+}
+h4, p {
+
+}
+h5{
+
+}
+h6{
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin: 16px 0 40px 0;
+}
+
 
 @media screen and (min-width: 500px) {
   h1 {
@@ -217,6 +269,16 @@ h2 {
   h2 {
 
   }
+  h3{
+
+  }
+  p {
+
+  }
+  h5{}
+
+  h6{}
+
 }
 @media screen and (max-width: 500px) {
   h1 {
@@ -227,27 +289,19 @@ h2 {
   h2 {
 
   }
+  h3{
+
+  }
+  p {
+
+  }
+  h5{}
+
+  h6{}
 }
 
 /* ==================  END TYPOGRAPHY  ================== */
 
-
-h2 {
-  color: var(--GREY8);
-  letter-spacing: -0.5px;
-}
-@media screen and (min-width: 500px) {
-  h2 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-@media screen and (max-width: 500px) {
-  h2 {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
 
 p {
   text-align: left;
@@ -265,32 +319,6 @@ p {
     line-height: 24px;
   }
 }
-
-
-
-a {
-  text-decoration: none;
-  color: var(--GBLUE);
-  transition: color 200ms ease-in-out;
-}
-a:after {
-  transition: opacity 200ms ease-in-out;
-  content: "";
-  opacity: 0;
-}
-a:hover {
-  color: var(--GREY6);
-}
-a.arrow:after {
-  opacity: 1;
-  content: " ↗";
-}
-a.arrow-trans:after {
-  opacity: 0;
-  content: " ↗";
-}
-
-
 
 :root {
   --mobileNavbarHeight: 60px;
@@ -316,15 +344,26 @@ div#main div#home {
   }
 }
 
+
 #landing-fold {
   height: 640px;
   background-image: url('main/home/landing-fold-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 35% 0;
   color: white;
 }
-#landing-fold h1 {
+#landing-fold #about{
+  margin-top: 120px;
+}
+
+#landing-fold .line{
+  width: 72px;
+  height: 2px;
+  border-bottom: 2px solid white;
+
+}
+#landing-fold h1, #landing-fold h2  {
 color: white;
 }
 div#footer {
@@ -554,28 +593,13 @@ section#navbar_section > div#navbar > div, section#navbar_section > div#navbar >
   letter-spacing: 0.5px;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 }
-section#navbar_section > div#navbar > div, section#navbar_section > div#navbar > img.home {
-  margin-top: auto;
-  margin-right: 40px;
-  margin-left: 0;
-  margin-bottom: auto;
-}
-section#navbar_section > div#navbar > img.home {
-  margin: auto auto auto 0;
-  width: 60px;
-}
+
 section#navbar_section > div#navbar > img.uni {
   height: 40px;
   margin: auto 0;
 }
 section#navbar_section > div#navbar > div:last-of-type {
   margin-right: 0;
-}
-section#navbar_section > div#navbar > div:hover, section#navbar_section > div#navbar > div.selected {
-  color: black;
-}
-section#navbar_section > div#navbar > div.pale {
-  color: var(--GREY6);
 }
 
 @keyframes FadeOut {
@@ -1315,23 +1339,3 @@ div#contact_grid > div > p.subtitle {
   grid-row: 2/2;
   grid-column: span 2;
 }
-div#contact_grid > div > a {
-  grid-row: 3/3;
-  grid-column: span 2;
-}
-@media screen and (min-width: 500px) {
-  div#contact_grid > div > a {
-    font-size: 20px;
-    line-height: 32px;
-  }
-}
-@media screen and (max-width: 500px) {
-  div#contact_grid > div > a {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-div#contact_grid > div.visit > a {
-  text-transform: capitalize;
-}
-
