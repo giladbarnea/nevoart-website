@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+		"module": "commonjs",
+		
+        "files": [
+            "common/js/betterhtmlelement.d.ts"
+        ]
+    }
+}
