@@ -429,7 +429,7 @@ section#navbar_section {
 section#navbar_section > div#hamburger {
   height: inherit;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 760px)  {
   section#navbar_section > div#hamburger {
     display: none;
   }
@@ -441,7 +441,7 @@ section#navbar_section > div#hamburger > div.menu-and-logo-container > div.menu 
   height: inherit;
   cursor: pointer;
   position: absolute;
-  right: 0px;
+  right: 20px;
   transition: 0.5s ease-in-out;
   width: calc(var(--mobileNavbarHeight) - 10px);
 }
@@ -531,7 +531,7 @@ section#navbar_section > div#navbar {
   margin: auto auto 0 auto;
   transition: box-shadow 0.2s ease-in-out;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 759px) {
   section#navbar_section > div#navbar {
     display: none;
   }

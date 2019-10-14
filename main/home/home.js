@@ -112,7 +112,7 @@ const HomePage = () => {
             console.log('HomePage().init(), building News, entered !MOBILE clause', JSON.parstr({ MOBILE }));
             // const newsData = new NewsData();
             let i = 0;
-            const radios = elem({ id: 'radios' });
+            // const radios = elem({ id: 'radios' });
             for (let [title, { date, content, links }] of dict(data.news).items()) {
                 let item = { title, date, content, links, radio: div({ cls: 'radio' }), index: i };
                 // newsData.push(item);
