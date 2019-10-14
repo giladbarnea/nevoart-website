@@ -28,18 +28,7 @@
   --TRANS: rgba(0, 0, 0, 0);
 }
 
-@font-face {
-  font-family: "BasisGrotesqueOffWhite";
-  src: url("common/fonts/basis-grotesque-off-white.woff");
-}
-@font-face {
-  font-family: "BasisGrotesqueMedium";
-  src: url("common/fonts/basis-grotesque-medium.woff");
-}
-@font-face {
-  font-family: "BasisGrotesqueBold";
-  src: url("common/fonts/basis_grotesque_bold.otf")
-}
+/* ==================  END LAYOUT  ================== */
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -76,6 +65,7 @@ body {
 @media screen and (min-width: 500px) and (max-width: 760px) {
   body {
     --w: var(--W3);
+    margin: 0 20px 20px 20px;
   }
   body #window_stats:after {
     content: "--w: var(--W3): 496px \a[BP4] screen [BP3]: 500px screen 760px";
@@ -135,15 +125,86 @@ body {
 @media screen and (max-width: 759px) {
   .main-cls{
     background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    width: 100%;
+  }
+}
+
+/* ==================  END LAYOUT  ================== */
+
+/* ==================  GRID  ================== */
+@media screen and (min-width: 1023px) {
+  .first-half{
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .second-half {
+    grid-column-start: 7;
+    grid-column-end: 13;
+
+  }
+  .seven-first{}
+  .seven-rest{}
+  .first-third {}
+  .second-third{}
+  .third-third{}
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .first-half{
+    
+  }
+  .second-half {
+
+  }
+  .seven-first{}
+  .seven-rest{}
+  .first-third {}
+  .second-third{}
+  .third-third{}
+}
+
+@media screen and (max-width: 759px) {
+  .first-half, .second-half, .first-third, .second-third, .third-third, .seven-first, .seven-rest {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
 
 
+/* ==================  END GRID  ================== */
+
+/* ==================  TYPOGRAPHY  ================== */
+
+
+@font-face {
+  font-family: "BasisGrotesqueOffWhite";
+  src: url("common/fonts/basis-grotesque-off-white.woff");
+}
+@font-face {
+  font-family: "BasisGrotesqueMedium";
+  src: url("common/fonts/basis-grotesque-medium.woff");
+}
+@font-face {
+  font-family: "BasisGrotesqueBold";
+  src: url("common/fonts/basis_grotesque_bold.otf")
+}
+
+.bold {
+  font-family: BasisGrotesqueBold;
+}
 
 h1 {
   font-family: BasisGrotesqueBold;
   margin: 0 0 20px 0;
   color: var(--GREY8);
+}
+
+h2 {
+  color: var(--GREY8);
+  letter-spacing: -0.5px;
 }
 
 @media screen and (min-width: 500px) {
@@ -152,17 +213,23 @@ h1 {
     line-height: 74px;
     letter-spacing: -1.5px;
   }
+
+  h2 {
+
+  }
 }
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 40px;
     line-height: 46px;
     letter-spacing: -1px;
+  }
+  h2 {
 
   }
 }
 
-
+/* ==================  END TYPOGRAPHY  ================== */
 
 
 h2 {
@@ -199,9 +266,7 @@ p {
   }
 }
 
-.bold {
-  font-family: BasisGrotesqueBold;
-}
+
 
 a {
   text-decoration: none;
