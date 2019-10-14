@@ -82,10 +82,10 @@ WindowElem.on({
             let imgElem = elem({ htmlElement: new Image() })
                 .attr({ src, hidden: "" })
                 .on({
-                load: () => {
-                    CacheDiv.cacheAppend([[`${page}.${file}`, imgElem]]);
-                }
-            });
+                    load: () => {
+                        CacheDiv.cacheAppend([[`${page}.${file}`, imgElem]]);
+                    }
+                });
         }
         async function cacheTeam() {
             console.log(...less('cacheTeam'));
@@ -129,9 +129,9 @@ class NavbarElem extends BetterHTMLElement {
         for (let pageString of Routing.pageStrings()) {
             this[pageString]
                 .click(() => {
-                console.log(`navbar ${pageString} click`);
-                Routing.navigateTo(pageString);
-            })
+                    console.log(`navbar ${pageString} click`);
+                    Routing.navigateTo(pageString);
+                })
                 .mouseover(() => this._emphasize(this[pageString]))
                 .mouseout(() => this._resetPales());
         }
@@ -201,10 +201,10 @@ fetchDict("main/contact/contact.json").then(async (data) => {
                     Footer.contactSection.mainCls.append(elem({ tag: 'iframe' })
                         .id('contact_map')
                         .attr({
-                        frameborder: "0",
-                        allowfullscreen: "",
-                        src: data.map
-                    }));
+                            frameborder: "0",
+                            allowfullscreen: "",
+                            src: data.map
+                        }));
                 });
             }
         }

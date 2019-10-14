@@ -27,6 +27,7 @@
   --GREY8: rgb(40, 40, 40);
   --TRANS: rgba(0, 0, 0, 0);
 }
+
 @font-face {
   font-family: "BasisGrotesqueOffWhite";
   src: url("common/fonts/basis-grotesque-off-white.woff");
@@ -39,16 +40,11 @@
   font-family: "BasisGrotesqueBold";
   src: url("common/fonts/basis_grotesque_bold.otf")
 }
-
-html {
-  min-height: 100%;
-}
-
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--GREY7);
-  font-family: "BasisGrotesque", sans-serif;
+  font-family: BasisGrotesqueMedium, sans-serif;
   margin: 0;
   line-height: 24px;
   transition: filter 0.2s ease-in-out;
@@ -115,11 +111,41 @@ body {
   }
 }
 
+.main-cls {
+  max-width: 100%;
+  width: var(--w);
+  display: grid;
+  grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+  grid-column-gap: 24px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+@media screen and (min-width: 1023px) {
+  .main-cls {
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .main-cls{
+    background-color: pink;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .main-cls{
+    background-color: yellow;
+  }
+}
+
+
+
 h1 {
   font-family: BasisGrotesqueBold;
   margin: 0 0 20px 0;
   color: var(--GREY8);
 }
+
 @media screen and (min-width: 500px) {
   h1 {
     font-size: 64px;
@@ -139,10 +165,7 @@ h1 {
 
 
 
-
-
 h2 {
-  font-family: OpenSansBold;
   color: var(--GREY8);
   letter-spacing: -0.5px;
 }
@@ -202,11 +225,7 @@ a.arrow-trans:after {
   content: " ↗";
 }
 
-.main-cls {
-  margin: 0 auto;
-  max-width: 100%;
-  width: var(--w);
-}
+
 
 :root {
   --mobileNavbarHeight: 60px;
@@ -232,7 +251,6 @@ div#main div#home {
   }
 }
 
-
 #landing-fold {
   height: 640px;
   background-image: url('main/home/landing-fold-bg.png');
@@ -241,8 +259,9 @@ div#main div#home {
   background-position: 0 0;
   color: white;
 }
-
-
+#landing-fold h1 {
+color: white;
+}
 div#footer {
   box-shadow: 0 -1px 0 var(--GREY2);
   color: var(--GREY3);
@@ -329,15 +348,13 @@ div#footer > section#ugug_section {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  font-family: OpenSansBold;
   white-space: pre;
 }
 
 section#navbar_section {
-  background-color: rgba(255, 255, 255, 0.92);
-  position: fixed;
+  background-color: transparent;
+  position: absolute;
   width: 100%;
-  z-index: 5;
 }
 @media screen and (max-width: 500px) {
   section#navbar_section {
@@ -465,7 +482,7 @@ section#navbar_section > div#navbar {
   }
 }
 section#navbar_section > div#navbar.box-shadow {
-  box-shadow: inset 0 -1px 0 0 var(--GREY2);
+  /* box-shadow: inset 0 -1px 0 0 var(--GREY2); */
 }
 section#navbar_section > div#navbar > div, section#navbar_section > div#navbar > img {
   cursor: pointer;
@@ -486,8 +503,8 @@ section#navbar_section > div#navbar > img.uni {
   height: 40px;
   margin: auto 0;
 }
-section#navbar_section > div#navbar > div:nth-last-child(2) {
-  margin-right: auto;
+section#navbar_section > div#navbar > div:last-of-type {
+  margin-right: 0;
 }
 section#navbar_section > div#navbar > div:hover, section#navbar_section > div#navbar > div.selected {
   color: black;
@@ -576,7 +593,6 @@ div#intro > div#right_widget > div#news {
   position: relative;
 }
 div#intro > div#right_widget > div#news > div.title {
-  font-family: OpenSansBold;
   line-height: 20px;
   color: var(--GREY8);
   margin-bottom: unset;
@@ -708,7 +724,6 @@ section#funding_section > div.main-cls > div#sponsors_container > div.sponsor > 
   height: 160px;
 }
 section#funding_section > div.main-cls > div#sponsors_container > div.sponsor > div.sponsor-title {
-  font-family: OpenSansBold;
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -1157,9 +1172,7 @@ div#home > div#neuroanatomy_intro {
   margin-bottom: calc(var(--gap));
   width: calc(var(--w) * 0.6);
 }
-div#home > div#neuroanatomy_intro > p:first-of-type {
-  font-family: OpenSansBold;
-}
+
 div#home > div#brains_flex {
   display: flex;
   flex-wrap: wrap;
