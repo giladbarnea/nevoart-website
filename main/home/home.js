@@ -88,7 +88,7 @@ const HomePage = () => {
         //     newsChildren = rightWidget.news.children().map(c => c.e);
         // }
     }
-    WindowElem.promiseLoaded().then(buildRightWidgetAndNewsChildren);
+    // WindowElem.promiseLoaded().then(buildRightWidgetAndNewsChildren);
     async function init() {
         const data = await fetchDict('main/home/home.json');
         // if (!MOBILE) {
@@ -103,12 +103,12 @@ const HomePage = () => {
         //     console.log(`setting #mobile_cover_image_container > img src to main/home/${data["news-cover-image"]}`, 'grn');
         //     elem({ query: '#mobile_cover_image_container > img' }).attr({ src: `main/home/${data["news-cover-image"]}` });
         // }
-        if (Navbar === undefined)
-            await WindowElem.promiseLoaded();
+        // if (Navbar === undefined)
+            // await WindowElem.promiseLoaded();
         // Navbar.home.attr({ src: `main/home/${data.logo}` });
         const aboutText = elem({ query: "#about > .about-text" });
         // aboutText.append(paragraph({ text: data["about-text"]}));
-        aboutText.append(elem({tag:'h2',text: data["about-text"]}));
+        aboutText.append(elem({tag:'h3',text: data["about-text"]}));
         if (!MOBILE) {
             // const newsData = new NewsData();
             let i = 0;
@@ -125,26 +125,46 @@ const HomePage = () => {
             // rightWidget.mouseover(() => newsData.stopAutoSwitch());
             // rightWidget.mouseout(() => newsData.startAutoSwitch());
         }
-        const researchData = await fetchDict('main/research/research.json');
-        const researchSnippets = elem({ query: "#research_snippets" });
-        for (let [i, [title, { thumbnail }]] of enumerate(researchData.items())) {
-            researchSnippets.append(div({ cls: 'snippet' })
-                .append(img({ src: `main/research/${thumbnail}` }), div({ cls: 'snippet-title', text: title }))
-                .click((event) => {
-                ResearchPage().init(i);
-                history.pushState(null, null, '#research');
-                Footer.attr({ hidden: '' });
-                Navbar.select(Navbar.research);
-            }));
+        // const researchData = await fetchDict('main/research/research.json');
+        const researchSnippet = elem({ query: "#research_snippet" });
+        const researchSnippetData = data["research-snippet"];
+        for(let snippet of researchSnippetData){
+            researchSnippet.append(paragraph({text:snippet}))    
         }
+
+        const interests = elem({ query: "#interests" });
+        const interestsData = data["interests"];
+        for(let interest of interestsData){
+            interests
+                .append(
+                    div({cls:'bullet-container'})
+                        .append(
+                            div({cls:'bullet'}),
+                            paragraph({text:interest})
+                        )
+                    )
+                // .append(paragraph({text:interest}))    
+        }
+
+        // researchSnippets.append(paragraph({ text: data["research-snippet"]}));
+        // for (let [i, [title, { thumbnail }]] of enumerate(researchData.items())) {
+        //     researchSnippets.append(div({ cls: 'snippet' })
+        //         .append(img({ src: `main/research/${thumbnail}` }), div({ cls: 'snippet-title', text: title }))
+        //         .click((event) => {
+        //         ResearchPage().init(i);
+        //         history.pushState(null, null, '#research');
+        //         Footer.attr({ hidden: '' });
+        //         Navbar.select(Navbar.research);
+        //     }));
+        // }
         const fundingData = data.funding;
-        FundingSection.removeAttr('hidden');
-        for (let [title, { image, text, large }] of dict(fundingData).items()) {
-            let sponsorImage = img({ src: `main/home/${image}` });
-            if (large === true)
-                sponsorImage.class('large');
-            FundingSection.sponsorsContainer.append(div({ cls: 'sponsor' }).append(sponsorImage, div({ cls: 'sponsor-title', text: title }), div({ cls: 'sponsor-text', text })));
-        }
+        // FundingSection.removeAttr('hidden');
+        // for (let [title, { image, text, large }] of dict(fundingData).items()) {
+        //     let sponsorImage = img({ src: `main/home/${image}` });
+        //     if (large === true)
+        //         sponsorImage.class('large');
+        //     FundingSection.sponsorsContainer.append(div({ cls: 'sponsor' }).append(sponsorImage, div({ cls: 'sponsor-title', text: title }), div({ cls: 'sponsor-text', text })));
+        // }
     }
     return { init };
 };

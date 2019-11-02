@@ -922,8 +922,34 @@ function anchor({ id, text, cls, href } = {}) {
 
 
 function enumerate(obj) {
+	// undefined    []
+	// {}           []
+	// []           []
+	// ""           []
+	// number       TypeError
+	// null         TypeError
+	// boolean      TypeError
+	// Function     TypeError
+	// "foo"        [ [0, "f"], [1, "o"], [2, "o"] ]
+	// [ "foo" ]    [ [0, "foo"] ]
+	// [ 10 ]       [ [0, 10] ]
+	// { a: "foo" } [ ["a", "foo"] ]
+	let typeofObj = typeof obj;
+	if (obj === undefined
+	    || isEmptyObj(obj)
+	    || isEmptyArr(obj)
+	    // @ts-ignore
+	    || obj === "") {
+		return [];
+	}
+	if (obj === null
+	    || typeofObj === "boolean"
+	    || typeofObj === "number"
+	    || typeofObj === "function") {
+		throw new TypeError(`${typeofObj} object is not iterable`);
+	}
 	let array = [];
-	if (Array.isArray(obj) || typeof obj[Symbol.iterator] === 'function') {
+	if (isArray(obj)) {
 		let i = 0;
 		for (let x of obj) {
 			array.push([i, x]);

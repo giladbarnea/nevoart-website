@@ -3,5 +3,15 @@
 	"logo": "",
 	"about-text": "We seek to understand the molecular and cellular mechanisms that govern protein synthesis under normal and stress conditions.",
 	"news": {},
-	"funding": {}
+	"funding": {},
+	"research-snippet": [
+		"Elroy-Stien’s lab is engaged with various research topics, all related to regulation of gene expression with emphasis on mRNA translation in mammalian cells in health and disease. Regulation of gene expression at the level of mRNA translation into proteins is fundamental to growth, differentiation and development of multi-cellular organisms.",
+		"We integrate state-of-the-art research methodologies to study the neurodegenerative genetic Vanishing White Matter (VWM) disease, to design and develop novel therapies, and to study basic mechanisms that govern protein synthesis during the cell cycle."
+	],
+	"interests": [
+		"Molecular mechanisms governing gene expression networks in response to physiological and stress signals.",
+		"The effects of mutations in translation initiation factor 2B (eIF2B) on global and specific gene expression, specifically in brain glial cells.",
+		"The link between eIF2B function and cellular metabolism.",
+		"Regulation of global and specific mRNA translation during cellular division."
+	]
 }
