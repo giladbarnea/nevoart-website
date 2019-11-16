@@ -734,64 +734,7 @@ div#intro > div#right_widget > div#news_cover_image_container {
 div#intro > div#right_widget > div#news_cover_image_container > img {
   width: calc(calc(0.45 * var(--w)) - 2 * 32px);
 }
-div#intro > div#right_widget > div#news {
-  display: flex;
-  flex-direction: column;
-  padding: 24px 32px;
-  line-height: 32px;
-  position: relative;
-}
-div#intro > div#right_widget > div#news > div.title {
-  line-height: 20px;
-  color: var(--GREY8);
-  margin-bottom: unset;
-}
-@media screen and (min-width: 500px) {
-  div#intro > div#right_widget > div#news > div.title {
-    font-size: 20px;
-  }
-}
 
-div#intro > div#right_widget > div#news > div.date {
-  color: var(--GREY5);
-}
-div#intro > div#right_widget > div#news > div.date.mb {
-  margin-bottom: 15px;
-}
-@media screen and (min-width: 500px) {
-  div#intro > div#right_widget > div#news > div.content {
-    font-size: 20px;
-  }
-}
-
-div#intro > div#right_widget > div#radios {
-  margin: auto auto 32px auto;
-}
-div#intro > div#right_widget > div#radios > .radio {
-  border-width: 1px;
-  border-color: var(--GREY3);
-  border-style: solid;
-  background-color: white;
-  border-radius: 100px;
-  cursor: pointer;
-  display: inline-block;
-  height: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
-  transition: background 100ms;
-  width: 15px;
-}
-div#intro > div#right_widget > div#radios > .radio[class~=selected] {
-  background-color: var(--GREY3);
-  border-color: var(--GREY4);
-}
-
-div#research_snippets_container {
-  text-align: left;
-}
-div#research_snippets_container > h1 {
-  margin-bottom: 30px;
-}
 div#research_snippets_container > div#research_snippets > div.snippet {
   width: var(--snippetWidth);
   cursor: pointer;
