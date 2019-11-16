@@ -163,7 +163,7 @@ const HomePage = () => {
         //         Navbar.select(Navbar.research);
         //     }));
         // }
-        const fundingData = data.funding;
+        // const fundingData = data.funding;
         // FundingSection.removeAttr('hidden');
         // for (let [title, { image, text, large }] of dict(fundingData).items()) {
         //     let sponsorImage = img({ src: `main/home/${image}` });
