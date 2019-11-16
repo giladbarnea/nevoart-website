@@ -14,7 +14,7 @@
   --SMALL_GAP0: 30px;
   --SMALL_GAP1: 20px;
   --SMALL_GAP2: 15px;
-  --BLUE: rgb(59, 130, 240);
+  --BLUE: #0060DC;
   --GREY00: rgb(255, 255, 255);
   --GREY01: rgb(250, 250, 250);
   --GREY02: #EBEDF0;
@@ -163,13 +163,15 @@ section {
 
 .separator {
   height: 2px;
-  border-bottom: 2px solid var(--GREY02);
+  border-bottom: 1px solid var(--GREY02);
   margin-top: 22px;
 }
 
 .table {
   display: flex;
+  margin-bottom: 120px;
 }
+
 
 /* ==================  END LAYOUT  ================== */
 
@@ -183,7 +185,7 @@ section {
   .true-first-half {
     width: 44%;
     padding: 52px 6% 0 0;
-    border-right: 2px solid var(--GREY02);
+    border-right: 1px solid var(--GREY02);
   }
 
   .true-second-half {
@@ -204,9 +206,18 @@ section {
     grid-column-end: 8;
   }
   .seven-rest{}
-  .first-third {}
-  .second-third{}
-  .third-third{}
+  .first-third {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .second-third{
+    grid-column-start: 5;
+    grid-column-end: 9;
+  }
+  .third-third{
+    grid-column-start: 9;
+    grid-column-end: 13;
+  }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1023px) {
@@ -234,8 +245,6 @@ section {
 /* ==================  END GRID  ================== */
 
 /* ==================  TYPOGRAPHY  ================== */
-
-
 @font-face {
   font-family: "BasisGrotesqueOffWhite";
   src: url("common/fonts/basis-grotesque-off-white.woff");
@@ -248,20 +257,6 @@ section {
   font-family: "BasisGrotesqueBold";
   src: url("common/fonts/basis_grotesque_bold.otf")
 }
-
-.bold {
-  font-family: BasisGrotesqueBold;
-}
-
-.ceteralign{
-  text-align: center;
-}
-
-a {
-  border-bottom: 1px solid white;
-  cursor: pointer;
-}
-
 h1 {
   font-family: BasisGrotesqueBold;
   margin: 0 0 20px 0;
@@ -281,7 +276,6 @@ h3 {
   letter-spacing: -0.2px;
   margin: 0 0 20px 0;
   font-weight: normal;
-
 }
 h4, p {
 
@@ -298,8 +292,58 @@ h6{
 p {
   margin: 0 0 20px 0;
 }
-#interests p {
 
+.bold {
+  font-family: BasisGrotesqueBold;
+}
+
+.centeralign{
+  text-align: center;
+}
+a {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.readmore {
+  width: fit-content;
+  margin-bottom:0;
+  color: var(--BLUE);
+  border-bottom: 1px solid var(--BLUE);
+}
+
+.bullet-container{
+  display: flex;
+}
+
+.bullet {
+ width: 24px;
+ height: 24px;
+ border: 1px solid var(--GREY8);
+ border-radius: 100%;
+ margin-right: 24px;
+ margin-top: 4px;
+ flex: none;
+}
+
+.inner-bullet {
+ width: 6px;
+ height: 6px;
+ border-radius: 100%;
+ margin: 9px;
+}
+
+.bullet-container:nth-of-type(1) .inner-bullet{
+  background-color: #588CFF;
+}
+.bullet-container:nth-of-type(2) .inner-bullet{
+  background-color: #8A72EB;
+}
+.bullet-container:nth-of-type(3) .inner-bullet{
+  background-color: #B79DEC;
+}
+.bullet-container:nth-of-type(4) .inner-bullet{
+  background-color: #3DB9BE;
 }
 
 @media screen and (min-width: 500px) {
@@ -345,44 +389,7 @@ p {
 
 /* ==================  END TYPOGRAPHY  ================== */
 
-
-@media screen and (min-width: 500px) {
-  p {
-    font-size: 20px;
-    line-height: 32px;
-  }
-}
-@media screen and (max-width: 500px) {
-  p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-:root {
-  --mobileNavbarHeight: 60px;
-  --regularNavbarHeight: 70px;
-}
-
-div#main {
-  text-align: center;
-}
-div#main div#home {
-  display: block;
-  opacity: 1;
-  position: relative;
-}
-@media screen and (min-width: 500px) {
-  div#main div#home {
-    padding-top: calc(var(--regularNavbarHeight) + 60px);
-  }
-}
-@media screen and (max-width: 500px) {
-  div#main div#home {
-    padding-top: var(--mobileNavbarHeight);
-  }
-}
-
+/* ==================      STYLES      ================== */
 
 #landing-fold {
   height: 640px;
@@ -405,11 +412,77 @@ div#main div#home {
 color: white;
 }
 
+.research-block {
+  background-color: #FAFAF8;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.20);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.research-block:hover{
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.10);
+  cursor: pointer;
+}
+
+#about-orna {
+  background: #F2FAFF;
+}
+
+.profile-pic {
+  background-image: url('main/home/orna_profile.png');
+  width: 160px;
+  height: 160px;
+  background-size: 160px;
+  margin-top: -132px;
+  margin-bottom: 36px;
+}
+
+.bio-labels{
+  display: flex;
+}
+
+.label {
+  background: var(--BLUE);
+  padding: 2px 12px;
+  color: white;
+  border-radius: 4px;
+  margin-right:8px;
+}
 
 
 
 
 
+
+
+
+
+
+
+:root {
+  --mobileNavbarHeight: 60px;
+  --regularNavbarHeight: 70px;
+}
+
+div#main {
+  text-align: center;
+}
+div#main div#home {
+  display: block;
+  opacity: 1;
+  position: relative;
+}
+
+@media screen and (min-width: 500px) {
+  div#main div#home {
+    padding-top: calc(var(--regularNavbarHeight) + 60px);
+  }
+}
+@media screen and (max-width: 500px) {
+  div#main div#home {
+    padding-top: var(--mobileNavbarHeight);
+  }
+}
 div#footer {
   box-shadow: 0 -1px 0 var(--GREY2);
   color: var(--GREY3);

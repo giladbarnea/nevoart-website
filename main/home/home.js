@@ -139,12 +139,18 @@ const HomePage = () => {
                 .append(
                     div({cls:'bullet-container'})
                         .append(
-                            div({cls:'bullet'}),
+                            div({cls:'bullet'})
+                                .append(
+                                    div({cls:'inner-bullet'})
+                                ),
                             paragraph({text:interest})
                         )
                     )
-                // .append(paragraph({text:interest}))    
         }
+
+        const bio = elem({ query: "#short-bio" });
+        const bioData = data["bio"];
+         bio.append(paragraph({text:bioData}))
 
         // researchSnippets.append(paragraph({ text: data["research-snippet"]}));
         // for (let [i, [title, { thumbnail }]] of enumerate(researchData.items())) {
