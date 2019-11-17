@@ -16,9 +16,9 @@ class BadArgumentsAmountError extends Error {
 
 	static getArgNamesValues(argsWithValues) {
 		return Object.entries(argsWithValues)
-		             // @ts-ignore
-		             .flatMap(([argname, argval]) => `${argname}: ${argval}`)
-		             .join('", "');
+			// @ts-ignore
+			          .flatMap(([argname, argval]) => `${argname}: ${argval}`)
+			          .join('", "');
 	}
 
 	static getArgsWithValues(passedArgs) {
@@ -920,6 +920,53 @@ function anchor({ id, text, cls, href } = {}) {
 	return new Anchor({ id, text, cls, href });
 }
 
+function isEmptyObj(obj) {
+	// {}               true
+	// new Boolean()    true
+	// new Number()     true
+	// {hi:"bye"}       false
+	// []               false
+	// undefined        false
+	// null             false
+	// ()=>{}           false
+	// function(){}     false
+	// Boolean()        false
+	// Number()         false
+	return isObject(obj) && !isArray(obj) && Object.keys(obj).length === 0;
+}
+
+function isArray(obj) {
+	return typeof obj !== "string" && (Array.isArray(obj) || typeof obj[Symbol.iterator] === 'function');
+}
+
+function isObject(obj) {
+	// {}               true
+	// {hi:"bye"}       true
+	// []               true
+	// new Boolean()    true
+	// new Number()     true
+	// undefined        false
+	// null             false
+	// ()=>{}           false
+	// function(){}     false
+	// Boolean()        false
+	// Number()         false
+	return typeof obj === 'object' && !!obj;
+}
+
+function isEmptyArr(collection) {
+	return isArray(collection) && getLength(collection) === 0;
+}
+
+function shallowProperty(key) {
+	return function (obj) {
+		return obj == null ? void 0 : obj[key];
+	};
+}
+
+function getLength(collection) {
+	return shallowProperty('length')(collection);
+}
 
 function enumerate(obj) {
 	// undefined    []
