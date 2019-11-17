@@ -276,7 +276,7 @@ h1 {
 }
 
 h2 {
-  font-family: BasisGrotesque-Bold;
+  font-family: BasisGrotesqueBold;
   font-size: 36px;
   letter-spacing: -1px;
 }
@@ -356,6 +356,11 @@ a {
 }
 .bullet-container:nth-of-type(4) .inner-bullet{
   background-color: #3DB9BE;
+}
+
+#footer p {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media screen and (min-width: 500px) {
@@ -486,6 +491,11 @@ a.label {
 
 #footer {
   background: white;
+  padding-top: 100px;
+}
+
+#footer .main-cls {
+  margin-bottom: 0;
 }
 
 
@@ -752,11 +762,7 @@ div#research_snippets_container > div#research_snippets > div.snippet > img {
   width: inherit;
   border-radius: 20px;
 }
-div#research_snippets_container > div#research_snippets > div.snippet > div.snippet-title {
-  font-family: OpenSansSemiBold;
-  font-size: 20px;
-  line-height: 26px;
-}
+
 @media screen and (min-width: 500px) {
   div#research_snippets_container > div#research_snippets {
     --snippetWidth: calc((var(--w) - 3 * var(--GAP1)) / 4);
@@ -929,10 +935,7 @@ div#home.team-page > div.grid > div.person > img {
 div#home.team-page > div.grid > div.person > div {
   text-transform: capitalize;
 }
-div#home.team-page > div.grid > div.person > div.name {
-  font-size: large;
-  font-family: OpenSansSemiBold;
-}
+
 div#home.team-page > div.grid > div.person > div.role {
   color: var(--GREY6);
   font-family: OpenSansItalic;
@@ -1096,10 +1099,7 @@ div#publications_container > div.year > div.publication > div.content-div > span
   color: var(--GREY6);
   font-size: 14px;
 }
-div#publications_container > div.year > div.publication > div.content-div > div.publication-title {
-  font-family: OpenSansSemiBold;
-  margin-bottom: 10px;
-}
+
 
 
 div#home.gallery-page div#images_container[class=theater] {
