@@ -4,9 +4,7 @@ const ResearchPage = () => {
         const data = await fetchDict('main/research/research.json');
         const articles = [];
         let emptied = false;
-        for (let [i, [title, { image, text, circle }]] of enumerate(data.items())) {
-            let articleCls = i % 2 == 0 ? '' : 'reverse';
-            let imgCls = circle === true ? 'circle' : '';
+        for (let [i, [title, { image, text, circle, caption }]] of enumerate(data.items())) {
             let imgElem;
             let cachedImage = CacheDiv[`research.${image}`];
             if (cachedImage !== undefined) {
@@ -22,12 +20,13 @@ const ResearchPage = () => {
                 }
                 imgElem = img({ src });
             }
-            imgElem.class(imgCls);
-            let article = div({ cls: `article ${articleCls}` })
+            imgElem.class('two-thirds');
+            let article = elem({ tag: 'section', cls: 'main-cls'})
                 .cacheAppend({
-                title: elem({ tag: 'h1', text: title }),
-                text: paragraph({ cls: "text" }).html(text),
-                img: imgElem
+                title: elem({ tag: 'h2', cls: 'first-third', text: title }),
+                text: paragraph({ cls: "text, two-thirds" }).html(text),
+                img: imgElem,
+                caption: elem({tag: 'h6', cls: 'two-thirds', text: caption})
             });
             articles.push(article);
             if (!emptied) {

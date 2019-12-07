@@ -21,11 +21,11 @@ const Routing = (() => {
         if (bool(url)) {
             if (pageStrings().slice(1).includes(url)) {
                 console.log(`\t%cvalid url ("${url}"), calling pageObj().init()`, `color: ${BLUE}`);
-                if (url === "gallery")
-                    Footer.attr({ hidden: '' });
-                else
-                    Footer.removeAttr('hidden');
-                FundingSection.attr({ hidden: '' });
+                // if (url === "gallery")
+                //     Footer.attr({ hidden: '' });
+                // else
+                    // Footer.removeAttr('hidden');
+                // FundingSection.attr({ hidden: '' });
                 const pageObj = getPageObj(url);
                 pageObj().init();
                 if (Navbar === undefined)
