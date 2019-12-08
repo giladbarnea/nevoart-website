@@ -319,9 +319,8 @@ h6{
   border-bottom: 1px solid white;
 }
 
-a {
+a, p.readmore {
   text-decoration: none;
-  font-size: inherit;
   width: fit-content;
   margin-bottom: 0;
   color: var(--BLUE);
@@ -439,6 +438,8 @@ color: white;
   border-radius: 8px;
   padding: 24px;
   transition: all 0.2s ease-in-out;
+  border: none;
+  color: inherit;
 }
 
 .research-block:hover{
@@ -516,7 +517,6 @@ a.label {
 .research-page h2 {
   margin-top: 0;
 }
-
 
 .research-page img {
   width: -webkit-fill-available;

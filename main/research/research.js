@@ -38,12 +38,13 @@ const ResearchPage = () => {
         if (selectedIndex !== undefined) {
             const selectedArticle = articles[selectedIndex];
             const howFar = selectedIndex / articles.length;
-            selectedArticle.e.scrollIntoView({ behavior: "smooth", block: "center" });
+            selectedArticle.e.scrollIntoView({ behavior: "smooth",  });
             await wait(howFar * 1000);
             selectedArticle.title.addClass('highlighted');
             await wait(600);
             selectedArticle.title.removeClass('highlighted');
         }
+
     }
     return { init };
 };
