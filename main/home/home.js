@@ -148,7 +148,7 @@ const HomePage = () => {
                 )
         }
 
-        const researchProjects = elem({ query: "#landing-research" });
+        const researchProjects = elem({ query: "#research-projects" });
         const researchProjectsData = data["researchProjects"];
         for (let [i, researchProject] of enumerate(researchProjectsData)) {
             researchProjects
