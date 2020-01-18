@@ -44,8 +44,8 @@ const ResearchPage = () => {
         Home.class('research-page')
             .append(
                 elem({ tag: 'section', cls: 'main-cls page-intro' }).append(
-                    elem({ tag: 'h1', cls: 'page-title seven-first', text: 'Research' }),
-                    elem({ tag: 'p', cls: 'seven-first', text: pageIntro })
+                    elem({ tag: 'h1', cls: 'page-title nine-first', text: 'Research' }),
+                    elem({ tag: 'p', cls: 'nine-first', text: pageIntro })
                 ),
                 ...articles
             );

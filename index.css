@@ -172,6 +172,11 @@ section {
   padding: 0;
 }
 
+.page-intro {
+  padding-top: 100px;
+  border-bottom: 1px solid var(--GREY02)
+}
+
 .separator {
   height: 2px;
   border-bottom: 1px solid var(--GREY02);
@@ -216,6 +221,12 @@ section {
     grid-column-start: 1;
     grid-column-end: 8;
   }
+
+  .nine-first {
+    grid-column-start: 1;
+    grid-column-end: 10;
+  }
+
   .seven-rest{}
   .first-third {
     grid-column-start: 1;
