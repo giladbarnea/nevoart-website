@@ -70,7 +70,7 @@ WindowElem.on({
         if(window.location.hash !== "")
             fetchDict('main/home/home.json').then(({ logo }) => Navbar.home.attr({ src: `main/home/${logo}` }));
         function cache(file, page) {
-            console.log(whsat)
+            // console.log(whsat)
             if(!file) return;
             let src;
             if(file.includes('http') || file.includes('www')) {
@@ -132,8 +132,8 @@ class NavbarElem extends BetterHTMLElement {
                     console.log(`navbar ${pageString} click`);
                     Routing.navigateTo(pageString);
                 })
-                .mouseover(() => this._emphasize(this[pageString]))
-                .mouseout(() => this._resetPales());
+                //.mouseover(() => this._emphasize(this[pageString]))
+                //.mouseout(() => this._resetPales());
         }
     }
     select(child) {

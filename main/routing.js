@@ -31,6 +31,8 @@ const Routing = (() => {
                 if (Navbar === undefined)
                     await WindowElem.promiseLoaded();
                 Navbar.select(Navbar[url]);
+                Body.addClass('permalink');
+
             }
             else {
                 console.log(`%cRouting.initPage(), bad url, not in pageStrings(): "${url}". Calling Routing.navigateTo("home")`, `color: ${BLUE}`);

@@ -22,9 +22,9 @@
   --GREY3: rgb(204, 204, 204);
   --GREY4: rgb(187, 187, 187);
   --GREY5: rgb(153, 153, 153);
-  --GREY6: rgb(252, 242, 242);
-  --GREY7: rgb(68, 68, 68);
-  --GREY8: rgb(40, 40, 40);
+  --GREY6: rgb(138, 141, 145);
+  --GREY7: rgb(101, 103, 107);
+  --GREY8: rgb(10, 10, 10);
   --TRANS: rgba(0, 0, 0, 0);
 }
 
@@ -32,7 +32,7 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--GREY7);
+  color: var(--GREY8);
   font-family: BasisGrotesqueMedium, sans-serif;
   margin: 0;
 }
@@ -144,6 +144,15 @@ body {
   transition: all 0.2s ease-in-out;
   border: none;
 }
+
+.permalink #navbar > a {
+  color: var(--GREY6);
+}
+
+.permalink #navbar > a.selected {
+  color: var(--GREY8);
+}
+
 #navbar a:last-of-type {
   margin-right:0;
 }
@@ -286,7 +295,6 @@ section {
 h1 {
   font-family: BasisGrotesqueBold;
   margin: 0 0 20px 0;
-  color: var(--GREY8);
   font-weight: normal;
 }
 
