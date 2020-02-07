@@ -604,14 +604,27 @@ a.label {
   flex: auto;
 }
 
+.publication .highlight {
+  margin: 12px 0;
+  color: var(--GREY6);
+}
+
+.publication .highlight::before {
+  content: "Highlighted in:";
+  font-style: italic;
+  font-style: bold;
+  margin-right: 8px;
+  color: var(--GREY8);
+}
+
 #journal-banner {
   height: 34px;
-  min-width: 100px;
-  margin: 0 -24px 0 0;
+  flex: none;
+  margin: 0 -25px 0 24px;
   position: relative;
   background: var(--BLUE);
   color: white;
-  padding: 7px 16px 0px 30px;
+  padding: 7px 16px 0px 34px;
   line-height: 24px;
   font-size: 16px;
   text-align: right;

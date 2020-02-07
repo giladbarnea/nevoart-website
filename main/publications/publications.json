@@ -1,94 +1,89 @@
 {
 	"selected": [
-		"Task-free MRI predicts individual differences in brain activity during task performance",
-		"learning in the fast lane: new insights into neuroplasticity",
-		"Separate parts of occipito-temporal white matter fibers are associated with recognition of faces and places",
-		"Micro-structural assessment of short term plasticity dynamics"
+		"eIF2B Mutations Cause Mitochondrial Malfunction in Oligodendrocytes",
+		"Drug Screening Identifies Sigma-1-Receptor as a Target for the Therapy of VWM Leukodystrophy",
+		"A Unique ISR Program Determines Cellular Responses to Chronic Stress",
+		"Mitochondrial malfunction in vanishing white matter disease: a disease of the cytosolic translation machinery"
 	],
 	"publications": {
-		"learning in the fast lane: new insights into neuroplasticity": {
-			"year": 2012,
-			"creds": "Sagi Y., Tavor I., Hofstetter S., Tzur-Moryosef S.,  Blumenfeld-Katzir T. & Assaf Y.",
-			"mag": "Neuron 73, 1195-203",
-			"link": "https://www.sciencedirect.com/science/article/pii/S089662731200178X",
-			"journal": "lorem ipsum"
-		},
-		"Micro-structural assessment of short term plasticity dynamics": {
+		"Novel Proteomic Approach (PUNCH-P) Reveals Cell Cycle Specific Fluctuations in mRNA Translation": {
 			"year": 2013,
-			"creds": "Tavor I., Hofstetter S. & Assaf Y.",
-			"mag": "NeuroImage 81, 1-7",
-			"link": "https://www.sciencedirect.com/science/article/pii/S1053811913005442",
-			"journal": "lorem ipsum"
+			"creds": "Aviner R., Geiger T., Elroy-Stein, O.",
+			"mag": "27,1834-1844",
+			"link": "http://genesdev.cshlp.org/content/27/16/1834.long",
+			"journal": "Genes Dev.",
+			"highlight": "Miura, G.: \"Pack a PUNCH\" (2013) Research Highlights, Nature Chemical Biology,9,601. doi:10.1038/nchembio.1347 \n\nLou, K-J.: \"Puromycin-associated nascent chain proteomics (PUNCH-P) for monitoring protein synthesis\" (2013) SciBX: 6(35); doi:10.1038/scibx.2013.971 [Science-Buisness eXchange; Nature.com]",
+			"supTwo": "www.ipsum"
 		},
-		"Short-Term Learning Induces White Matter Plasticity in the Fornix": {
-			"year": 2013,
-			"creds": "Hofstetter S., Tavor I., Tzur Moryosef S. & Assaf Y.",
-			"mag": "Journal of Neuroscience 33, 12844-50",
-			"link": "https://www.jneurosci.org/content/jneuro/33/31/12844.full.pdf",
-			"journal": "lorem ipsum"
-		},
-		"Separate parts of occipito-temporal white matter fibers are associated with recognition of faces and places": {
+		"PUNCH-P for global translatome profiling: Methodology, insights and comparison to other techniques": {
 			"year": 2014,
-			"creds": "Tavor I., Yablonski M., Mezer A., Rom S., Assaf Y. & Yovel G.",
-			"mag": "NeuroImage 86, 123-30",
-			"link": "https://www.sciencedirect.com/science/article/pii/S1053811913008574",
-			"journal": "lorem ipsum"
+			"creds": "Aviner R., Geiger T., Elroy-Stein, O.",
+			"mag": "(1), eLocation ID: e27516",
+			"link": "http://www.elroystein-tau.com/wp-content/uploads/2014/06/Aviner-TRANSLATION-2013.pdf",
+			"journal": "Translation1"
 		},
-		"In vivo correlation between axon diameter and conduction velocity in the human brain": {
+		"Genome-wide identification and quantification of protein synthesis in cultured cells and whole tissues by puromycin-associated nascent chain proteomics (PUNCH-P)": {
+			"year": 2014,
+			"creds": "Aviner R., Geiger T., Elroy-Stein, O.",
+			"mag": "9(4), 751-760",
+			"link": "https://www.nature.com/articles/nprot.2014.051",
+			"journal": "Nature Protocols"
+		},
+		"Proteomics-level analysis of myelin formation and regeneration in a mouse model for Vanishing White Matter disease": {
 			"year": 2015,
-			"creds": "Horowitz A., Barazany D., Tavor I., Bernstein M., Yovel G. & Assaf Y.",
-			"mag": "Brain Structure and Function 220, 1-12",
-			"link": "https://link.springer.com/article/10.1007/s00429-014-0871-0",
-			"journal": "lorem ipsum"
+			"creds": "Gat-Viks I., Geiger T., Barbi M., Raini G., Elroy-Stein O.",
+			"mag": "134(3), 513-526.",
+			"link": "https://www.ncbi.nlm.nih.gov/pubmed/25920008",
+			"journal": "J. Neurochem."
 		},
-		"Response to comments on the paper by Horowitz et al.": {
+		"Uncovering Hidden Layers of Cell Cycle Regulation through Integrative Multi-omic Analysis": {
 			"year": 2015,
-			"creds": "Horowitz A., Barazany D., Tavor I., Yovel G. & Assaf Y.",
-			"mag": "Brain Structure and Function 220, 1791",
-			"link": "https://link.springer.com/article/10.1007/s00429-015-1031-x",
-			"journal": "lorem ipsum"
+			"creds": "Aviner R., Shenoy A., Elroy-Stein O., Geiger T.",
+			"mag": "Oct 6;11(10):e1005554",
+			"link": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005554",
+			"journal": "PLoS Genet."
 		},
-		"Sex beyond the genitalia: The human brain mosaic": {
-			"year": 2015,
-			"creds": "Joel D., Berman Z., Tavor I., Wexler N., Gaber O., Stein Y., Shefi N., Pool J., Urchs S., Margulies D.S., Liem F., Hänggi J., Jäncke L. & Assaf Y.",
-			"mag": "Proc. Natl. Acad. Sci., 15468-73",
-			"link": "https://www.pnas.org/content/pnas/112/50/15468.full.pdf",
-			"journal": "lorem ipsum"
+		"Mutant eIF2B leads to impaired mitochondrial oxidative phosphorylation in Vanishing White Matter Disease": {
+			"year": 2017,
+			"creds": "Gali R., Sharet R., Herrero M., Atzmon A., Shenoy A., Geiger T., Elroy-Stein O.",
+			"mag": "doi:10.1111/jnc.14024",
+			"link": "https://onlinelibrary.wiley.com/doi/full/10.1111/jnc.14024",
+			"journal": "J. Neurochem."
 		},
-		"Task-free MRI predicts individual differences in brain activity during task performance": {
-			"year": 2016,
-			"creds": "Tavor I., Parker Jones O., Mars R.B., Smith S.M., Behrens T.E. & Jbabdi S.",
-			"mag": "Science 352, 216-220",
-			"link": "https://science.sciencemag.org/content/352/6282/216",
-			"journal": "lorem ipsum"
+		"Proteomic analysis of polyribosomes identifies splicing factors as potential regulators of translation during mitosis": {
+			"year": 2017,
+			"creds": "Aviner R., Hofmann S., Elman T., Shenoy A., Geiger T., Elkon R., Ehrlich M., Elroy-Stein O.",
+			"mag": "doi: 10.1093/nar/gkx326.",
+			"link": "https://academic.oup.com/nar/article/45/10/5945/3782599",
+			"journal": "Nucleic Acids Res."
 		},
-		"The Diffusion Tensor Imaging Properties of the Normal Testicles at 3 Tesla Magnetic Resonance Imaging": {
+		"Mitochondrial malfunction in vanishing white matter disease: a disease of the cytosolic translation machinery": {
+			"year": 2017,
+			"creds": "Elroy-Stein O.",
+			"mag": "Oct;12(10):1610-1612. doi: 10.4103/1673-5374.217329.",
+			"link": "http://www.nrronline.org/article.asp?issn=1673-5374;year=2017;volume=12;issue=10;spage=1610;epage=1612;aulast=Elroy-Stein",
+			"journal": "Neural Regen Res."
+		},
+		"A Unique ISR Program Determines Cellular Responses to Chronic Stress": {
+			"year": 2017,
+			"creds": "Guan B.J., van Hoef V., Jobava R., Elroy-Stein O., Valasek L.S., Cargnello M., Gao X.H., Krokowski D., Merrick W.C., Kimball S.R., Komar A.A., Koromilas A.E., Wynshaw-Boris A., Topisirovic I., Larsson O., Hatzoglou M.",
+			"mag": "Mol Cell. Dec 7;68(5):885-900.e6. doi: 10.1016/j.molcel.2017.11.007.",
+			"link": "https://www.sciencedirect.com/science/article/pii/S1097276517308420?via%3Dihub",
+			"journal": "Mol Cell."
+		},
+		"Drug Screening Identifies Sigma-1-Receptor as a Target for the Therapy of VWM Leukodystrophy": {
 			"year": 2018,
-			"creds": "Nissan N., Anaby D., Tavor I., Kleinbaum Y., Dotan Z., Konen E. & Portnoy O.",
-			"mag": "Academic Radiology",
-			"link": "https://www.clinicalkey.com/#!/content/playContent/1-s2.0-S1076633218304422?returnurl=https:%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1076633218304422%3Fshowall%3Dtrue&referrer=https:%2F%2Fwww.ncbi.nlm.nih.gov%2F",
-			"journal": "lorem ipsum"
+			"creds": "Atzmon A., Herrero M., Sharet-Eshed R., Gilad Y., Senderowitz H., Elroy-Stein O.",
+			"mag": "Front Mol Neurosci. Sep 18;11:336. doi: 10.3389/fnmol.2018.00336. eCollection 2018.",
+			"link": "https://www.frontiersin.org/articles/10.3389/fnmol.2018.00336/full",
+			"journal": "Front Mol Neurosci."
 		},
-		"Selective atrophy of the connected deepest cortical layers following small subcortical infarct": {
+		"eIF2B Mutations Cause Mitochondrial Malfunction in Oligodendrocytes": {
 			"year": 2019,
-			"creds": "Lotan E., Tavor I., Barazany D., Ben-Amitay S., Hoffmann C., Tsarfaty G., Assaf Y. & Tanne D.",
-			"mag": "Neurology 92 (6), 567-575",
-			"link": "https://n.neurology.org/content/92/6/e567",
-			"journal": "lorem ipsum"
-		},
-		"Short-Term Plasticity Following Motor Sequence Learning Revealed by Diffusion MRI": {
-			"year": 2019,
-			"creds": "Tavor I., Botvinik-Nezer R., Bernstein-Eliav M., Tsarfaty G. & Assaf Y.",
-			"mag": "bioRxiv, p.553628",
-			"link": "https://www.biorxiv.org/content/10.1101/553628v1",
-			"journal": "lorem ipsum"
-		},
-		"Brain structure changes induced by attention bias modification training": {
-			"year": 2019,
-			"creds": "Abend R., Rosenfelder A., Shamai D., Pine D.S., Tavor I., Assaf Y. & Bar-Haim Y.",
-			"mag": "Biological Psychology 146, 107736",
-			"link": "https://www.sciencedirect.com/science/article/pii/S030105111830677X",
-			"journal": "lorem ipsum"
+			"creds": "Herrero M, Mandelboum S, Elroy-Stein O.",
+			"mag": "Neuromolecular Med. https://doi.org/10.1007/s12017-019-08551-9.",
+			"link": "https://link.springer.com/article/10.1007%2Fs12017-019-08551-9",
+			"journal": "Neuromolecular Med"
 		}
 	},
 	"journals": {

@@ -1,6 +1,6 @@
 const PublicationsPage = () => {
     class Publication extends Div {
-        constructor(title, year, creds, mag, link, journal) {
+        constructor(title, year, creds, mag, link, journal, highlight, supOne, supTwo) {
             super({ cls: 'publication' });
             function _openLink() {
                 if (link.includes('http') || link.includes('www'))
@@ -9,7 +9,7 @@ const PublicationsPage = () => {
                     window.open(`main/publications/${link}`);
             }
             this.year = year;
-            this.cacheAppend({
+            const elements = {
                 content: div({ cls: "content-div" }).cacheAppend({
                     titleContent: div({ cls: "title" }).cacheAppend({
                         title: paragraph({ text: title, cls: "publication-title bold" }),
@@ -18,9 +18,18 @@ const PublicationsPage = () => {
                     creds: div({ text: creds, cls: "creds" }),
                     year: span({ text: ` (${year})`, cls: "year" }),
                     mag: span({ text: mag, cls: "mag" }),
-                    
                 }),
-            }).click(_openLink);
+            };
+            if (highlight){
+                elements.content.cacheAppend({highlight: div({ text: highlight, cls: "highlight" })});
+            }
+            if (supOne){
+                elements.content.cacheAppend({supOne: anchor({ text: "Supplementary 1", href: supOne, cls: "sup-btn" })});
+            }
+            if (supTwo){
+                elements.content.cacheAppend({supTwo: anchor({ text: "Supplementary 2", href: supOne, cls: "sup-btn" })});
+            }
+            this.cacheAppend(elements).click(_openLink);
         }
     }
     class Journal extends Anchor {
@@ -37,11 +46,11 @@ const PublicationsPage = () => {
         const selected = [];
         const journals = [];
         for (let title of selectedData) {
-            let { year, creds, mag, link, journal } = publicationsData[title];
-            selected.push(new Publication(title, year, creds, mag, link, journal));
+            let { year, creds, mag, link, journal, highlight, supOne, supTwo } = publicationsData[title];
+            selected.push(new Publication(title, year, creds, mag, link, journal, highlight, supOne, supTwo));
         }
-        for (let [title, { year, creds, mag, link, journal }] of dict(publicationsData).items()) {
-            publications.push(new Publication(title, year, creds, mag, link, journal));
+        for (let [title, { year, creds, mag, link, journal, highlight, supOne, supTwo }] of dict(publicationsData).items()) {
+            publications.push(new Publication(title, year, creds, mag, link, journal, highlight, supOne, supTwo));
         }
         for (let [title, { link }] of dict(journalsData).items()) {
             journals.push(new Journal(title, link));
