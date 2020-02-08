@@ -64,7 +64,7 @@ WindowElem.on({
                 team: '.team',
                 publications: '.publications',
                 gallery: '.gallery',
-                contact: '.contact',
+                // contact: '.contact',
             }
         });
         if(window.location.hash !== "")

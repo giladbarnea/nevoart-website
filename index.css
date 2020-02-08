@@ -617,6 +617,19 @@ a.label {
   color: var(--GREY8);
 }
 
+.publication .sup-btn {
+  padding: 8px;
+  border: 1px solid var(--BLUE);
+  border-radius: 4px;
+  display: inline-block;
+  margin: 12px 12px 0 0;
+}
+
+.publication .mag:after {
+  content: ' ';
+  display: block;
+}
+
 #journal-banner {
   height: 34px;
   flex: none;

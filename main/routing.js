@@ -14,7 +14,7 @@ const Routing = (() => {
         }
     }
     function pageStrings() {
-        return ["home", "research", "team", "publications", "gallery", "contact"];
+        return ["home", "research", "team", "publications", "gallery"];
     }
     async function initPage(url) {
         console.log(`%cRouting.initPage(url: "${url}")`, `color: ${BLUE}`);

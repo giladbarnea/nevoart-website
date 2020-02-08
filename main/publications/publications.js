@@ -27,7 +27,7 @@ const PublicationsPage = () => {
                 elements.content.cacheAppend({supOne: anchor({ text: "Supplementary 1", href: supOne, cls: "sup-btn" })});
             }
             if (supTwo){
-                elements.content.cacheAppend({supTwo: anchor({ text: "Supplementary 2", href: supOne, cls: "sup-btn" })});
+                elements.content.cacheAppend({supTwo: anchor({ text: "Supplementary 2", href: supTwo, cls: "sup-btn" })});
             }
             this.cacheAppend(elements).click(_openLink);
         }
