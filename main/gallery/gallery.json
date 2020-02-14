@@ -1,148 +1,122 @@
-[
-	{
-		"caption": "Before there was lab, there was Seinfeld :)",
-		"file": "00.jpeg",
-		"year": 2018
-	},
-	{
-		"caption": "Another day at the office",
-		"file": "01.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Sagol School of Neuroscience Retreat 2019",
-		"file": "03.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Niv presenting at the Sagol School of Neuroscience Retreat 2019",
-		"file": "02.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Sagol School of Neuroscience Retreat 2019",
-		"file": "04.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Another day at the office",
-		"file": "05.jpeg",
-		"year": 2018
-	},
-	{
-		"caption": "Sagol School of Neuroscience Retreat 2019",
-		"file": "06.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Sagol School of Neuroscience Retreat 2019",
-		"file": "07.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Sagol School of Neuroscience Retreat 2019",
-		"file": "08.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Sagol School of Neuroscience Retreat 2019",
-		"file": "09.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Keyboards cleaning day",
-		"file": "10.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Happy birthday to Shachar!",
-		"file": "11.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Happy birthday to Inbar!",
-		"file": "12.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "MRIing :)",
-		"file": "13.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "14.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "15.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Happy birthday to Michal!",
-		"file": "16.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "Happy birthday to Michal!",
-		"file": "17.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "18.jpeg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "19.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "23.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "21.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "22.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "20.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "OHBM 2019 Rome",
-		"file": "24.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "Families day",
-		"file": "25.jpg",
-		"year": 2019
-	},
-	{
-		"caption": "Girl Power!",
-		"file": "26.jpg",
-		"year": 2018
-	},
-	{
-		"caption": "Ido at Israel Neurological Association Meeting 2018",
-		"file": "27.jpg",
-		"year": 2018
-	},
-	{
-		"caption": "Ido at Israel Neurological Association Meeting 2018",
-		"file": "28.jpg",
-		"year": 2018
-	}
-]
-
+{
+	"Bio Images": [
+		{
+			"caption": "Before there was lab, there was Seinfeld :)",
+			"file": "00.jpeg"
+		},
+		{
+			"caption": "Another day at the office",
+			"file": "01.jpeg"
+		},
+		{
+			"caption": "Sagol School of Neuroscience Retreat 2019",
+			"file": "03.jpeg"
+		},
+		{
+			"caption": "Niv presenting at the Sagol School of Neuroscience Retreat 2019",
+			"file": "02.jpeg"
+		},
+		{
+			"caption": "Sagol School of Neuroscience Retreat 2019",
+			"file": "04.jpeg"
+		},
+		{
+			"caption": "Another day at the office",
+			"file": "05.jpeg"
+		},
+		{
+			"caption": "Sagol School of Neuroscience Retreat 2019",
+			"file": "06.jpeg"
+		},
+		{
+			"caption": "Sagol School of Neuroscience Retreat 2019",
+			"file": "07.jpeg"
+		},
+		{
+			"caption": "Sagol School of Neuroscience Retreat 2019",
+			"file": "08.jpeg"
+		},
+		{
+			"caption": "Sagol School of Neuroscience Retreat 2019",
+			"file": "09.jpeg"
+		},
+		{
+			"caption": "Keyboards cleaning day",
+			"file": "10.jpeg"
+		}
+	],
+	"Team Photos": [
+		{
+			"caption": "Happy birthday to Shachar!",
+			"file": "11.jpeg"
+		},
+		{
+			"caption": "Happy birthday to Inbar!",
+			"file": "12.jpeg"
+		},
+		{
+			"caption": "MRIing :)",
+			"file": "13.jpeg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "14.jpeg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "15.jpeg"
+		},
+		{
+			"caption": "Happy birthday to Michal!",
+			"file": "16.jpeg"
+		},
+		{
+			"caption": "Happy birthday to Michal!",
+			"file": "17.jpeg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "18.jpeg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "19.jpg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "23.jpg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "21.jpg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "22.jpg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "20.jpg"
+		},
+		{
+			"caption": "OHBM 2019 Rome",
+			"file": "24.jpg"
+		},
+		{
+			"caption": "Families day",
+			"file": "25.jpg"
+		},
+		{
+			"caption": "Girl Power!",
+			"file": "26.jpg"
+		},
+		{
+			"caption": "Ido at Israel Neurological Association Meeting 2018",
+			"file": "27.jpg"
+		},
+		{
+			"caption": "Ido at Israel Neurological Association Meeting 2018",
+			"file": "28.jpg"
+		}
+	]
+}

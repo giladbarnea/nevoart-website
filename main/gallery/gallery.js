@@ -1,44 +1,46 @@
 const GalleryPage = () => {
     async function init() {
         class GalleryImg extends Img {
-            constructor(brightness, contrast, file, year, caption) {
+            constructor(file, caption) {
                 super({});
                 this.path = null;
                 this.index = null;
+                this.collection = null;
                 this.caption = null;
-                this.contrast = 1;
-                this.brightness = 1;
                 if (file !== undefined)
                     this.path = file;
                 if (caption !== undefined)
                     this.caption = caption;
-                if (contrast !== undefined)
-                    this.contrast = contrast;
-                if (brightness !== undefined)
-                    this.brightness = brightness;
-                if (year !== undefined)
-                    this.year = year;
                 this.click((event) => {
                     console.log('this click:', this);
                     event.stopPropagation();
                     return toggleImgViewer(this);
                 });
             }
+            src(src) {
+                if (src === undefined) {
+                    return this._htmlElement.src;
+                } else {
+                    this._htmlElement.src = src;
+                    // this.css({backgroundImage:`url(${src})`})
+                    return this;
+                }
+            }
             getLeftImage() {
                 let i;
                 if (this.index === 0)
-                    i = galleryImgs.length - 1;
+                    i = this.collection.length - 1;
                 else
                     i = this.index - 1;
-                return galleryImgs[i];
+                return this.collection[i];
             }
             getRightImage() {
                 let i;
-                if (this.index === galleryImgs.length - 1)
+                if (this.index === this.collection.length - 1)
                     i = 0;
                 else
                     i = this.index + 1;
-                return galleryImgs[i];
+                return this.collection[i];
             }
         }
         console.log('GalleryPage init');
@@ -60,7 +62,7 @@ const GalleryPage = () => {
 </svg>
 `;
         function switchToImg(_selectedImg) {
-            console.log(`galleryImg.switchToImg(`, JSON.parstr({ _selectedImg }));
+            console.log(`galleryImg.switchToImg(`, _selectedImg);
             selectedImg = _selectedImg;
             imgViewer.caption.text(selectedImg.caption);
             let clone = _selectedImg.e.cloneNode();
@@ -79,7 +81,7 @@ const GalleryPage = () => {
         }
         function closeImgViewer() {
             Body.toggleClass('theater', false);
-            imagesContainer.toggleClass('theater', false);
+            // imagesContainer.toggleClass('theater', false);
             Navbar.css({ opacity: 1 });
             imgViewer
                 .toggleClass('on', false);
@@ -87,7 +89,7 @@ const GalleryPage = () => {
             imgViewer.isopen = false;
         }
         function toggleImgViewer(_selectedImg) {
-            console.log('galleryImg.toggleImgViewer(', JSON.parstr({ _selectedImg }));
+            console.log('galleryImg.toggleImgViewer(', _selectedImg);
             if (imgViewer.isopen)
                 return closeImgViewer();
             imgViewerClose.toggleClass('on', true);
@@ -95,114 +97,85 @@ const GalleryPage = () => {
             switchToImg(_selectedImg);
             imgViewer.isopen = true;
             Body.toggleClass('theater', true);
-            imagesContainer.toggleClass('theater', true);
+            // imagesContainer.toggleClass('theater', true);
             Navbar.css({ opacity: 0 });
         }
         const imgViewer = div({ id: 'img_viewer' })
             .cacheAppend({
-            left: div({ id: 'left_chevron', cls: 'left' }).html(chevronSvg).click(gotoAdjImg),
-            img: img({}),
-            right: div({ id: 'right_chevron', cls: 'right' }).html(chevronSvg).click(gotoAdjImg),
-            caption: div({ id: 'caption' })
-        }).click((event) => {
-            console.log('imgViewer click, stopping propagation');
-            event.stopPropagation();
-        });
+                left: div({ id: 'left_chevron', cls: 'left' }).html(chevronSvg).click(gotoAdjImg),
+                img: img({}),
+                right: div({ id: 'right_chevron', cls: 'right' }).html(chevronSvg).click(gotoAdjImg),
+                caption: div({ id: 'caption' })
+            }).click((event) => {
+                console.log('imgViewer click, stopping propagation');
+                event.stopPropagation();
+            });
         imgViewer.isopen = false;
-        const data = await fetchArray("main/gallery/gallery.json");
-        const galleryImgs = [];
-        for (let { brightness, contrast, file, year, caption } of data) {
-            let galleryImg = new GalleryImg(brightness, contrast, file, year, caption);
-            let cachedImage = CacheDiv[`gallery.${file}`];
-            if (cachedImage !== undefined) {
-                galleryImg.wrapSomethingElse(cachedImage.removeAttr('hidden'));
-                console.log(...less(`gallery | "gallery.${file}" loaded from cache`));
+        const { "Bio Images": bioImagesData, "Team Photos": teamPhotosData } = await fetchDict("main/gallery/gallery.json");
+        function populateArray(data) {
+            const arr = [];
+            for (let { file, caption } of data) {
+                let galleryImg = new GalleryImg(file, caption);
+                let cachedImage = CacheDiv[`gallery.${file}`];
+                if (cachedImage !== undefined) {
+                    galleryImg.wrapSomethingElse(cachedImage.removeAttr('hidden'));
+                    console.log(...less(`gallery | "gallery.${file}" loaded from cache`));
+                }
+                else {
+                    let src = `main/gallery/${file}`;
+                    galleryImg.src(src);
+                }
+                arr.push(galleryImg);
             }
-            else {
-                let src = `main/gallery/${file}`;
-                galleryImg.src(src);
-            }
-            galleryImg.css({ filter: `contrast(${contrast || 1}) brightness(${brightness || 1})` });
-            galleryImgs.push(galleryImg);
+            return arr
         }
-        galleryImgs
-            .sort(({ year: yearA }, { year: yearB }) => yearB - yearA)
-            .forEach((image, i) => image.index = i);
-        const yearToYearDiv = {};
-        let count = 0;
-        function appendToRow(yearDiv, galleryImg, count) {
-            switch (count % 4) {
-                case 0:
-                    yearDiv.grid.row0.append(galleryImg);
-                    break;
-                case 1:
-                    yearDiv.grid.row1.append(galleryImg);
-                    break;
-                case 2:
-                    yearDiv.grid.row2.append(galleryImg);
-                    break;
-                case 3:
-                    yearDiv.grid.row3.append(galleryImg);
-                    break;
-            }
-        }
-        for (let galleryImg of galleryImgs) {
-            let yearDiv;
-            if (galleryImg.year in yearToYearDiv) {
-                count++;
-                yearDiv = yearToYearDiv[galleryImg.year];
-            }
-            else {
-                count = 0;
-                yearDiv = div({ cls: 'year' })
-                    .cacheAppend({
-                    title: div({ cls: 'year-title' }).text(galleryImg.year),
-                    grid: div({ cls: 'grid' }).cacheAppend({
-                        row0: div({ cls: 'row' }),
-                        row1: div({ cls: 'row' }),
-                        row2: div({ cls: 'row' }),
-                        row3: div({ cls: 'row' }),
-                    })
-                });
-                yearToYearDiv[galleryImg.year] = yearDiv;
-            }
-            appendToRow(yearDiv, galleryImg, count);
-        }
-        console.log('yearToYearDiv:', JSON.parstr(yearToYearDiv));
+        const bioImages = populateArray(bioImagesData);
+        bioImages.forEach((image, i) => { image.index = i; image.collection = bioImages; })
+        const teamPhotos = populateArray(teamPhotosData);
+        teamPhotos.forEach((image, i) => { image.index = i; image.collection = teamPhotos; })
+
+
         let selectedImg = new GalleryImg();
-        const imagesContainer = div({ id: 'images_container' })
-            .append(...Object.values(yearToYearDiv).reverse());
+
         DocumentElem
             .click(() => {
-            if (!imgViewer.isopen)
-                return;
-            console.log('document click, closeImgViewer()');
-            closeImgViewer();
-        })
+                if (!imgViewer.isopen)
+                    return;
+                console.log('document click, closeImgViewer()');
+                closeImgViewer();
+            })
             .keydown((event) => {
-            if (!imgViewer.isopen)
-                return;
-            if (event.key === "Escape")
-                return closeImgViewer();
-            if (event.key.startsWith("Arrow")) {
-                if (event.key === "ArrowLeft")
-                    return switchToImg(selectedImg.getLeftImage());
-                else if (event.key === "ArrowRight")
-                    return switchToImg(selectedImg.getRightImage());
-            }
-        });
+                if (!imgViewer.isopen)
+                    return;
+                if (event.key === "Escape")
+                    return closeImgViewer();
+                if (event.key.startsWith("Arrow")) {
+                    if (event.key === "ArrowLeft")
+                        return switchToImg(selectedImg.getLeftImage());
+                    else if (event.key === "ArrowRight")
+                        return switchToImg(selectedImg.getRightImage());
+                }
+            });
         const imgViewerClose = div({ id: 'img_viewer_close' }).append(elem({ tag: 'svg' })
             .attr({ viewBox: `0 0 32 32` })
             .append(elem({ tag: 'path', cls: 'upright' }), elem({ tag: 'path', cls: 'downleft' }))).click(closeImgViewer);
-        Home.empty().class('gallery-page').append(imagesContainer, imgViewer, imgViewerClose);
-        
-        // .append(
-        //     elem({ tag: 'section', cls: 'main-cls bio-images' }).append(
-        //         elem({ tag: 'h1', cls: "page-title nine-first", text: 'Active Lab Members' }),
-        //         teamContainer
-        //     )
-        
-        
+
+        Home.empty().class('gallery-page')
+            .append(
+                elem({ tag: 'section', cls: 'main-cls page-intro active-memebers' }).append(
+                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Bio Images' }),
+                    div({ cls: 'img-container edge-to-edge' }).append(
+                        ...bioImages)
+                ),
+                elem({ tag: 'section', cls: 'main-cls alumni' }).append(
+                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Team Photos' }),
+                    div({ cls: 'img-container edge-to-edge' }).append(
+                        ...teamPhotos)
+                ),
+                div({ cls: 'overlay' }),
+                imgViewer,
+                imgViewerClose
+            );
     }
     return { init };
 };
