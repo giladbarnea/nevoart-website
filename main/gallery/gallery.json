@@ -2,9 +2,7 @@
 	{
 		"caption": "Before there was lab, there was Seinfeld :)",
 		"file": "00.jpeg",
-		"year": 2018,
-		"contrast": 1.1,
-		"brightness": 1.25
+		"year": 2018
 	},
 	{
 		"caption": "Another day at the office",
@@ -29,9 +27,7 @@
 	{
 		"caption": "Another day at the office",
 		"file": "05.jpeg",
-		"year": 2018,
-		"contrast": 1.05,
-		"brightness": 1.2
+		"year": 2018
 	},
 	{
 		"caption": "Sagol School of Neuroscience Retreat 2019",
@@ -46,15 +42,12 @@
 	{
 		"caption": "Sagol School of Neuroscience Retreat 2019",
 		"file": "08.jpeg",
-		"year": 2019,
-		"brightness": 1.2
+		"year": 2019
 	},
 	{
 		"caption": "Sagol School of Neuroscience Retreat 2019",
 		"file": "09.jpeg",
-		"year": 2019,
-		"contrast": 1.1,
-		"brightness": 1.2
+		"year": 2019
 	},
 	{
 		"caption": "Keyboards cleaning day",
@@ -69,9 +62,7 @@
 	{
 		"caption": "Happy birthday to Inbar!",
 		"file": "12.jpeg",
-		"year": 2019,
-		"contrast": 1.05,
-		"brightness": 1.2
+		"year": 2019
 	},
 	{
 		"caption": "MRIing :)",
@@ -81,9 +72,7 @@
 	{
 		"caption": "OHBM 2019 Rome",
 		"file": "14.jpeg",
-		"year": 2019,
-		"contrast": 1.05,
-		"brightness": 1.15
+		"year": 2019
 	},
 	{
 		"caption": "OHBM 2019 Rome",
@@ -108,15 +97,12 @@
 	{
 		"caption": "OHBM 2019 Rome",
 		"file": "19.jpg",
-		"year": 2019,
-		"contrast": 1.1,
-		"brightness": 1.1
+		"year": 2019
 	},
 	{
 		"caption": "OHBM 2019 Rome",
 		"file": "23.jpg",
-		"year": 2019,
-		"brightness": 1.15
+		"year": 2019
 	},
 	{
 		"caption": "OHBM 2019 Rome",
@@ -131,9 +117,7 @@
 	{
 		"caption": "OHBM 2019 Rome",
 		"file": "20.jpg",
-		"year": 2019,
-		"contrast": 1.1,
-		"brightness": 1.05
+		"year": 2019
 	},
 	{
 		"caption": "OHBM 2019 Rome",

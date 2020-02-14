@@ -154,6 +154,11 @@ body {
   color: var(--GREY8);
 }
 
+.permalink #navbar > a.home {
+  background-color: var(--BLUE);
+  color: white;
+}
+
 #navbar a:last-of-type {
   margin-right:0;
 }
@@ -653,6 +658,15 @@ a.label {
   border-left: 20px solid var(--OffWhite);
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
+}
+
+.side-bar .journal {
+  width: 100%;
+}
+
+.side-bar .journal:hover{
+  padding-left: 4px;
+  transition: all 0.2s ease-in-out;
 }
 
 /* ==================  TEAM PAGE  ================== */

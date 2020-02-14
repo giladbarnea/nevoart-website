@@ -195,6 +195,14 @@ const GalleryPage = () => {
             .attr({ viewBox: `0 0 32 32` })
             .append(elem({ tag: 'path', cls: 'upright' }), elem({ tag: 'path', cls: 'downleft' }))).click(closeImgViewer);
         Home.empty().class('gallery-page').append(imagesContainer, imgViewer, imgViewerClose);
+        
+        // .append(
+        //     elem({ tag: 'section', cls: 'main-cls bio-images' }).append(
+        //         elem({ tag: 'h1', cls: "page-title nine-first", text: 'Active Lab Members' }),
+        //         teamContainer
+        //     )
+        
+        
     }
     return { init };
 };
