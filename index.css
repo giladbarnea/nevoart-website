@@ -683,8 +683,10 @@ a.label {
   margin-bottom: 4px;
 }
 
-.thesis {
+h6.thesis {
   text-align: left;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
