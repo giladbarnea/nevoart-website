@@ -53,28 +53,101 @@
 			"thesis": "Thesis: “hnRNP C is co-localized with active ribosomes at the cell cortex during mitosis to control the translation of sub-class of mRNAs”",
 			"email": "inbar.meni@gmail.com"
 		},
-		"skdfubv": {
-			"role": " former MSc student",
-			"image": "inbar.png",
-			"thesis": "Inbar completed her undergraduate studies in biology and psychology with emphasis on Neuroscience at Tel Aviv University. She then continued to MSc under the joint supervision of Prof. Chagi Pick and Dr. Ido Tavor. She investigated the effects of mild traumatic brain injury on the patterns of brain connectivity in mice.",
-			"email": "inbar.meni@gmail.com"
+		"Dalia Pinchasi": {
+			"role": "Lab Technician",
+			"image": "Dalia.png"
 		},
-		"Inbar Meningher": {
-			"role": " former MSc student",
-			"image": "inbar.png",
-			"thesis": "Inbar completed her undergraduate studies in biology and psychology with emphasis on Neuroscience at Tel Aviv University. She then continued to MSc under the joint supervision of Prof. Chagi Pick and Dr. Ido Tavor. She investigated the effects of mild traumatic brain injury on the patterns of brain connectivity in mice.",
-			"email": "inbar.meni@gmail.com"
+		"Gali Raini": {
+			"role": "2010-2016, PhD student",
+			"image": "Gali.png",
+			"thesis": "Mitochondrial Dysfunction in Vanishing White Matter Disease"
 		},
-		"Inbar Meningher": {
-			"role": " former MSc student",
-			"image": "inbar.png",
-			"thesis": "Inbar completed her undergraduate studies in biology and psychology with emphasis on Neuroscience at Tel Aviv University. She then continued to MSc under the joint supervision of Prof. Chagi Pick and Dr. Ido Tavor. She investigated the effects of mild traumatic brain injury on the patterns of brain connectivity in mice.",
-			"email": "inbar.meni@gmail.com"
+		"Sarah Hofmann": {
+			"role": "2013-2016, Post-doc",
+			"image": "Sarah.png"
 		},
-		"Inbar Meningher": {
-			"role": " former MSc student",
-			"image": "inbar.png",
-			"email": "inbar.meni@gmail.com"
+		"Yulia Kesler": {
+			"role": "2012-2015, MSc student",
+			"image": "Yulia.png",
+			"Thesis": "Evaluation of Guanabenz derivatives as GADD34 inhibitors"
+		},
+		"Ranen Aviner": {
+			"role": "2009-2014, PhD Student",
+			"image": "Ranen.png",
+			"Thesis": "Deciphering the mitotic translatom"
+		},
+		"Sima Barhoom": {
+			"role": "2008-2013, Post Doc",
+			"image": "Sima.png"
+		},
+		"Yuval Cabilly": {
+			"role": "2008-2013, PhD student",
+			"image": "Yuval.png",
+			"Thesis": "The mouse model for Vanishing White Matter (VWM) disease reveals abnormal development of brain white matter and poor astrocyte inflammatory response"
+		},
+		"Liraz Marom": {
+			"role": "2005-2007, MSc student; 2007-2012, PhD student",
+			"image": "Liraz.png",
+			"Thesis": "3′-Poly(A) tain and poly(A) binding protein (PABP) promote the IRES activity of Crucifier-infecting tobamovirus (CrTMV); \n A mouse model for VWM disease reveals function- and time-specific changes in brain gene expression and displayes phenotypic recovery upon inhibition of GADD34"
+		},
+		"Mali Barbi": {
+			"role": "2009-2011, MSc student",
+			"image": "Mali.png",
+			"Thesis": "The inflamatory response of microglia cells of VWM-diseased mice harboring a point mutation in eIF2B5"
+		},
+		"Shelly Hen-Avivi": {
+			"role": "2006-2009, MSc student",
+			"image": "Shelly.png",
+			"Thesis": "A search for factors that mediate CrTMV IRES activity"
+		},
+		"Gilad Sivan": {
+			"role": "2005-2009, PhD student",
+			"image": "Gilad.png",
+			"Thesis": "Control of mRNA translation during mitosis: Regulation at the Elongation level"
+		},
+		"Michal Geva": {
+			"role": "2003-2008, PhD student",
+			"image": "Michal.png",
+			"Thesis": "Generation of a Knock-In mouse model for eIF2B-related leukodystrophy"
+		},
+		"Idan Pereman": {
+			"role": "2003-2005, MSc student",
+			"image": "Idan.png",
+			"Thesis": "Characterization of the Poly(A)-binding protein (PABP) during the cell cycle"
+		},
+		"Dvir Dahary": {
+			"role": "2003-2005, MSc student",
+			"image": "Dvir.png",
+			"Thesis": "Natural antisense transcription represents real overlap rather than translcriptional leakage"
+		},
+		"Limor Dinur-Klein": {
+			"role": "2002-2005, MSc student",
+			"image": "Limor.png",
+			"Thesis": "Translation initiation factor eIF5B: new aspects regarding activity and stability"
+		},
+		"Liraz Kantor": {
+			"role": "2002-2006, PhD student",
+			"image": "LirazK.png",
+			"Thesis": "Effect of eIF2B mutations on cellular stress response – Implications of the neurodegenerative disease CACH/VWM"
+		},
+		"Deborah Silvera": {
+			"role": "2000-2003, Post Doc",
+			"image": "Debbie.jpeg"
+		},
+		"Nadejda Koloteva-Levine": {
+			"role": "1998-2002, Post Doc",
+			"image": "Nadejda.jpg"
+		},
+		"Gabriel Gerlitz": {
+			"role": "1996-1998, MSc Student; 1998-2002, PhD student",
+			"image": "Gabi.png",
+			"Thesis": "Post translational modifications of hnRNP-C upon megakaryocytic differentiation; \n Activation of internal translation initiation – the possible roles of eIF2α and hnRNP-C"
+		},
+		"Maya Amichay": {
+			"role": "1999-2001, MSc student",
+			"image": "Maya.png",
+			"Thesis": "Regulation of PDGF2 mRNA stability is mediated by 5’UTR – 3’UTR interactions"
 		}
+
 	}
 }
