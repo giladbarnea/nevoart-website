@@ -1,5 +1,52 @@
 const GalleryPage = () => {
     async function init() {
+        class GalleryVid extends BetterHTMLElement {
+            formatUrl(url){
+
+                let i = url.lastIndexOf('/');
+                // let start = url.substr(0,i);
+                let end = url.substr(i+1);
+                if (end.includes('watch?v=')){
+                    // watch?v=oNJScNCHigI  =>  oNJScNCHigI  
+                    end = end.substr(end.indexOf('watch?v=') + 8);
+                }
+                if (end.includes('&')){
+                    // handles eg "oNJScNCHigI&feature=youtu.be" 
+                    end = end.substr(0, end.indexOf('&'))
+                }
+                if (end.includes('?')){
+                    // handles eg "oNJScNCHigI?t=600" 
+                    end = end.substr(0, end.indexOf('?'))
+                }
+
+                let newurl = 'https://www.youtube.com/embed/' + end;
+                return newurl;
+            }
+            constructor(title, body, url) {
+                super({ tag:'iframe', cls: 'video' });
+                this.title = title;
+                this.body = body;
+                let newurl = this.formatUrl(url);
+                console.log(`url: ${url}, newurl: ${newurl}`);
+                this.url = newurl;
+                this.attr({
+                    frameborder: "0",
+                    allowfullscreen: "",
+                    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                    marginheight: "0",
+                    marginwidth: "0",
+                    src: newurl,
+                    width: "560",
+                    height: "315"
+                })
+
+                // <iframe width="560" height="315" 
+                // src="https://www.youtube.com/embed/9YffrCViTVk" 
+                // frameborder="0" 
+                // allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                // allowfullscreen></iframe>
+            }
+        }
         class GalleryImg extends Div {
             constructor(file, caption) {
                 super({});
@@ -106,8 +153,8 @@ const GalleryPage = () => {
             });
         imgViewer.isopen = false;
         
-        const { "Bio Images": bioImagesData, "Team Photos": teamPhotosData } = await fetchDict("main/gallery/gallery.json");
-        function populateArray(data) {
+        const { "Bio Images": bioImagesData, "Team Photos": teamPhotosData, "Videos": videosData } = await fetchDict("main/gallery/gallery.json");
+        function populateImgArray(data) {
             const arr = [];
             for (let { file, caption } of data) {
                 let galleryImg = new GalleryImg(file, caption);
@@ -124,13 +171,23 @@ const GalleryPage = () => {
             }
             return arr
         }
-        const bioImages = populateArray(bioImagesData);
+        function populateVidArray(data) {
+            const arr = [];
+            for (let { title, body, url } of data) {
+                let galleryVideo = new GalleryVid(title, body, url);
+                arr.push(galleryVideo);
+            }
+            return arr
+        }
+        const bioImages = populateImgArray(bioImagesData);
         bioImages.forEach((image, i) => { image.index = i; image.collection = bioImages; })
-        const teamPhotos = populateArray(teamPhotosData);
+        const teamPhotos = populateImgArray(teamPhotosData);
         teamPhotos.forEach((image, i) => { image.index = i; image.collection = teamPhotos; })
-
+        const videos = populateVidArray(videosData);
 
         let selectedImg = new GalleryImg();
+
+        
 
         DocumentElem
             .click(() => {
@@ -166,6 +223,11 @@ const GalleryPage = () => {
                     elem({ tag: 'h1', cls: "page-title nine-first", text: 'Team Photos' }),
                     div({ cls: 'img-container edge-to-edge' }).append(
                         ...teamPhotos)
+                ),
+                elem({ tag: 'section', cls: 'main-cls videos' }).append(
+                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Videos' }),
+                    div({ cls: 'img-container edge-to-edge' }).append(
+                        ...videos)
                 ),
                 div({ cls: 'overlay' }),
                 imgViewer,
