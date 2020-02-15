@@ -162,6 +162,7 @@ const HomePage = () => {
                             ResearchPage().init(i);
                             history.pushState(null, null, '#research');
                             Navbar.select(Navbar.research);
+                            Body.addClass('permalink');
                         })
                 );
         }

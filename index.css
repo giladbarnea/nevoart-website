@@ -705,162 +705,140 @@ h6.thesis {
 
 /* ==================  GALLERY PAGE  ================== */
 
-
-
-
-div#home.gallery-page div#images_container:not([class=theater]) > div.year > div.grid > div.row > img {
-  margin-top: 0;
-  margin-bottom: 3px;
-  cursor: pointer;
-  transition: opacity 100ms;
-}
-div#home.gallery-page div#images_container:not([class=theater]) > div.year > div.grid > div.row > img:hover {
-  opacity: 0.5;
-}
-
-
-div#home.gallery-page div#images_container > div.year > div.grid {
-  display: grid;
-  --tagWidth: calc((var(--w) - (8px * 3)) / 4);
-  margin-bottom: auto;
-  grid-template-columns: repeat(4, var(--tagWidth));
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 8px;
-  grid-column-gap: 8px;
-}
-div#home.gallery-page div#images_container > div.year > div.grid img {
-  margin: auto;
-}
-div#home.gallery-page div#images_container > div.year > div.grid img:nth-of-type(4n+4) {
-  margin: 0 0px auto auto;
-}
-div#home.gallery-page div#images_container > div.year > div.grid img:nth-of-type(4n+1) {
-  margin: 0 auto auto 0;
-}
-@media screen and (min-width: 1023px) {
+/* @media screen and (min-width: 1023px) {
   div#home.gallery-page div#images_container > div.year > div.grid img {
     width: var(--tagWidth);
   }
 }
-div#home.gallery-page div#img_viewer {
-  display: flex;
-  height: var(--localHeight);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: calc(var(--localHeight) / -2);
-  opacity: 0;
-  position: fixed;
-  top: 50%;
-  transition: opacity 200ms;
-  width: var(--w);
-  z-index: -1;
-}
+
 @media screen and (min-width: 1340px) {
-  div#home.gallery-page div#img_viewer {
+  div#home.gallery-page div.img-viewer {
     --localHeight: 600px;
   }
-}
+} */
 @media screen and (max-width: 1340px) {
-  div#home.gallery-page div#img_viewer {
+  div#home.gallery-page div.img-viewer {
     --localHeight: 500px;
   }
 }
-div#home.gallery-page div#img_viewer.on {
-  opacity: 1;
-  z-index: 5;
-}
-div#home.gallery-page div#img_viewer > img {
-  max-height: var(--localHeight);
-}
-div#home.gallery-page div#img_viewer > div#caption {
-  text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
-  text-align: center;
-  position: fixed;
-  font-size: 24px;
-  color: white;
-  top: 52%;
-  margin-top: calc(var(--localHeight) / 2);
-  width: inherit;
-}
-div#home.gallery-page div#img_viewer > div#right_chevron, div#home.gallery-page div#img_viewer > div#left_chevron {
-  cursor: pointer;
-  filter: invert(1) drop-shadow(2px 4px 6px black);
-  margin: auto;
-  opacity: 0.8;
-  transition: opacity 100ms, transform 50ms;
-  width: 44px;
-  z-index: 5;
-}
-div#home.gallery-page div#img_viewer > div#right_chevron:hover, div#home.gallery-page div#img_viewer > div#left_chevron:hover {
-  opacity: 1;
-}
-div#home.gallery-page div#img_viewer > div#right_chevron.right, div#home.gallery-page div#img_viewer > div#left_chevron.right {
-  margin: auto;
-}
-div#home.gallery-page div#img_viewer > div#right_chevron.right:active > svg, div#home.gallery-page div#img_viewer > div#left_chevron.right:active > svg {
-  transform: translateX(4px);
-}
-div#home.gallery-page div#img_viewer > div#right_chevron.left:active > svg, div#home.gallery-page div#img_viewer > div#left_chevron.left:active > svg {
-  transform: rotate(180deg) translateX(4px);
-}
-div#home.gallery-page div#img_viewer > div#right_chevron.left > svg, div#home.gallery-page div#img_viewer > div#left_chevron.left > svg {
-  transform: rotate(180deg);
-}
-div#home.gallery-page div#img_viewer_close {
-  position: fixed;
-  top: var(--gap);
-  right: var(--gap);
-  opacity: 0;
-  transition: opacity 100ms;
-}
-div#home.gallery-page div#img_viewer_close.on {
-  opacity: 0.8;
-  cursor: pointer;
-}
-div#home.gallery-page div#img_viewer_close.on:hover {
-  opacity: 1;
-}
-div#home.gallery-page div#img_viewer_close > svg {
-  display: block;
-  --dim: 32px;
-  width: var(--dim);
-  height: var(--dim);
-}
-div#home.gallery-page div#img_viewer_close > svg > path {
-  fill: none;
-  stroke-width: 4px;
-  stroke: white;
-}
-div#home.gallery-page div#img_viewer_close > svg > path.upright {
-  d: path("m 31 1 l -30 30");
-}
-div#home.gallery-page div#img_viewer_close > svg > path.downleft {
-  d: path("m 1 1 l 30 30");
-}
-
-
-
 
 .img-container {
   display: grid;
 	grid-template-columns: repeat(4, 1fr);
-  grid-gap: 24px;
+  grid-gap: 4px;
+  margin-top: 40px;
 }
 
-.img-container > img {
-  height: 80px;
-
+.img-container > div {
+  height: 180px;
+  background-size: contain;
 }
 
+.overlay {
+  display: none;
+}
 
+.theater .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  opacity: 0.8;
+  top: 0;
+  display: inline;
+}
 
+body.theater {
+  overflow: hidden;
+}
 
+.img-viewer {
+  position: fixed;
+  width: var( --w);
+  height: var(--localHeight);
+  top: 50%;
+  left: 50%;
+  margin-top: calc(var(--localHeight) / -2);
+  margin-left: calc(var(--w)/-2);
+  display: none;
+}
 
+.img-viewer.on {
+  display: flex;
+}
 
+.img-viewer > div {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+#caption {
+  text-align: center;
+  position: fixed;
+  font-size: 20px;
+  top: 52%;
+  margin-top: calc(var(--localHeight) / 2);
+  width: inherit;
+}
 
+.img-viewer-close > svg > path.upright {
+  d: path("m 31 1 l -30 30");
+}
+.img-viewer-close > svg > path.downleft {
+  d: path("m 1 1 l 30 30");
+}
 
+.img-viewer-close > svg {
+  width: 40px;
+  height: 40px;
+  stroke-width: 4px;
+  stroke: black;
+}
 
+#left_chevron, #right_chevron {
+  width: 52px;
+  padding: 12px;
+  height: var(--localHeight);
+}
+
+#left_chevron {
+  margin-left: -80px;
+}
+
+#right_chevron {
+  margin-right: -80px;
+}
+
+.left > svg, .right > svg {
+  position: relative;
+  top: 50%;
+  margin-top: -26px;
+}
+
+#left_chevron > svg {
+  transform: rotate(180deg);
+}
+
+#right_chevron:hover, #left_chevron:hover, .img-viewer-close.on:hover {
+  cursor: pointer;
+}
+
+.img-viewer-close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  display: none;
+}
+
+.img-viewer-close.on {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  display: block;
+}
 
 
 

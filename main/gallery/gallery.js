@@ -1,6 +1,6 @@
 const GalleryPage = () => {
     async function init() {
-        class GalleryImg extends Img {
+        class GalleryImg extends Div {
             constructor(file, caption) {
                 super({});
                 this.path = null;
@@ -18,13 +18,7 @@ const GalleryPage = () => {
                 });
             }
             src(src) {
-                if (src === undefined) {
-                    return this._htmlElement.src;
-                } else {
-                    this._htmlElement.src = src;
-                    // this.css({backgroundImage:`url(${src})`})
-                    return this;
-                }
+                return this.css({backgroundImage:`url(${src})`})
             }
             getLeftImage() {
                 let i;
@@ -100,10 +94,10 @@ const GalleryPage = () => {
             // imagesContainer.toggleClass('theater', true);
             Navbar.css({ opacity: 0 });
         }
-        const imgViewer = div({ id: 'img_viewer' })
+        const imgViewer = div({ cls: 'img-viewer' })
             .cacheAppend({
                 left: div({ id: 'left_chevron', cls: 'left' }).html(chevronSvg).click(gotoAdjImg),
-                img: img({}),
+                img: div({}),
                 right: div({ id: 'right_chevron', cls: 'right' }).html(chevronSvg).click(gotoAdjImg),
                 caption: div({ id: 'caption' })
             }).click((event) => {
@@ -111,6 +105,7 @@ const GalleryPage = () => {
                 event.stopPropagation();
             });
         imgViewer.isopen = false;
+        
         const { "Bio Images": bioImagesData, "Team Photos": teamPhotosData } = await fetchDict("main/gallery/gallery.json");
         function populateArray(data) {
             const arr = [];
@@ -156,18 +151,18 @@ const GalleryPage = () => {
                         return switchToImg(selectedImg.getRightImage());
                 }
             });
-        const imgViewerClose = div({ id: 'img_viewer_close' }).append(elem({ tag: 'svg' })
+        const imgViewerClose = div({ cls: 'img-viewer-close' }).append(elem({ tag: 'svg' })
             .attr({ viewBox: `0 0 32 32` })
             .append(elem({ tag: 'path', cls: 'upright' }), elem({ tag: 'path', cls: 'downleft' }))).click(closeImgViewer);
 
         Home.empty().class('gallery-page')
             .append(
-                elem({ tag: 'section', cls: 'main-cls page-intro active-memebers' }).append(
+                elem({ tag: 'section', cls: 'main-cls page-intro bio-images' }).append(
                     elem({ tag: 'h1', cls: "page-title nine-first", text: 'Bio Images' }),
                     div({ cls: 'img-container edge-to-edge' }).append(
                         ...bioImages)
                 ),
-                elem({ tag: 'section', cls: 'main-cls alumni' }).append(
+                elem({ tag: 'section', cls: 'main-cls team-photos' }).append(
                     elem({ tag: 'h1', cls: "page-title nine-first", text: 'Team Photos' }),
                     div({ cls: 'img-container edge-to-edge' }).append(
                         ...teamPhotos)
