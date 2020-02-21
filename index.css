@@ -548,7 +548,7 @@ a.label {
 
 #footer {
   background: white;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 #footer .main-cls {
@@ -559,6 +559,9 @@ a.label {
   margin-top: 50px;
 }
 
+.permalink #footer  {
+  background-color: #fafafa;
+}
 
 /* ==================  RESEARCH PAGE  ================== */
 
@@ -574,6 +577,7 @@ a.label {
   width: -webkit-fill-available;
 }
 
+/* todo: add this sticky logic in js so that the research subtitle stay while scrolling: */
 .research-page h2.fixed {
   position: fixed;
   top: 52px;

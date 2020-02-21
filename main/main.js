@@ -97,6 +97,7 @@ WindowElem.on({
                 cache(image, "team");
         }
         async function cacheGallery() {
+            return console.warn('Hi Morki :) Remember to ask shmendrik to fix gallery cache sometime')
             console.log(...less('cacheGallery'));
             let galleryData = await fetchArray("main/gallery/gallery.json");
             const galleryFiles = galleryData.map(d => d.file);
