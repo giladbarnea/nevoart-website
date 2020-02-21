@@ -22,10 +22,10 @@ const GalleryPage = () => {
                 let newurl = 'https://www.youtube.com/embed/' + end;
                 return newurl;
             }
-            constructor(title, body, url) {
-                super({ tag:'iframe', cls: 'video' });
-                this.title = title;
-                this.body = body;
+            constructor(url) {
+                super({ tag:'iframe' });
+                // this.title = title;
+                // this.body = body;
                 let newurl = this.formatUrl(url);
                 console.log(`url: ${url}, newurl: ${newurl}`);
                 this.url = newurl;
@@ -35,11 +35,11 @@ const GalleryPage = () => {
                     allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
                     marginheight: "0",
                     marginwidth: "0",
-                    src: newurl,
-                    width: "560",
-                    height: "315"
-                })
-
+                    src: newurl
+                    // width: "560",
+                    // height: "315"
+                });
+                
                 // <iframe width="560" height="315" 
                 // src="https://www.youtube.com/embed/9YffrCViTVk" 
                 // frameborder="0" 
@@ -174,8 +174,15 @@ const GalleryPage = () => {
         function populateVidArray(data) {
             const arr = [];
             for (let { title, body, url } of data) {
-                let galleryVideo = new GalleryVid(title, body, url);
-                arr.push(galleryVideo);
+                let galleryVid = new GalleryVid(url);
+                let galleryVidUnit = div({ cls: 'vid-unit-container edge-to-edge main-cls' }).append(
+                                                div({ cls: 'video first-half' }).append(galleryVid),
+                                                div({ cls: 'video-info second-half' }).append(
+                                                        elem({ tag: 'h3', cls: "video-title", text: title }),
+                                                        elem({ tag: 'p', cls: "video-body", text: body })
+                                                )
+                                    );
+                arr.push(galleryVidUnit);
             }
             return arr
         }
@@ -226,7 +233,7 @@ const GalleryPage = () => {
                 ),
                 elem({ tag: 'section', cls: 'main-cls videos' }).append(
                     elem({ tag: 'h1', cls: "page-title nine-first", text: 'Videos' }),
-                    div({ cls: 'img-container edge-to-edge' }).append(
+                    div({ cls: 'vids-container edge-to-edge' }).append(
                         ...videos)
                 ),
                 div({ cls: 'overlay' }),

@@ -736,6 +736,23 @@ h6.thesis {
   cursor: pointer;
 }
 
+.vids-container {
+  margin-top: 40px;
+}
+
+.vid-unit-container.main-cls {
+  margin-bottom: 60px;
+}
+
+.video > iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.video {
+  padding-top: 8px;
+}
+
 .overlay {
   display: none;
 }
