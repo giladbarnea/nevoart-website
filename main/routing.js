@@ -32,6 +32,7 @@ const Routing = (() => {
                     await WindowElem.promiseLoaded();
                 Navbar.select(Navbar[url]);
                 Body.addClass('permalink');
+                Navbar.e.scrollIntoView({ behavior: "smooth", });
 
             }
             else {

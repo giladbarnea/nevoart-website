@@ -2,11 +2,6 @@ const isIphone = window.navigator.userAgent.includes('iPhone');
 const DocumentElem = elem({ htmlElement: document });
 const Body = elem({ htmlElement: document.body });
 const Home = elem({ id: 'home' });
-// const FundingSection = elem({
-//     id: 'funding_section', children: {
-//         sponsorsContainer: 'div#sponsors_container'
-//     }
-// });
 const CacheDiv = elem({ id: 'cache' });
 const WindowElem = elem({ htmlElement: window });
 WindowElem.isLoaded = false;
@@ -43,6 +38,7 @@ WindowElem.on({
         }
     },
     hashchange: (event) => {
+        
         const newURL = event.newURL.replace(window.location.origin + window.location.pathname, "").replace('#', '');
         if(!bool(newURL)) {
             Routing.navigateTo("home");
@@ -70,7 +66,6 @@ WindowElem.on({
         if(window.location.hash !== "")
             fetchDict('main/home/home.json').then(({ logo }) => Navbar.home.attr({ src: `main/home/${logo}` }));
         function cache(file, page) {
-            // console.log(whsat)
             if(!file) return;
             let src;
             if(file.includes('http') || file.includes('www')) {
@@ -133,8 +128,6 @@ class NavbarElem extends BetterHTMLElement {
                     console.log(`navbar ${pageString} click`);
                     Routing.navigateTo(pageString);
                 })
-                //.mouseover(() => this._emphasize(this[pageString]))
-                //.mouseout(() => this._resetPales());
         }
     }
     select(child) {
@@ -157,59 +150,7 @@ class NavbarElem extends BetterHTMLElement {
     }
 }
 let Navbar;
-// const Footer = elem({
-//     id: 'footer', children: {
-//         contactSection: {
-//             '#contact_section': {
-//                 mainCls: {
-//                     '.main-cls': {
-//                         address: '.address',
-//                         contact: '.contact',
-//                         map: '#contact_map'
-//                     }
-//                 }
-//             }
-//         },
-//         logosSection: {
-//             '#logos_section': {
-//                 mainCls: '.main-cls'
-//             }
-//         },
-//         ugugSection: {
-//             '#ugug_section': {
-//                 mainCls: '.main-cls'
-//             }
-//         }
-//     }
-// });
-// Footer.ugugSection.mainCls.html(`2019
-//     Developed by <a href="http://giladbarnea.github.io" target="_blank">Gilad Barnea</a>`);
-// fetchDict("main/contact/contact.json").then(async (data) => {
-// Footer.contactSection.mainCls.address.append(anchor({ href: data.visit.link }).html(data.visit.address).target("_blank"));
-// Footer.contactSection.mainCls.contact.append(paragraph().html(`Phone:
-//                                                     <a href="tel:${data.call.phone}">${data.call.phone}</a><br>
-//                                                     Email:
-//                                                     <a href="mailto:${data.email.address}">${data.email.address}</a>`));
-// const [uni, medicine, sagol] = Footer.logosSection.mainCls.children('img');
-// uni.click(() => window.open("https://www.tau.ac.il"));
-// medicine.click(() => window.open("https://en-med.tau.ac.il/"));
-// sagol.click(() => window.open("https://www.sagol.tau.ac.il/"));
-// WindowElem.on({
-//     load: () => {
-//         if (!MOBILE) {
-//             wait(3000).then(() => {
-//                 Footer.contactSection.mainCls.append(elem({ tag: 'iframe' })
-//                     .id('contact_map')
-//                     .attr({
-//                         frameborder: "0",
-//                         allowfullscreen: "",
-//                         src: data.map
-//                     }));
-//             });
-//         }
-//     }
-// });
-// });
+
 const hamburger = elem({
     id: 'hamburger', children: { menu: '.menu', logo: '.logo', items: '.items' }
 });
