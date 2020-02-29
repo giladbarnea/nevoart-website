@@ -5,14 +5,15 @@
 	"news": {},
 	"funding": {},
 	"research-snippet": [
-		"Elroy-Stien’s lab is engaged with various research topics, all related to regulation of gene expression with emphasis on mRNA translation in mammalian cells in health and disease. Regulation of gene expression at the level of mRNA translation into proteins is fundamental to growth, differentiation and development of multi-cellular organisms.",
-		"We integrate state-of-the-art research methodologies to study the neurodegenerative genetic Vanishing White Matter (VWM) disease, to design and develop novel therapies, and to study basic mechanisms that govern protein synthesis during the cell cycle."
+		"Elroy-Stein’s lab is engaged with various research topics, all related to regulation of gene expression with emphasis on mRNA translation in mammalian cells in health and disease. Regulation of gene expression at the level of mRNA translation into proteins is fundamental to growth, differentiation, metabolism, and development of multi-cellular organisms.",
+		"We integrate state-of-the-art research methodologies to study the neurodegenerative genetic Vanishing White Matter (VWM) disease; to design and develop novel therapies; and to study basic mechanisms that govern protein synthesis during the cell cycle."
 	],
 	"interests": [
 		"Molecular mechanisms governing gene expression networks in response to physiological and stress signals.",
-		"The effects of mutations in translation initiation factor 2B (eIF2B) on global and specific gene expression, specifically in brain glial cells.",
+		"The effects of mutations in translation initiation factor 2B (eIF2B) on global and specific gene expression, specifically in astrocytes.",
 		"The link between eIF2B function and cellular metabolism.",
-		"Regulation of global and specific mRNA translation during cellular division."
+		"Regulation of global and specific mRNA translation during cellular division.",
+		"The role of hnRNP-C in localized translation in mitotic cells."
 	],
 	"researchProjects": [
 		"Regulation of mRNA translation in the brain",
@@ -20,6 +21,6 @@
 		"Developmemt of novel experimental methodologies"
 	],
 	"bio": [
-		"Elroy-Stein is a Full Professor at the Department of Cell Research and Immunology at the Faculty of Life Sciences, Tel Aviv University, and a member of the Sagol School of Neuroscience. She received her B.Sc. and M.Sc. from the Technion, her Ph.D. on Human Molecular Genetics at the Weizmann Institute of Science, Israel, and her postdoctoral training at the Lab of Viral Diseases, NIAID, Maryland, USA."
+		"Elroy-Stein is a Full Professor at the School of Molecular Cell Biology & Biotechnology, Faculty of Life Sciences, and a member of the Sagol School of Neuroscience, Tel Aviv University. She received her BSc and MSc from the Technion, and her PhD on Human Molecular Genetics from the Weizmann Institute of Science, Israel. She subsequently completed postdoctoral training at the Lab of Viral Diseases, NIAID, NIH, Maryland, USA."
 	]
 }
