@@ -666,6 +666,8 @@ a.label {
   font-style: bold;
   margin-right: 8px;
   color: var(--GREY8);
+  display: block;
+  margin-bottom: 12px;
 }
 
 .publication .sup-btn {
