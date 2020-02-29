@@ -174,6 +174,7 @@ hamburger.items.children('div').forEach((bhe) => {
 hamburger.click((event) => {
     console.log('hamburger.click');
     hamburger.toggleClass('open');
+    Body.toggleClass('theater');
     if (hamburger.hasClass('open')) {
         console.log('hamburger opened');
     }
