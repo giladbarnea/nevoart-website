@@ -388,7 +388,8 @@ section {
 
 .page-intro {
   padding-top: 100px;
-  border-bottom: 1px solid var(--GREY02)
+  margin-bottom: -50px;
+  /* border-bottom: 1px solid var(--GREY02) */
 }
 
 .separator {
@@ -592,10 +593,6 @@ a.label {
 
 
 /* ==================  RESEARCH PAGE desktop ================== */
-
-.research-page section {
-  margin-bottom: 0px;
-}
 
 .research-page h2 {
   margin-top: 0;
