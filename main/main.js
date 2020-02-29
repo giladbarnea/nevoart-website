@@ -6,14 +6,14 @@ const CacheDiv = elem({ id: 'cache' });
 const WindowElem = elem({ htmlElement: window });
 WindowElem.isLoaded = false;
 WindowElem.promiseLoaded = async function () {
-    if(this.isLoaded)
+    if (this.isLoaded)
         return true;
     let count = 0;
-    while(!this.isLoaded) {
-        if(count >= 2000) {
-            if(count === 2000)
+    while (!this.isLoaded) {
+        if (count >= 2000) {
+            if (count === 2000)
                 console.trace(`WindowElem.promiseLoaded() count: ${count}. Waiting 200ms, warning every 1s.`);
-            else if(count % 5 === 0)
+            else if (count % 5 === 0)
                 console.warn(`WindowElem.promiseLoaded() count: ${count}. Waiting 200ms, warning every 1s.`);
             await wait(200);
         }
@@ -28,8 +28,8 @@ WindowElem.promiseLoaded = async function () {
 };
 WindowElem.on({
     scroll: (event) => {
-        if(Navbar !== undefined) {
-            if(window.scrollY > 0) {
+        if (Navbar !== undefined) {
+            if (window.scrollY > 0) {
                 Navbar.removeClass('box-shadow');
             }
             else {
@@ -38,9 +38,9 @@ WindowElem.on({
         }
     },
     hashchange: (event) => {
-        
+
         const newURL = event.newURL.replace(window.location.origin + window.location.pathname, "").replace('#', '');
-        if(!bool(newURL)) {
+        if (!bool(newURL)) {
             Routing.navigateTo("home");
         }
         else {
@@ -63,12 +63,12 @@ WindowElem.on({
                 // contact: '.contact',
             }
         });
-        if(window.location.hash !== "")
+        if (window.location.hash !== "")
             fetchDict('main/home/home.json').then(({ logo }) => Navbar.home.attr({ src: `main/home/${logo}` }));
         function cache(file, page) {
-            if(!file) return;
+            if (!file) return;
             let src;
-            if(file.includes('http') || file.includes('www')) {
+            if (file.includes('http') || file.includes('www')) {
                 src = file;
             }
             else {
@@ -86,9 +86,9 @@ WindowElem.on({
             console.log(...less('cacheTeam'));
             const data = await fetchDict('main/team/team.json');
             const { team: teamData, alumni: alumniData } = data;
-            for(let [_, { image }] of dict(teamData).items())
+            for (let [_, { image }] of dict(teamData).items())
                 cache(image, "team");
-            for(let [_, { image }] of dict(alumniData).items())
+            for (let [_, { image }] of dict(alumniData).items())
                 cache(image, "team");
         }
         async function cacheGallery() {
@@ -96,24 +96,24 @@ WindowElem.on({
             console.log(...less('cacheGallery'));
             let galleryData = await fetchArray("main/gallery/gallery.json");
             const galleryFiles = galleryData.map(d => d.file);
-            for(let file of galleryFiles)
+            for (let file of galleryFiles)
                 cache(file, "gallery");
         }
         async function cacheResearch() {
             console.log(...less('cacheResearch'));
             const researchData = await fetchDict('main/research/research.json');
             delete researchData["page-intro"];
-            for(let [_, { image }] of researchData.items())
+            for (let [_, { image }] of researchData.items())
                 cache(image, "research");
         }
         console.log(...less('waiting 1000ms before caching starts...'));
         wait(1000).then(() => {
             console.log(...less('done waiting, starting caching'));
-            if(!window.location.hash.includes('research'))
+            if (!window.location.hash.includes('research'))
                 cacheResearch();
-            if(!window.location.hash.includes('team'))
+            if (!window.location.hash.includes('team'))
                 cacheTeam();
-            if(!window.location.hash.includes('gallery'))
+            if (!window.location.hash.includes('gallery'))
                 cacheGallery();
             console.log(...less('done caching'));
         });
@@ -122,7 +122,7 @@ WindowElem.on({
 class NavbarElem extends BetterHTMLElement {
     constructor({ query, children }) {
         super({ query, children });
-        for(let pageString of Routing.pageStrings()) {
+        for (let pageString of Routing.pageStrings()) {
             this[pageString]
                 .click(() => {
                     console.log(`navbar ${pageString} click`);
@@ -131,19 +131,19 @@ class NavbarElem extends BetterHTMLElement {
         }
     }
     select(child) {
-        for(let pageString of Routing.pageStrings()) {
+        for (let pageString of Routing.pageStrings()) {
             let pageElem = this[pageString];
             pageElem.toggleClass('selected', pageElem === child);
         }
     }
     _emphasize(child) {
-        for(let pageString of Routing.pageStrings()) {
+        for (let pageString of Routing.pageStrings()) {
             let pageElem = this[pageString];
             pageElem.toggleClass('pale', pageElem !== child);
         }
     }
     _resetPales() {
-        for(let pageString of Routing.pageStrings()) {
+        for (let pageString of Routing.pageStrings()) {
             let pageElem = this[pageString];
             pageElem.removeClass('pale');
         }
@@ -152,12 +152,16 @@ class NavbarElem extends BetterHTMLElement {
 let Navbar;
 
 const hamburger = elem({
-    id: 'hamburger', children: { menu: '.menu', logo: '.logo', items: '.items' }
+    id: 'hamburger', children: {
+        menu_and_logo_container: '.menu-and-logo-container',
+        // logo: '.logo',
+        items: '.items'
+    }
 });
-hamburger.logo.click((event) => {
+/*hamburger.logo.click((event) => {
     event.stopPropagation();
     Routing.navigateTo("home");
-});
+});*/
 hamburger.items.children('div').forEach((bhe) => {
     bhe.click((event) => {
         event.stopPropagation();
@@ -170,7 +174,7 @@ hamburger.items.children('div').forEach((bhe) => {
 hamburger.click((event) => {
     console.log('hamburger.click');
     hamburger.toggleClass('open');
-    if(hamburger.hasClass('open')) {
+    if (hamburger.hasClass('open')) {
         console.log('hamburger opened');
     }
     else {

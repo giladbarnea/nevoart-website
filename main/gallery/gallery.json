@@ -456,10 +456,6 @@
 			"file": "team-15.jpg"
 		},
 		{
-			"caption": "",
-			"file": "team-14.jpg"
-		},
-		{
 			"caption": "Dana and Nadejda",
 			"file": "team-13.jpg"
 		},
@@ -503,6 +499,10 @@
 		{
 			"caption": "Atalia",
 			"file": "team-00.jpg"
+		},
+		{
+			"caption": "Jeanne",
+			"file": "team-14.jpg"
 		}
 	]
 }
