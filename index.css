@@ -761,6 +761,10 @@ h6.thesis {
 
 /* ==================  GALLERY PAGE desktop  ================== */
 
+.team-photos.page-intro {
+ margin-bottom: 100px;
+}
+
 .img-container {
   display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -780,6 +784,10 @@ h6.thesis {
 
 .vid-unit-container.main-cls {
   margin-bottom: 60px;
+}
+
+.vid-unit-container.main-cls:last-of-type{
+  margin-bottom: 0;
 }
 
 .video > iframe {

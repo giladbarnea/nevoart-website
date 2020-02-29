@@ -221,12 +221,7 @@ const GalleryPage = () => {
 
         Home.empty().class('gallery-page')
             .append(
-                elem({ tag: 'section', cls: 'main-cls page-intro bio-images' }).append(
-                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Bio Images' }),
-                    div({ cls: 'img-container edge-to-edge' }).append(
-                        ...bioImages)
-                ),
-                elem({ tag: 'section', cls: 'main-cls team-photos' }).append(
+                elem({ tag: 'section', cls: 'main-cls team-photos page-intro' }).append(
                     elem({ tag: 'h1', cls: "page-title nine-first", text: 'Team Photos' }),
                     div({ cls: 'img-container edge-to-edge' }).append(
                         ...teamPhotos)
@@ -235,6 +230,11 @@ const GalleryPage = () => {
                     elem({ tag: 'h1', cls: "page-title nine-first", text: 'Videos' }),
                     div({ cls: 'vids-container edge-to-edge' }).append(
                         ...videos)
+                ),
+                elem({ tag: 'section', cls: 'main-cls bio-images' }).append(
+                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Bio Images' }),
+                    div({ cls: 'img-container edge-to-edge' }).append(
+                        ...bioImages)
                 ),
                 div({ cls: 'overlay' }),
                 imgViewer,
