@@ -651,7 +651,7 @@ color: white;
 #about-orna {
   background: #F2FAFF;
   height: 412px;
-  padding-bottom: 0;
+  padding-bottom: 32px;
 }
 
 #about-orna > .main-class {
