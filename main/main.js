@@ -169,6 +169,7 @@ hamburger.items.children('div').forEach((bhe) => {
         console.log(`hamburger ${innerText} click`);
         hamburger.removeClass('open');
         Routing.navigateTo(innerText);
+        Body.toggleClass('theater');
     });
 });
 hamburger.click((event) => {
