@@ -79,6 +79,7 @@ WindowElem.on({
                 .on({
                     load: () => {
                         CacheDiv.cacheAppend([[`${page}.${file}`, imgElem]]);
+                        console.log('done loading: ',`${page}.${file}`);
                     }
                 });
         }
@@ -92,12 +93,17 @@ WindowElem.on({
                 cache(image, "team");
         }
         async function cacheGallery() {
-            return console.warn('Hi Morki :) Remember to ask shmendrik to fix gallery cache sometime')
+            // return console.warn('Hi Morki :) Remember to ask shmendrik to fix gallery cache sometime')
             console.log(...less('cacheGallery'));
-            let galleryData = await fetchArray("main/gallery/gallery.json");
-            const galleryFiles = galleryData.map(d => d.file);
-            for (let file of galleryFiles)
+            let {"Bio Images": bioImagesData, "Team Photos": teamPhotosData} = await fetchDict("main/gallery/gallery.json");
+            // const galleryFiles = galleryData.map(d => d.file);
+            
+            for (let {file} of bioImagesData) {
                 cache(file, "gallery");
+            }
+            for (let {file} of teamPhotosData) {
+                cache(file, "gallery");
+            }
         }
         async function cacheResearch() {
             console.log(...less('cacheResearch'));

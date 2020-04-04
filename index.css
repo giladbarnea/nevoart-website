@@ -960,9 +960,10 @@ h6.thesis {
   margin-top: 40px;
 }
 
-.img-container > div {
+.img-container > img {
   height: 180px;
-  background-size: cover;
+  /* background-size: cover; */
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -1108,7 +1109,7 @@ body.theater {
 /* ===== mobile ===== */
 
 @media screen and (max-width: 768px) {
-  .img-container > div {
+  .img-container > img {
     height: 100px;
   }
 

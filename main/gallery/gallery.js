@@ -47,7 +47,7 @@ const GalleryPage = () => {
                 // allowfullscreen></iframe>
             }
         }
-        class GalleryImg extends Div {
+        class GalleryImg extends Img {
             constructor(file, caption) {
                 super({});
                 this.path = null;
@@ -64,9 +64,9 @@ const GalleryPage = () => {
                     return toggleImgViewer(this);
                 });
             }
-            src(src) {
-                return this.css({backgroundImage:`url(${src})`})
-            }
+            // src(src) {
+            //     return this.css({backgroundImage:`url(${src})`})
+            // }
             getLeftImage() {
                 let i;
                 if (this.index === 0)
@@ -120,7 +120,8 @@ const GalleryPage = () => {
                 switchToImg(selectedImg.getRightImage());
             }
         }
-        function closeImgViewer() {
+        function closeImgViewer(event) {
+            console.log('closeImgViewer', event);
             Body.toggleClass('theater', false);
             // imagesContainer.toggleClass('theater', false);
             Navbar.css({ opacity: 1 });
@@ -144,7 +145,7 @@ const GalleryPage = () => {
         const imgViewer = div({ cls: 'img-viewer' })
             .cacheAppend({
                 left: div({ id: 'left_chevron', cls: 'left' }).html(chevronSvg).click(gotoAdjImg),
-                img: div({}),
+                img: img(),
                 right: div({ id: 'right_chevron', cls: 'right' }).html(chevronSvg).click(gotoAdjImg),
                 caption: div({ id: 'caption' })
             }).click((event) => {

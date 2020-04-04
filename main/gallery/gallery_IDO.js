@@ -215,4 +215,3 @@ const GalleryPage = () => {
 
     return {init};
 };
-//# sourceMappingURL=gallery.js.map
