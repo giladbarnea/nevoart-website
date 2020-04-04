@@ -602,7 +602,7 @@ section {
 
 #landing-fold {
   height: 640px;
-  background-image: url('main/home/landing-fold-bg.png');
+  background-image: url('main/home/landing-fold-bg-small.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 35% 0;
