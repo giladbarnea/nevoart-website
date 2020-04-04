@@ -602,11 +602,18 @@ section {
 
 #landing-fold {
   height: 640px;
-  background-image: url('main/home/landing-fold-bg-small.png');
+  color: white;
+  background: linear-gradient(201deg, rgba(0,230,255,1) 0%, rgba(132,184,241,1) 23%, rgba(161,145,217,1) 100%);
+}
+
+#langing-fold-art {
+  height: 640px;
+  width: 100%;
+  position: absolute;
+  background-image: url('main/home/landing-art.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 35% 0;
-  color: white;
+  background-position: 28% 0;
 }
 
 #landing-fold #about{
