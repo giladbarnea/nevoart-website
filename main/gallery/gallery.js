@@ -139,8 +139,6 @@ const GalleryPage = () => {
             switchToImg(_selectedImg);
             imgViewer.isopen = true;
             Body.toggleClass('theater', true);
-            // imagesContainer.toggleClass('theater', true);
-            Navbar.css({ opacity: 0 });
         }
         const imgViewer = div({ cls: 'img-viewer' })
             .cacheAppend({
