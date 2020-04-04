@@ -455,7 +455,7 @@ section {
   color: var(--GREY8);
 }
 
-.permalink #navbar > a.home {
+.permalink #navbar > a.oes-lab {
   background-color: var(--BLUE);
   color: white;
 }
@@ -464,7 +464,7 @@ section {
   margin-right:0;
 }
 
-#navbar a.home {
+#navbar a.oes-lab {
   background-color: white;
   color: var(--BLUE);
   margin-right: auto;
@@ -477,7 +477,7 @@ section {
   margin-top: 25px;
 }
 
-#navbar a.home:hover {
+#navbar a.oes-lab:hover {
   margin-top: 0px;
 }
 
