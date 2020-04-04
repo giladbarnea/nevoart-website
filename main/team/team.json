@@ -1,7 +1,7 @@
 {
 	"team": {
 		"Orna Elroy-Stein": {
-			"role": "principal investigator",
+			"role": "Principal Investigator",
 			"image": "orna_profile.png",
 			"email": "ornaes@tauex.tau.ac.il"
 		},
@@ -11,9 +11,9 @@
 			"email": "andreaat@post.tau.ac.il"
 		},
 		"Melisa Herrero": {
-			"role": "PhD student",
+			"role": "PhD Student",
 			"image": "melissa.jpg",
-			"email": "melo_herrero@hotmail.com"
+			"email": "mherrerobocco@gmail.com"
 		},
 		"Mika Rotem": {
 			"role": "PhD Student",
@@ -26,29 +26,29 @@
 			"email": "shirsrour@mail.tau.ac.il"
 		},
 		"Reut Sharet": {
-			"role": "MSc student",
+			"role": "PhD Student",
 			"image": "reut.jpg",
 			"email": "reutsharet@mail.tau.ac.il"
 		},
 		"Daniel Blumenkrants": {
-			"role": "MSc student",
+			"role": "MSc Student",
 			"image": "daniel.jpg",
 			"email": "blumenkrants@mail.tau.ac.il"
 		},
 		"Maron Daw": {
-			"role": "MSc student",
+			"role": "MSc Student",
 			"image": "maron.jpg",
 			"email": "marondaw209@gmail.com"
 		},
 		"Liat Orr": {
-			"role": "MSc student",
+			"role": "MSc Student",
 			"image": "liat.jpg",
 			"email": "liatgalorr@mail.tau.ac.il"
 		}
 	},
 	"alumni": {
 		"Tamar Elman": {
-			"role": "2016-2018, MSc student",
+			"role": "2016-2018, MSc Student",
 			"image": "tamar.jpg",
 			"thesis": "hnRNP C is co-localized with active ribosomes at the cell cortex during mitosis to control the translation of sub-class of mRNAs"
 		},
@@ -57,16 +57,16 @@
 			"image": "Dalia.jpg"
 		},
 		"Gali Raini": {
-			"role": "2010-2016, PhD student",
+			"role": "2010-2016, PhD Student",
 			"image": "Gali.jpg",
 			"thesis": "Mitochondrial Dysfunction in Vanishing White Matter Disease"
 		},
 		"Sarah Hofmann": {
-			"role": "2013-2016, Post-doc",
+			"role": "2013-2016, Post Doc",
 			"image": "Sarah.jpg"
 		},
 		"Yulia Kesler": {
-			"role": "2012-2015, MSc student",
+			"role": "2012-2015, MSc Student",
 			"image": "Yulia.jpg",
 			"thesis": "Evaluation of Guanabenz derivatives as GADD34 inhibitors"
 		},
@@ -80,52 +80,52 @@
 			"image": "Sima.jpg"
 		},
 		"Yuval Cabilly": {
-			"role": "2008-2013, PhD student",
+			"role": "2008-2013, PhD Student",
 			"image": "Yuval.jpg",
 			"thesis": "The mouse model for Vanishing White Matter (VWM) disease reveals abnormal development of brain white matter and poor astrocyte inflammatory response"
 		},
 		"Liraz Marom": {
-			"role": "2005-2007, MSc student; 2007-2012, PhD student",
+			"role": "2005-2007, MSc Student; 2007-2012, PhD Student",
 			"image": "Liraz.jpg",
 			"thesis": "3′-Poly(A) tain and poly(A) binding protein (PABP) promote the IRES activity of Crucifier-infecting tobamovirus (CrTMV) \n\n A mouse model for VWM disease reveals function- and time-specific changes in brain gene expression and displayes phenotypic recovery upon inhibition of GADD34"
 		},
 		"Mali Barbi": {
-			"role": "2009-2011, MSc student",
+			"role": "2009-2011, MSc Student",
 			"image": "Mali.jpg",
 			"thesis": "The inflamatory response of microglia cells of VWM-diseased mice harboring a point mutation in eIF2B5"
 		},
 		"Shelly Hen-Avivi": {
-			"role": "2006-2009, MSc student",
+			"role": "2006-2009, MSc Student",
 			"image": "Shelly.jpg",
 			"thesis": "A search for factors that mediate CrTMV IRES activity"
 		},
 		"Gilad Sivan": {
-			"role": "2005-2009, PhD student",
+			"role": "2005-2009, PhD Student",
 			"image": "gilad.jpg",
 			"thesis": "Control of mRNA translation during mitosis: Regulation at the Elongation level"
 		},
 		"Michal Geva": {
-			"role": "2003-2008, PhD student",
+			"role": "2003-2008, PhD Student",
 			"image": "Michal.jpg",
 			"thesis": "Generation of a Knock-In mouse model for eIF2B-related leukodystrophy"
 		},
 		"Idan Pereman": {
-			"role": "2003-2005, MSc student",
+			"role": "2003-2005, MSc Student",
 			"image": "Idan.jpg",
 			"thesis": "Characterization of the Poly(A)-binding protein (PABP) during the cell cycle"
 		},
 		"Dvir Dahary": {
-			"role": "2003-2005, MSc student",
+			"role": "2003-2005, MSc Student",
 			"image": "dvir.jpg",
 			"thesis": "Natural antisense transcription represents real overlap rather than translcriptional leakage"
 		},
 		"Limor Dinur-Klein": {
-			"role": "2002-2005, MSc student",
+			"role": "2002-2005, MSc Student",
 			"image": "Limor.jpg",
 			"thesis": "Translation initiation factor eIF5B: new aspects regarding activity and stability"
 		},
 		"Liraz Kantor": {
-			"role": "2002-2006, PhD student",
+			"role": "2002-2006, PhD Student",
 			"image": "LirazK.jpg",
 			"thesis": "Effect of eIF2B mutations on cellular stress response – Implications of the neurodegenerative disease CACH/VWM"
 		},
@@ -138,22 +138,22 @@
 			"image": "Nadejda.jpg"
 		},
 		"Gabriel Gerlitz": {
-			"role": "1996-1998, MSc Student; 1998-2002, PhD student",
+			"role": "1996-1998, MSc Student; 1998-2002, PhD Student",
 			"image": "gabi.jpg",
 			"thesis": "Post translational modifications of hnRNP-C upon megakaryocytic differentiation \n\n Activation of internal translation initiation – the possible roles of eIF2α and hnRNP-C"
 		},
 		"Maya Amichay": {
-			"role": "1999-2001, MSc student",
+			"role": "1999-2001, MSc Student",
 			"image": "Maya.jpg",
 			"thesis": "Regulation of PDGF2 mRNA stability is mediated by 5’UTR – 3’UTR interactions"
 		},
 		"Osnat Sella-Tavor": {
-			"role": "1993-1995, MSc Student; 1995-2000, PhD student",
+			"role": "1993-1995, MSc Student; 1995-2000, PhD Student",
 			"image": "osnat.jpg",
 			"thesis": "Identification of RNA-binding proteins that interact with PDGF2/c-sis mRNA leader – Implications for translational modulation during differentiation \n\n Differentiation-induced internal translation of platelet-derived growth factor 2 (PDGF2/c-sis) mRNA: analysis of the cis-elements and trans-acting factors"
 		},
 		"Dana Gelbaum": {
-			"role": "1997-1999, MSc student",
+			"role": "1997-1999, MSc Student",
 			"image": "dana.jpg",
 			"thesis": "Interaction between 5’UTR and 3’UTR affect the translatability and stability of PDGF2 mRNA"
 		},
