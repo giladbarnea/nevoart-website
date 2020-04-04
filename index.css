@@ -965,6 +965,7 @@ h6.thesis {
   /* background-size: cover; */
   object-fit: cover;
   cursor: pointer;
+  width: 100%;
 }
 
 .vids-container {
