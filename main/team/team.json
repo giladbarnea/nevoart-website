@@ -11,7 +11,7 @@
 			"email": "andreaat@post.tau.ac.il"
 		},
 		"Melisa Herrero": {
-			"role": "PhD Student",
+			"role": "Post Doc",
 			"image": "melissa.jpg",
 			"email": "mherrerobocco@gmail.com"
 		},
@@ -25,7 +25,7 @@
 			"image": "shir.jpg",
 			"email": "shirsrour@mail.tau.ac.il"
 		},
-		"Reut Sharet": {
+		"Reut Sharet-Eshed": {
 			"role": "PhD Student",
 			"image": "reut.jpg",
 			"email": "reutsharet@mail.tau.ac.il"
@@ -47,6 +47,16 @@
 		}
 	},
 	"alumni": {
+		"Melisa Herrero": {
+			"role": "2015-2020, PhD Student",
+			"image": "melissa.jpg",
+			"thesis": "Vulnerability of astrocytes and oligodendrocytes to eIF2B mutations: Implications to Vanishing White Matter disease"
+		},
+		"Reut Sharet-Eshed": {
+			"role": "2015-2017, MSc Student",
+			"image": "reut.jpg",
+			"thesis": "Possible mechanisms affecting mitochondrial biogenesis in a mouse model for VWM disease"
+		},
 		"Tamar Elman": {
 			"role": "2016-2018, MSc Student",
 			"image": "tamar.jpg",
