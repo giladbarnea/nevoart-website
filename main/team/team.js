@@ -14,11 +14,16 @@ const TeamPage = () => {
                 this.email = email;
                 let mailto = "mailto:" + email + "?Subject=Hello";
                 let imgElem;
-                let cachedImage = CacheDiv[`team.${image}`];
-                if (cachedImage !== undefined) {
-                    imgElem = cachedImage.removeAttr('hidden');
+                if (typeof image === 'string') {
+                    let cachedImage = CacheDiv[`team.${image}`];
+                    if (cachedImage !== undefined) {
+                        let hidden = cachedImage.attr('hidden');
+                        imgElem = cachedImage.removeAttr('hidden');
+                    } else {
+                        imgElem = img({src: `main/team/${image}`});
+                    }
                 } else {
-                    imgElem = img({src: `main/team/${image}`});
+                    imgElem = image;
                 }
                 this.append(
                     imgElem,
@@ -192,21 +197,25 @@ const TeamPage = () => {
         //         showArrowOnHover(this.email.children('a'));
         //     }
         // }
+        const imgs = new Set();
 
         function containerFactory({containerData, team}) {
             let index = 0;
             for (let [name, {image, role, thesis, email}] of dict(containerData).items()) {
+                if (imgs.has(image)) {
+                    image = img({src: `main/team/${image}`});
+                } else {
+                    imgs.add(image);
+                }
                 let person = new Person(image, name, role, thesis, email);
                 team.push(person);
                 index++;
             }
-            // let cls = MOBILE ? 'flex' : 'grid';
             const grid = div({cls: "member-container edge-to-edge"}).append(...team);
             return grid;
         }
 
         const {alumni: alumniData, team: teamData} = await fetchDict('main/team/team.json');
-        // const expando = new Expando();
         const team = new Team();
         const alumni = new Team();
         const teamContainer = containerFactory({containerData: teamData, team: team});
