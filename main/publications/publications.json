@@ -8,13 +8,6 @@
 		"Novel Proteomic Approach (PUNCH-P) Reveals Cell Cycle Specific Fluctuations in mRNA Translation"
 	],
 	"publications": {
-		"Recurrent functional misinterpretation of RNA-seq data caused by sample-specific gene length bias": {
-			"year": 2019,
-			"creds": "Mandelboum S, Manber Z, Elroy-Stein O, Elkon R.",
-			"mag": "17(11): e3000481",
-			"link": "https://doi.org/10.1371/journal.pbio.3000481",
-			"journal": "PLoS Biology"
-		},
 		"The translational repression mediated by the PDGF/c-sis mRNA leader is relieved during megakaryocytic differentiation": {
 			"year": 1995,
 			"creds": "Bernstein J., Sheffler I., Elroy-Stein O.",
@@ -274,9 +267,16 @@
 		"eIF2B Mutations Cause Mitochondrial Malfunction in Oligodendrocytes": {
 			"year": 2019,
 			"creds": "Herrero M, Mandelboum S, Elroy-Stein O.",
-			"mag": "Neuromolecular Med. https://doi.org/10.1007/s12017-019-08551-9.",
+			"mag": "Neuromolecular Med.",
 			"link": "https://link.springer.com/article/10.1007%2Fs12017-019-08551-9",
 			"journal": "Neuromolecular Med"
+		},
+		"Recurrent functional misinterpretation of RNA-seq data caused by sample-specific gene length bias": {
+			"year": 2019,
+			"creds": "Mandelboum S, Manber Z, Elroy-Stein O, Elkon R.",
+			"mag": "17(11): e3000481",
+			"link": "https://doi.org/10.1371/journal.pbio.3000481",
+			"journal": "PLoS Biology"
 		}
 	},
 	"journals": {
