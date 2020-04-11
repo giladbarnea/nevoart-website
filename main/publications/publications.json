@@ -8,6 +8,13 @@
 		"Novel Proteomic Approach (PUNCH-P) Reveals Cell Cycle Specific Fluctuations in mRNA Translation"
 	],
 	"publications": {
+		"Recurrent functional misinterpretation of RNA-seq data caused by sample-specific gene length bias": {
+			"year": 2019,
+			"creds": "Mandelboum S, Manber Z, Elroy-Stein O, Elkon R.",
+			"mag": "17(11): e3000481",
+			"link": "https://doi.org/10.1371/journal.pbio.3000481",
+			"journal": "PLoS Biology"
+		},
 		"The translational repression mediated by the PDGF/c-sis mRNA leader is relieved during megakaryocytic differentiation": {
 			"year": 1995,
 			"creds": "Bernstein J., Sheffler I., Elroy-Stein O.",
@@ -359,6 +366,9 @@
 		},
 		"Oncogene": {
 			"link": "http://www.nature.com/onc/index.html"
+		},
+		"PLOS Biology": {
+			"link": "https://journals.plos.org/plosbiology/"
 		},
 		"PLOS Genetics": {
 			"link": "http://journals.plos.org/plosgenetics"
