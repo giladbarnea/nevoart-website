@@ -1,9 +1,3 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 const TeamPage = () => {
     async function init() {
         console.log('TeamPage init');
@@ -15,31 +9,36 @@ const TeamPage = () => {
         // }
         class Person extends Div {
             constructor(image, name, role, thesis, email) {
-                super({ cls: 'person' });
+                super({cls: 'person'});
                 this.thesis = thesis;
                 this.email = email;
-                let mailto = "mailto:" + email+ "?Subject=Hello";
+                let mailto = "mailto:" + email + "?Subject=Hello";
                 let imgElem;
-                let cachedImage = CacheDiv[`team.${image}`];
-                if (cachedImage !== undefined) {
-                    imgElem = cachedImage.removeAttr('hidden');
-                }
-                else {
-                    imgElem = img({ src: `main/team/${image}` });
+                if (typeof image === 'string') {
+                    let cachedImage = CacheDiv[`team.${image}`];
+                    if (cachedImage !== undefined) {
+                        let hidden = cachedImage.attr('hidden');
+                        imgElem = cachedImage.removeAttr('hidden');
+                    } else {
+                        imgElem = img({src: `main/team/${image}`});
+                    }
+                } else {
+                    imgElem = image;
                 }
                 this.append(
-                        imgElem,
-                        elem({ tag: 'h3', text: name, cls: "name" }), 
-                        elem({ tag: 'h6', text: role, cls: "role" }),
-                        anchor({ text: email, cls: "role", href: mailto}),
-                        elem({ tag: 'h6', text: thesis, cls: "thesis" })
-                        )
+                    imgElem,
+                    elem({tag: 'h3', text: name, cls: "name"}),
+                    elem({tag: 'h6', text: role, cls: "role"}),
+                    anchor({text: email, cls: "role", href: mailto}),
+                    elem({tag: 'h6', text: thesis, cls: "thesis"})
+                )
                     .click((event) => {
                         console.log('person click, stopping prop and toggling expando');
                         event.stopPropagation();
                         // expando.toggle(this);
                     });
             }
+
             // focus() {
             //     return this.removeClass('unfocused');
             // }
@@ -74,11 +73,13 @@ const TeamPage = () => {
             //     this.group[rightmostPersonIndex].after(expando);
             // }
         }
+
         class Team extends Array {
             constructor() {
                 super();
                 this._push = super.push;
             }
+
             // push(person) {
             //     let length = this._push(person);
             //     let index = length - 1;
@@ -101,6 +102,7 @@ const TeamPage = () => {
             //     }
             // }
         }
+
         // class Expando extends Div {
         //     constructor() {
         //         super({ id: 'person_expando' });
@@ -195,34 +197,37 @@ const TeamPage = () => {
         //         showArrowOnHover(this.email.children('a'));
         //     }
         // }
-        // __decorate([
-        //     logFn()
-        // ], Expando.prototype, "setHtml", null);
-        function containerFactory({ containerData, team }) {
+        const imgs = new Set();
+
+        function containerFactory({containerData, team}) {
             let index = 0;
-            for (let [name, { image, role, thesis, email }] of dict(containerData).items()) {
+            for (let [name, {image, role, thesis, email}] of dict(containerData).items()) {
+                if (imgs.has(image)) {
+                    image = img({src: `main/team/${image}`});
+                } else {
+                    imgs.add(image);
+                }
                 let person = new Person(image, name, role, thesis, email);
                 team.push(person);
                 index++;
             }
-            // let cls = MOBILE ? 'flex' : 'grid';
-            const grid = div({ cls: "member-container edge-to-edge" }).append(...team);
+            const grid = div({cls: "member-container edge-to-edge"}).append(...team);
             return grid;
         }
-        const { alumni: alumniData, team: teamData } = await fetchDict('main/team/team.json');
-        // const expando = new Expando();
+
+        const {alumni: alumniData, team: teamData} = await fetchDict('main/team/team.json');
         const team = new Team();
         const alumni = new Team();
-        const teamContainer = containerFactory({ containerData: teamData, team: team });
-        const alumniContainer = containerFactory({ containerData: alumniData, team: alumni });
+        const teamContainer = containerFactory({containerData: teamData, team: team});
+        const alumniContainer = containerFactory({containerData: alumniData, team: alumni});
         Home.empty().class('team-page')
             .append(
-                elem({ tag: 'section', cls: 'main-cls page-intro active-memebers' }).append(
-                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Active Lab Members' }),
+                elem({tag: 'section', cls: 'main-cls page-intro active-memebers'}).append(
+                    elem({tag: 'h1', cls: "page-title nine-first", text: 'Active Lab Members'}),
                     teamContainer
                 ),
-                elem({ tag: 'section', cls: 'main-cls alumni' }).append(
-                    elem({ tag: 'h1', cls: "page-title nine-first", text: 'Alumni' }), 
+                elem({tag: 'section', cls: 'main-cls alumni'}).append(
+                    elem({tag: 'h1', cls: "page-title nine-first", text: 'Alumni'}),
                     alumniContainer
                 )
             );
@@ -254,5 +259,6 @@ const TeamPage = () => {
         //     }
         // }
     }
-    return { init };
+
+    return {init};
 };
