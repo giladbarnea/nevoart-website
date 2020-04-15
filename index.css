@@ -15,17 +15,10 @@
   --SMALL_GAP2: 15px;
   --BLUE: #0060DC;
   --OffWhite: #FAFAF8;
-  --GREY00: rgb(255, 255, 255);
-  --GREY01: rgb(250, 250, 250);
   --GREY02: #EBEDF0;
-  --GREY2: rgb(221, 221, 221);
   --GREY3: rgb(204, 204, 204);
-  --GREY4: rgb(187, 187, 187);
-  --GREY5: rgb(153, 153, 153);
   --GREY6: rgb(138, 141, 145);
-  --GREY7: rgb(101, 103, 107);
   --GREY8: rgb(10, 10, 10);
-  --TRANS: rgba(0, 0, 0, 0);
 }
 
 :root {
@@ -929,10 +922,24 @@ a.label {
   margin-bottom: 4px;
 }
 
+.thesis-block {
+  background-color: #F2FAFF;
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.thesis-block > .role {
+  margin:0;
+}
+
 h6.thesis {
   text-align: left;
   font-style: italic;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 8px 0 0 0;
+  color: #47658B;
 }
 
 /* ===== mobile ===== */
@@ -1225,10 +1232,6 @@ body.theater {
   section#navbar_section > div#navbar {
     font-size: 20px;
   }
-}
-
-section#navbar_section > div#navbar.box-shadow {
-  /* box-shadow: inset 0 -1px 0 0 var(--GREY2); */
 }
 
 section#navbar_section > div#navbar > img.uni {

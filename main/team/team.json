@@ -95,9 +95,11 @@
 			"thesis": "The mouse model for Vanishing White Matter (VWM) disease reveals abnormal development of brain white matter and poor astrocyte inflammatory response"
 		},
 		"Liraz Marom": {
-			"role": "2005-2007, MSc Student; 2007-2012, PhD Student",
+			"role": "2005-2007, MSc Student",
+			"role2": "2007-2012, PhD Student",
 			"image": "Liraz.jpg",
-			"thesis": "3′-Poly(A) tain and poly(A) binding protein (PABP) promote the IRES activity of Crucifier-infecting tobamovirus (CrTMV) \n\n A mouse model for VWM disease reveals function- and time-specific changes in brain gene expression and displayes phenotypic recovery upon inhibition of GADD34"
+			"thesis": "3′-Poly(A) tain and poly(A) binding protein (PABP) promote the IRES activity of Crucifier-infecting tobamovirus (CrTMV)",
+			"thesis2": "A mouse model for VWM disease reveals function- and time-specific changes in brain gene expression and displayes phenotypic recovery upon inhibition of GADD34"
 		},
 		"Mali Barbi": {
 			"role": "2009-2011, MSc Student",
@@ -148,9 +150,11 @@
 			"image": "Nadejda.jpg"
 		},
 		"Gabriel Gerlitz": {
-			"role": "1996-1998, MSc Student; 1998-2002, PhD Student",
+			"role": "1996-1998, MSc Student",
+			"role2": "1998-2002, PhD Student",
 			"image": "gabi.jpg",
-			"thesis": "Post translational modifications of hnRNP-C upon megakaryocytic differentiation \n\n Activation of internal translation initiation – the possible roles of eIF2α and hnRNP-C"
+			"thesis": "Post translational modifications of hnRNP-C upon megakaryocytic differentiation",
+			"thesis2": "Activation of internal translation initiation – the possible roles of eIF2α and hnRNP-C"
 		},
 		"Maya Amichay": {
 			"role": "1999-2001, MSc Student",
@@ -158,9 +162,11 @@
 			"thesis": "Regulation of PDGF2 mRNA stability is mediated by 5’UTR – 3’UTR interactions"
 		},
 		"Osnat Sella-Tavor": {
-			"role": "1993-1995, MSc Student; 1995-2000, PhD Student",
+			"role": "1993-1995, MSc Student",
+			"role2": "1995-2000, PhD Student",
 			"image": "osnat.jpg",
-			"thesis": "Identification of RNA-binding proteins that interact with PDGF2/c-sis mRNA leader – Implications for translational modulation during differentiation \n\n Differentiation-induced internal translation of platelet-derived growth factor 2 (PDGF2/c-sis) mRNA: analysis of the cis-elements and trans-acting factors"
+			"thesis": "Identification of RNA-binding proteins that interact with PDGF2/c-sis mRNA leader – Implications for translational modulation during differentiation",
+			"thesis2": "Differentiation-induced internal translation of platelet-derived growth factor 2 (PDGF2/c-sis) mRNA: analysis of the cis-elements and trans-acting factors"
 		},
 		"Dana Gelbaum": {
 			"role": "1997-1999, MSc Student",
