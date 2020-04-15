@@ -188,6 +188,10 @@
 	],
 	"Team Photos": [
 		{
+			"caption": "test image",
+			"file": "team-ramon-2.jpg"
+		},
+		{
 			"caption": "ILANIT 2020, Eilat",
 			"file": "team-ilanit2020-1.jpg"
 		},
