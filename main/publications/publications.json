@@ -277,6 +277,13 @@
 			"mag": "17(11): e3000481",
 			"link": "https://doi.org/10.1371/journal.pbio.3000481",
 			"journal": "PLoS Biology"
+		},
+		"Publication about a new finding, very very interesting": {
+			"year": 2020,
+			"creds": "Maurann Stein, Shmendrick",
+			"mag": "ksgv wie48y9we84ytv",
+			"link": "https://doi.org/10.1371/journal.pbio.3000481",
+			"journal": "PLoS Smendores"
 		}
 	},
 	"journals": {
@@ -375,6 +382,9 @@
 		},
 		"PLOS one": {
 			"link": "http://www.plosone.org/"
+		},
+		"PLoS Shmendores": {
+			"link": "http://www.sldifwief.org/"
 		},
 		"Proc Nat Acad Sci": {
 			"link": "http://www.pnas.org/"
