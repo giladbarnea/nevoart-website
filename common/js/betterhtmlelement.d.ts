@@ -108,7 +108,7 @@ interface TransformOptions {
     translateZ?: string;
 }
 
-declare const SVG_NS_URI = "http://www.w3.org/2000/svg";
+declare const SVG_NS_URI = "https://www.w3.org/2000/svg";
 
 interface AnimateOptions {
     delay?: string;

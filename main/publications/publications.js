@@ -3,10 +3,13 @@ const PublicationsPage = () => {
         constructor(title, year, creds, mag, link, journal, highlight, supOne, supTwo) {
             super({ cls: 'publication' });
             function _openLink() {
-                if (link.includes('http') || link.includes('www'))
+                // DON'T change string to 'https'
+                if (link.includes('http') || link.includes('www')) {
                     window.open(link);
-                else
+                }
+                else {
                     window.open(`main/publications/${link}`);
+                }
             }
             this.year = year;
             const elements = {

@@ -85,7 +85,7 @@ const GalleryPage = () => {
             }
         }
         console.log('GalleryPage init');
-        const chevronSvg = `<svg version="1.1" id="chevron_right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        const chevronSvg = `<svg version="1.1" id="chevron_right" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
      viewBox="0 0 185.343 185.343">
     <path style="fill:#000;"
 		  d="M 51.707,185.343
