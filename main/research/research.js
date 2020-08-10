@@ -15,6 +15,7 @@ const ResearchPage = () => {
                 }
                 else {
                     let src;
+                    // DON'T change string to 'https'
                     if (image.includes('http') || image.includes('www')) {
                         src = image;
                     }

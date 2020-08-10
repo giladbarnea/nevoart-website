@@ -68,6 +68,7 @@ WindowElem.on({
         function cache(file, page) {
             if (!file) return;
             let src;
+            // DON'T change string to 'https'
             if (file.includes('http') || file.includes('www')) {
                 src = file;
             }
