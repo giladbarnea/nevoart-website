@@ -31,7 +31,7 @@ class BadArgumentsAmountError extends Error {
 	}
 }
 
-const SVG_NS_URI = 'http://www.w3.org/2000/svg';
+const SVG_NS_URI = 'https://www.w3.org/2000/svg';
 
 function isFunction(fn) {
 	return fn && {}.toString.call(fn) === '[object Function]';
@@ -63,7 +63,7 @@ class BetterHTMLElement {
 			if (['svg', 'path'].includes(tag.toLowerCase())) {
 				this._isSvg = true;
 				this._htmlElement = document.createElementNS(SVG_NS_URI, tag);
-				// this._htmlElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
+				// this._htmlElement.setAttribute('xmlns', "https://www.w3.org/2000/svg");
 			} else {
 				this._htmlElement = document.createElement(tag);
 			}
