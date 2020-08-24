@@ -9,6 +9,13 @@
 		"Novel Proteomic Approach (PUNCH-P) Reveals Cell Cycle Specific Fluctuations in mRNA Translation"
 	],
 	"publications": {
+		"Cleavage of the HIV replication primer tRNA lys,3 in human cells expressing bacterial anticodon nuclease.": {
+			"year": 1995,
+			"creds": "Shterman N, Elroy-Stein O, Morad I, Amitsur M, Kaufmann G.",
+			"mag": "Nuc. Acids Res. 23, 1744-1749. PMID: 7784179",
+			"link": "  ",
+			"journal": "Nuc. Acids Res."
+		},	
 		"The translational repression mediated by the PDGF/c-sis mRNA leader is relieved during megakaryocytic differentiation": {
 			"year": 1995,
 			"creds": "Bernstein J., Sheffler I., Elroy-Stein O.",
@@ -16,12 +23,54 @@
 			"link": "https://www.jbc.org/content/270/18/10559.long",
 			"journal": "J. Biol. Chem."
 		},
+		"The glucocerebrosidase D409H mutation in Gaucher disease.": {
+			"year": 1996,
+			"creds": "Pasmanik-Chor, M., S. Laadan, Elroy-Stein O, Zimran A, Abrahamov A, Gatt S, Horowitz M.",
+			"mag": "Biochem. Molec. Med. 59, 125-133. PMID: 8986634",
+			"link": "https://pubmed.ncbi.nlm.nih.gov/8986634/",
+			"journal": "Biochem. Molec. Med."
+		},
+		"Overexpression of human glucocerebrosidase containing different size leaders.": {
+			"year": 1996,
+			"creds": "Pasmanik-Chor M, Elroy-Stein O, Gatt S, Aerts H, Horowitz M.",
+			"mag": "Biochem. J. Vol. 316, 81-88. PMID: 8694790",
+			"link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1217489/",
+			"journal": "Biochem J."
+		},
 		"PDFG2/c-sis mRNA leader contains a differentiation-induced internal ribosomal entry site (D-IRES)": {
 			"year": 1997,
 			"creds": "Bernstein J., Sella O, Le S-Y., Elroy-Stein O.",
 			"mag": "J. Biol. Chem. 272, 9356-9362. PMID: 9083072",
 			"link": "https://www.jbc.org/content/272/14/9356.long",
 			"journal": "J. Biol. Chem."
+		},
+		"Does EBV modulate ADA mRNA translation?": {
+			"year": 1997,
+			"creds": "Gerlitz G, Elroy-Stein O.",
+			"mag": "Leukemia 11, 249. PMID: 9519791",
+			"link": "https://www.nature.com/articles/2400902",
+			"journal": "Leukemia"
+		},
+		"Expression of human mutated glucocerebrosidase alleles in human cells.": {
+			"year": 1997,
+			"creds": "Pasmanik-Chor M, Madar-Shapiro L, Elroy-Stein O, Aerts H, Gatt S, Horowitz M.",
+			"mag": "Hum. Mol. Genet. 6, 887-895. https://doi.org/10.1093/hmg/6.6.887",
+			"link": "https://academic.oup.com/hmg/article/6/6/887/2901215",
+			"journal": "Hum. Mol. Genet."
+		},	
+		"Ataxia-telangiectasia: Structural diversity of untranslated sequences suggests complex post-transcriptional regulation of ATM gene expression.": {
+			"year": 1997,
+			"creds": "Savitsky K, Platzer M, Usiel T, Gilad S, Sartiel A, Rosenthal A, Elroy-Stein O, Shiloh Y, Rotman G.",
+			"mag": "Nucleic Acid Res. 25, 1678-1684. PMID: 9108147",
+			"link": "https://academic.oup.com/nar/article/25/9/1678/2901941",
+			"journal": "Nuc. Acid Res."
+		},
+		"Adenovirus E1A interferes with expression of vaccinia viral genes.": {
+			"year": 1997,
+			"creds": "Strauss D, Elroy-Stein O, Ehrlich R.",
+			"mag": "Gene. 184, 279-284. PMID: 9031640",
+			"link": "https://www.sciencedirect.com/science/article/abs/pii/S0378111996006142?via%3Dihub",
+			"journal": "Gene"
 		},
 		"Regulation of vascular endothelial growth factor (VEGF) expression is mediated by internal initiation of translation and alternative initiation of transcription": {
 			"year": 1998,
@@ -43,6 +92,13 @@
 			"mag": "Mol. Cell. Biol. 20, 2297-2307. PMID: 10713153",
 			"link": "https://mcb.asm.org/content/20/7/2297.long",
 			"journal": "Mol. Cell. Biol."
+		},
+		"Gene expression using the vaccinia virus/T7 RNA polymerase hybrid system.": {
+			"year": 2001,
+			"creds": "Elroy-Stein O, Moss B.",
+			"mag": "Curr Protoc Mol Biol. Chapter 16:Unit16.19. doi: 10.1002/0471142727.mb1619s43. PMID: 18265126",
+			"link": "https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/0471142727.mb1619s43",
+			"journal": "Current Prot. Mol. Biol."
 		},
 		"Phosphorylation of initiation factor 2α is required for activation of internal translation initiation during cell differentiation": {
 			"year": 2002,
@@ -202,7 +258,7 @@
 			"journal": "Genes Dev.",
 			"highlight": "Miura, G.: \"Pack a PUNCH\" (2013) Research Highlights, Nature Chemical Biology,9,601. doi:10.1038/nchembio.1347 \n\nLou, K-J.: \"Puromycin-associated nascent chain proteomics (PUNCH-P) for monitoring protein synthesis\" (2013) SciBX: 6(35); doi:10.1038/scibx.2013.971 [Science-Buisness eXchange; Nature.com]"
 		},
-		"PUNCH-P for global translatome profiling: Methodology, insights and comparison to other techniques": {
+		"PUNCH-P for global translatome profiling: Methodology, insights and comparison to other techniques. Review": {
 			"year": 2013,
 			"creds": "Aviner R, Geiger T, Elroy-Stein O.",
 			"mag": "Translation 1(1), eLocation ID: e27516 PMID: 26824027",
@@ -260,8 +316,8 @@
 		},
 		"Drug Screening Identifies Sigma-1-Receptor as a Target for the Therapy of VWM Leukodystrophy": {
 			"year": 2018,
-			"creds": "Atzmon A., Herrero M., Sharet-Eshed R., Gilad Y., Senderowitz H., Elroy-Stein O.",
-			"mag": "Front Mol Neurosci. 11:336. doi: 10.3389/fnmol.2018.00336. eCollection 2018. PMID: 30279648",
+			"creds": "Atzmon A, Herrero M, Sharet-Eshed R, Gilad Y, Senderowitz H, Elroy-Stein O.",
+			"mag": "Front Mol Neurosci. 11:336. doi: 10.3389/fnmol.2018.00336. eCollection. PMID: 30279648",
 			"link": "https://www.frontiersin.org/articles/10.3389/fnmol.2018.00336/full",
 			"journal": "Front Mol Neurosci."
 		},
@@ -270,7 +326,7 @@
 			"creds": "Herrero M, Mandelboum S, Elroy-Stein O.",
 			"mag": "NeuroMolecular Med. 3:303-313. doi: 10.1007/s12017-019-08551-9. PMID: 31134486",
 			"link": "https://link.springer.com/article/10.1007%2Fs12017-019-08551-9",
-			"journal": "Neuromolecular Med"
+			"journal": "NeuroMolecular Med"
 		},
 		"Recurrent functional misinterpretation of RNA-seq data caused by sample-specific gene length bias": {
 			"year": 2019,
