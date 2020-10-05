@@ -30,23 +30,38 @@
 			"image": "reut.jpg",
 			"email": "reutsharet@mail.tau.ac.il"
 		},
+		"Liat Orr": {
+			"role": "PhD Student",
+			"image": "liat.jpg",
+			"email": "liatgalorr@mail.tau.ac.il"
+		},
 		"Daniel Blumenkrants": {
 			"role": "MSc Student",
 			"image": "daniel.jpg",
-			"email": "blumenkrants@mail.tau.ac.il"
+			"email": "danielb5532@gmail.com"
 		},
 		"Maron Daw": {
 			"role": "MSc Student",
 			"image": "maron.jpg",
 			"email": "marondaw209@gmail.com"
 		},
-		"Liat Orr": {
+		"Naama Brezner": {
 			"role": "MSc Student",
-			"image": "liat.jpg",
-			"email": "liatgalorr@mail.tau.ac.il"
+			"image": "Naama Brezner.jpg",
+			"email": "naama.brezner@gmail.com"
+		},
+		"Eran Antokolitz": {
+			"role": "MSc Student",
+			"image": "Eran Anto.jpg",
+			"email": "eantokolitz@gmail.com"
 		}
 	},
 	"alumni": {
+		"Daniel Blumenkrants": {
+			"role": "MSc Student",
+			"image": "daniel.jpg",
+			"thesis": "hnRNP C sumoylation is required for localized translation at the cell cortex in mitosis"
+		},
 		"Melisa Herrero": {
 			"role": "2015-2020, PhD Student",
 			"image": "melissa.jpg",
