@@ -50,7 +50,7 @@
 			"image": "Sandra Shtokman.jpg",
 			"email": "shtokman@mail.tau.ac.il"
 		}
-	}
+	},
 	"alumni": {
 		"Daniel Blumenkrants": {
 			"role": "2018-2020, MSc Student",
@@ -59,7 +59,7 @@
 		},
 		"Maron Daw": {
 			"role": "MSc Student",
-			"image": "maron.jpg",
+			"image": "maron.jpg"
 		},	
 		"Melisa Herrero": {
 			"role": "2015-2020, PhD Student",
