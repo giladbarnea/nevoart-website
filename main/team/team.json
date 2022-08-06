@@ -10,11 +10,7 @@
 			"image": "andrea.jpg",
 			"email": "andreaat@post.tau.ac.il"
 		},
-		"Melisa Herrero": {
-			"role": "Post Doc",
-			"image": "melissa.jpg",
-			"email": "mherrerobocco@gmail.com"
-		},
+		
 		"Mika Rotem": {
 			"role": "PhD Student",
 			"image": "mika.jpg",
@@ -40,7 +36,7 @@
 			"image": "Naama Brezner.jpg",
 			"email": "naama.brezner@gmail.com"
 		},
-		"Tamar Levy": {
+		"Tamar Levi": {
 			"role": "MSc Student",
 			"image": "Tamar Levi.jpg",
 			"email": "tamarlev31@gmail.com"
