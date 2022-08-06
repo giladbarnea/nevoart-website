@@ -334,6 +334,13 @@
 			"mag": "PLoS Biology 17(11): e3000481 PMID: 31134486",
 			"link": "https://doi.org/10.1371/journal.pbio.3000481",
 			"journal": "PLoS Biology"
+		},
+		"The energy status of astrocytes is the Achilles' heel of eIF2B-leukodystrophy": {
+			"year": 2021,
+			"creds": "Herrero M, Daw M, Atzmon A, Elroy-Stein O.",
+			"mag": "Cells 10(8), 1858. https://doi.org/10.3390/cells10081858",
+			"link": "https://www.mdpi.com/2073-4409/10/8/1858",
+			"journal": "Cells"	
 		}
 	},
 	"journals": {
