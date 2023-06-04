@@ -347,7 +347,16 @@
 			"mag": "Cell Death & Dis. 12, 1133 https://doi.org/10.1038/s41419-021-04422-z",
 			"link": "https://www.nature.com/articles/s41419-021-04422-z",
 			"journal": "Cell Death & Disease"
-		}
+		},
+		"Effective extraction of polyribosomes exposes gene expression strategies in primary astrocytes": {
+			"year": 2023,
+			"creds": "Mandelboum S, Herrero M, Atzmon A, Ehrlich M, Elroy-Stein O. ",
+			"mag": "https://doi.org/10.1093/nar/gkad131",
+			"link": "https://academic.oup.com/nar/article/51/7/3375/7070959",
+			"journal": "Nucleic Acids Res.",
+			"supplementary Data": "https://academic.oup.com/nar/article/51/7/3375/7070959#supplementary-data",
+			"supp Table One": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216580",
+			"supp Table Two": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216582"
 	},
 
 	"journals": {
