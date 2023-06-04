@@ -354,9 +354,9 @@
 			"mag": "https://doi.org/10.1093/nar/gkad131",
 			"link": "https://academic.oup.com/nar/article/51/7/3375/7070959",
 			"journal": "Nucleic Acids Res.",
-			"supplementary Data": "https://academic.oup.com/nar/article/51/7/3375/7070959#supplementary-data",
-			"supp Table One": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216580",
-			"supp Table Two": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216582"
+			"suppData": "https://academic.oup.com/nar/article/51/7/3375/7070959#supplementary-data",
+			"suppTableOne": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216580",
+			"suppTableTwo": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216582"
 	},
 
 	"journals": {
