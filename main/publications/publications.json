@@ -354,9 +354,21 @@
 			"mag": "Nucleic Acids Research, Volume 51, Issue 7, 24 April 2023, Pages 3375-3390, https://doi.org/10.1093/nar/gkad131 PMID: 36881761",
 			"link": "https://academic.oup.com/nar/article/51/7/3375/7070959",
 			"journal": "Nucleic Acids Res."
-			
-		}
-	},
+		},
+		"Nonsense mutation suppression is enhanced by targeting different stages of the protein synthesis process.": {
+			"year": 2023,
+			"creds": "Wittenstein A, Caspi M, Rippin I, Orna Elroy-Stein O, Eldar-Finkelman H, Thoms S, Rosin-Arbesfeld R.",
+			"mag": "PLoS Biology Vol.21(11):e3002355 09 Nov 2023 https://doi.org/10.1371/journal.pbio.3002355",
+			"link": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002355",
+			"journal": "PLoS Biology"
+		},
+		"Neuronal Gtf2i Deletion Alters Mitochondrial and Autophagic Properties.": {
+		"year": 2023,
+		"creds": "Nir Sade A, Levy G, Schokoroy Trangle S, Elad Sfadia G, Bar E, Ophir O, Fischer I, Rokach M, Atzmon A, Parnas H, Rosenberg T, Marco A, Elroy-Stein O, Barak B.",
+		"mag": "Communication Biology 2023 Dec 14 Vol.6(1):1269. doi: 10.1038/s42003-023-05612-5",
+		"link": "https://www.nature.com/articles/s42003-023-05612-5",
+		"journal": "Communication Biology"
+		},
 
 	"journals": {
 		"Biochem J": {
@@ -382,6 +394,9 @@
 		},	
 		"Cells": {
 			"link": "https://www.mdpi.com/journal/cells"
+		},
+		"Communication Biology": {
+			"link": "https://www.nature.com/commsbio/"
 		},	
 		"EMBO J": {
 			"link": "http://emboj.embopress.org/"
