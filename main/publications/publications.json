@@ -368,8 +368,15 @@
 		"mag": "Communication Biology 2023 Dec 14 Vol.6(1):1269. doi: 10.1038/s42003-023-05612-5",
 		"link": "https://www.nature.com/articles/s42003-023-05612-5",
 		"journal": "Communication Biology"
+		},
+		"Effective extraction of polyribosomes from astrocytes enables future discoveries on translation regulation.": {
+		"year": 2025,
+		"creds": "Elroy-Stein O.",
+		"mag": "Neural Regen Res. 20(4):1083-1084, April 2025. DOI: 10.4103/NRR.NRR-D-24-00204",
+		"link": "https://journals.lww.com/nrronline/fulltext/2025/04000/effective_extraction_of_polyribosomes_from.18.aspx",
+		"journal": "Neural Regen Res."
 		}
-	},
+		},
 	"journals": {
 		"Biochem J": {
 			"link": "https://science.sciencemag.org/content/352/6282/216"
