@@ -1,22 +1,22 @@
 {
-	"about-text": "We seek to understand the molecular and cellular mechanisms that govern protein synthesis under normal and stress conditions.",
+	"about-text": "We seek to craft and publish beautiful, functional, and engaging print and digital products.",
 	"research-snippet": [
-		"Elroy-Stein’s lab is engaged with various research topics, all related to regulation of gene expression with emphasis on mRNA translation in mammalian cells in health and disease. Regulation of gene expression at the level of mRNA translation into proteins is fundamental to growth, differentiation, metabolism, and development of multi-cellular organisms.",
-		"We integrate state-of-the-art research methodologies to study the neurodegenerative genetic Vanishing White Matter (VWM) disease; to design and develop novel therapies; and to study basic mechanisms that govern protein synthesis during the cell cycle."
+		"Nevoart is concerned with matters of great import: the optimal tempering of steel for longswords, the forging of resilient shield bosses, and ensuring our siege engine blueprints are legible even after a minor skirmish. Quality craftsmanship is the bedrock of any well-defended workshop.",
+		"We utilize time-honored techniques and robust materials, from the bellows that stoke our forges to the hammers that shape the steel. Our current endeavors include minimizing warpage in plate armor, developing quieter hinges for treasure chests, and understanding why some apprentices can't seem to sharpen a simple dagger correctly."
 	],
 	"interests": [
-		"Molecular mechanisms governing gene expression networks in response to physiological and stress signals.",
-		"The effects of mutations in translation initiation factor 2B (eIF2B) on global and specific gene expression, specifically in astrocytes.",
-		"The link between eIF2B function and cellular metabolism.",
-		"Regulation of global and specific mRNA translation during cellular division.",
-		"The role of hnRNP-C in localized translation in mitotic cells."
+		"Alloys suitable for arrowheads designed to pierce dragon scales (mostly theoretical).",
+		"The art of inscribing barely legible runes of warding onto sword pommels.",
+		"Best practices for quenching different types of steel without alarming the neighbors.",
+		"The ergonomics of battle-axe handles: form versus function.",
+		"Rust prevention techniques for armor left out in the rain (a common oversight)."
 	],
 	"researchProjects": [
-		"Regulation of mRNA translation in the brain",
-		"Regulation of mRNA translation during the cell cycle",
-		"Developmemt of novel experimental methodologies"
+		"Reinforcing helmet designs against mace impacts.",
+		"Improving the lethality-to-weight ratio of throwing axes.",
+		"Developing a superior polish for ceremonial breastplates."
 	],
 	"bio": [
-		"Elroy-Stein is a Full Professor at the Shmunis School of Biomedicine & Cancer Research, Faculty of Life Sciences, and a member of the Sagol School of Neuroscience, Tel Aviv University. She received her BSc and MSc from the Technion, and her PhD on Human Molecular Genetics from the Weizmann Institute of Science, Israel. She subsequently completed postdoctoral training at the Lab of Viral Diseases, NIAID, NIH, Maryland, USA."
+		"Reuven Barnea-Eli, Forgemaster. It is said he learned his trade from a taciturn mountain smith who paid him in chipped spearheads and grudging nods. Further studies involved a brief, smoky apprenticeship with a maker of questionable siege equipment. He now spends his days coaxing steel into shapes both useful and occasionally intimidating, with a notable expertise in items that are reassuringly heavy."
 	]
 }
