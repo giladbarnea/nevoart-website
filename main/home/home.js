@@ -40,7 +40,7 @@ const HomePage = () => {
                     elem({ tag: 'a', cls: 'research-block' })
                         .append(
                             elem({ tag: 'h3', text: researchProject }),
-                            paragraph({ cls: 'readmore', text: 'Read more →' })
+                            paragraph({ cls: 'readmore', text: 'קרא עוד ←' })
                         )
                         .click((event) => {
                             ResearchPage().init(i);
