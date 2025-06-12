@@ -3,4 +3,14 @@ description:
 globs: 
 alwaysApply: false
 ---
-This is a fork of what used to be a personal website that belonged to a principal investigator in a biology lab in Tel Aviv university, repurposed for my father's small business, Nevoart, which is basically a bare-bones, 10-employee workshop for print and design. clogged small space, massive printers, manual paper cutting and binding tools, main door is always open, etc.
+## Context
+This is a fork of what used to be a personal website that belonged to a principal investigator in a biology lab in Tel Aviv university, repurposed for my father's small business, Nevoart, which is a bare-bones, 10-employee workshop in Tel Aviv for print and design. Clogged small space, massive printers, manual paper cutting and binding tools, main door is always open, warm, personal customer treatment, etc. My father's name is Reuven.
+
+## Current Situation
+This repurposing is still in very early stages:
+- Work was only done on the landing page (home/index), and only the copy was changed to mock placeholder copy.
+- The other pages are untouched and will soon be removed. For now, completely ignore them.
+
+## Planned Changes
+- [ ] Make the whole website RTL with Hebrew copy and layout
+- [ ] Visual redesign and layout of home page
