@@ -1,20 +1,20 @@
 const Routing = (() => {
     function getPageObj(key) {
         switch (key) {
-            case "research":
-                return ResearchPage;
-            case "team":
-                return TeamPage;
-            case "publications":
-                return PublicationsPage;
-            case "gallery":
-                return GalleryPage;
+            case "print-services":
+                return PrintServicesPage;
+            case "design-services":
+                return DesignServicesPage;
+            case "about":
+                return AboutPage;
+            case "faq":
+                return FaqPage;
             case "contact":
                 return ContactPage;
         }
     }
     function pageStrings() {
-        return ["home", "research", "team", "publications", "gallery"];
+        return ["home", "print-services", "design-services", "about", "faq", "contact"];
     }
     async function initPage(url) {
         console.log(`%cRouting.initPage(url: "${url}")`, `color: ${BLUE}`);

@@ -1,16 +1,16 @@
 {
 	"visit": {
-		"address": "sackler bldg, room #631<br>tel aviv university<br>tel aviv-yafo, israel",
+		"address": "צבי 3<br>רמת גן<br>ישראל",
 		"link": "https://goo.gl/maps/wmR4cYfhDRwgM1m59",
 		"icon": "home-simple.svg"
 	},
 	"call": {
-		"hours": "9am - 17pm Su - Th",
-		"phone": "+(972)733804420",
+		"hours": "א׳ - ה׳ 9:00 - 17:00",
+		"phone": "+972-3-640-9153",
 		"icon": "phone-simple.svg"
 	},
 	"email": {
-		"address": "idotavor@tauex.tau.ac.il",
+		"address": "reuvenbe@gmail.com",
 		"icon": "envelope-simple.svg"
 	},
 	"map": "https://bit.ly/2mGwkNo",

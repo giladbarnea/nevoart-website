@@ -56,11 +56,11 @@ WindowElem.on({
             query: 'div#navbar',
             children: {
                 home: '.home',
-                research: '.research',
-                team: '.team',
-                publications: '.publications',
-                gallery: '.gallery',
-                // contact: '.contact',
+                'print-services': '.print-services',
+                'design-services': '.design-services',
+                about: '.about',
+                faq: '.faq',
+                contact: '.contact',
             }
         });
         if (window.location.hash !== "")
@@ -84,46 +84,8 @@ WindowElem.on({
                     }
                 });
         }
-        async function cacheTeam() {
-            console.log(...less('cacheTeam'));
-            const data = await fetchDict('main/team/team.json');
-            const { team: teamData, alumni: alumniData } = data;
-            for (let [_, { image }] of dict(teamData).items())
-                cache(image, "team");
-            for (let [_, { image }] of dict(alumniData).items())
-                cache(image, "team");
-        }
-        async function cacheGallery() {
-            // return console.warn('Hi Morki :) Remember to ask shmendrik to fix gallery cache sometime')
-            console.log(...less('cacheGallery'));
-            let {"Bio Images": bioImagesData, "Team Photos": teamPhotosData} = await fetchDict("main/gallery/gallery.json");
-            // const galleryFiles = galleryData.map(d => d.file);
-            
-            for (let {file} of bioImagesData) {
-                cache(file, "gallery");
-            }
-            for (let {file} of teamPhotosData) {
-                cache(file, "gallery");
-            }
-        }
-        async function cacheResearch() {
-            console.log(...less('cacheResearch'));
-            const researchData = await fetchDict('main/research/research.json');
-            delete researchData["page-intro"];
-            for (let [_, { image }] of researchData.items())
-                cache(image, "research");
-        }
-        console.log(...less('waiting 1000ms before caching starts...'));
-        wait(1000).then(() => {
-            console.log(...less('done waiting, starting caching'));
-            if (!window.location.hash.includes('research'))
-                cacheResearch();
-            if (!window.location.hash.includes('team'))
-                cacheTeam();
-            if (!window.location.hash.includes('gallery'))
-                cacheGallery();
-            console.log(...less('done caching'));
-        });
+        // Removed old caching functions for non-existent pages
+        console.log(...less('caching disabled for now - will be re-implemented when needed'));
     }
 });
 class NavbarElem extends BetterHTMLElement {
@@ -172,10 +134,20 @@ const hamburger = elem({
 hamburger.items.children('div').forEach((bhe) => {
     bhe.click((event) => {
         event.stopPropagation();
-        const innerText = bhe.e.innerText.toLowerCase();
-        console.log(`hamburger ${innerText} click`);
+        const innerText = bhe.e.innerText;
+        let route;
+        switch (innerText) {
+            case 'דף הבית': route = 'home'; break;
+            case 'שירותי הדפסה': route = 'print-services'; break;
+            case 'שירותי עיצוב': route = 'design-services'; break;
+            case 'אודות': route = 'about'; break;
+            case 'שאלות ותשובות': route = 'faq'; break;
+            case 'צור קשר': route = 'contact'; break;
+            default: route = 'home';
+        }
+        console.log(`hamburger ${innerText} click, routing to ${route}`);
         hamburger.removeClass('open');
-        Routing.navigateTo(innerText);
+        Routing.navigateTo(route);
         Body.toggleClass('theater');
     });
 });

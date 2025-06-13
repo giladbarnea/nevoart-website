@@ -9,11 +9,11 @@ const ContactPage = () => {
         }
         const data = await fetchDict("main/contact/contact.json");
         const visit = div({ cls: 'visit' })
-            .append(elem({ tag: 'h1', text: 'Visit' }), htmlToElement(await fetchText(`main/contact/${data.visit.icon}`)), paragraph({ cls: 'subtitle', text: 'Address' }), anchor({ href: data.visit.link, text: data.visit.address }).target("_blank"));
+            .append(elem({ tag: 'h1', text: 'בקרו אותנו' }), htmlToElement(await fetchText(`main/contact/${data.visit.icon}`)), paragraph({ cls: 'subtitle', text: 'כתובת' }), anchor({ href: data.visit.link, text: data.visit.address }).target("_blank"));
         const call = div({ cls: 'call' })
-            .append(elem({ tag: 'h1', text: 'Call' }), htmlToElement(await fetchText(`main/contact/${data.call.icon}`)), paragraph({ cls: 'subtitle', text: data.call.hours }), anchor({ text: data.call.phone, href: `tel:${data.call.phone}` }).target("_blank"));
+            .append(elem({ tag: 'h1', text: 'התקשרו' }), htmlToElement(await fetchText(`main/contact/${data.call.icon}`)), paragraph({ cls: 'subtitle', text: data.call.hours }), anchor({ text: data.call.phone, href: `tel:${data.call.phone}` }).target("_blank"));
         const email = div({ cls: 'email' })
-            .append(elem({ tag: 'h1', text: 'Email' }), htmlToElement(await fetchText(`main/contact/${data.email.icon}`)), anchor({ text: data.email.address, href: `mailto:${data.email.address}` }).target("_blank"));
+            .append(elem({ tag: 'h1', text: 'שלחו מייל' }), htmlToElement(await fetchText(`main/contact/${data.email.icon}`)), anchor({ text: data.email.address, href: `mailto:${data.email.address}` }).target("_blank"));
         const grid = div({ id: 'contact_grid' })
             .append(visit, call, email);
         const form = elem({ tag: 'iframe', text: "Loading" })
