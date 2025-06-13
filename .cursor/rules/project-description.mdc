@@ -4,7 +4,7 @@ globs:
 alwaysApply: false
 ---
 ## Context
-This is a fork of what used to be a personal website that belonged to a principal investigator in a biology lab in Tel Aviv university, repurposed for my father's small business, Nevoart, which is a bare-bones, 10-employee workshop in Tel Aviv for print and design. Clogged small space, massive printers, manual paper cutting and binding tools, main door is always open, warm, personal customer treatment, etc. My father's name is Reuven.
+This website is a fork of what used to be a personal website that belonged to a principal investigator in a biology lab in Tel Aviv university, repurposed for my father's small business, Nevoart, which is a bare-bones, 10-employee workshop in Tel Aviv for print and design. Clogged small space, massive printers, manual paper cutting and binding tools, main door is always open, warm, personal customer treatment, etc. My father's name is Reuven.
 
 ## Current Situation
 This repurposing is still in very early stages:
@@ -12,5 +12,10 @@ This repurposing is still in very early stages:
 - The other pages are untouched and will soon be removed. For now, completely ignore them.
 
 ## Planned Changes
-- [ ] Make the whole website RTL with Hebrew copy and layout
+- [x] Make the whole website RTL with Hebrew copy and layout (done)
+- [ ] Organize the old, irrelevant website pages that used to belong to the biology PI, to fit Nevoart.
+  - [ ] Nevoart required site pages: שירותי הדפסה, שירותי עיצוב, אודות, שאלות ותשובות, צור קשר
+  - [ ] Repurpose the existing 'contact' page to Nevoart. Replace the copy with placeholder Hebrew copy.
+  - [ ] שירותי עיצוב, אודות, שאלות ותשובות all need to be completely empty for now - we just need a blank page to navigate to when clicking the menu item
+  - [ ] שירותי הדפסה will need to be implemented LATER. Refer to .cursor/design-mocks/print-services-*.jpg images for the design specs. Pick the page from the old laboratory website that fits best for repurposing to the print-services page, based on its structure (not copy or anything else). Do not implement the page yet - just use Hebrew copy placeholders.
 - [ ] Visual redesign and layout of home page
